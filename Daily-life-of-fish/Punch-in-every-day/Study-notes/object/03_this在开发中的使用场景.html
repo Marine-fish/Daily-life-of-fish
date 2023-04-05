@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const obj = { //要实现谁谁在干嘛
+            name: 'pzq',
+            age: 23,
+            eating(name) {
+                // console.log(name + '在eating' )
+                //方法二: 根据变量查找顺序
+                // console.log(obj.name + '在eating' )
+                 //方法三: 根据this指向
+                console.log(this.name + '在eating' )
+            },
+            running(name) {
+                // console.log(name + '在running')
+
+                // console.log(obj.name + '在eating' )
+
+                console.log(this.name + '在eating' )
+            },
+            palyGame(name) {
+                // console.log(name + '在palyGame')
+
+                // console.log(obj.name + '在eating' )
+
+                console.log(this.name + '在eating' )
+            },
+        }
+        //方法一: 传参  缺点:过程极为繁琐
+        // obj.eating(obj.name)
+        // obj.running(obj.name)
+        // obj.palyGame(obj.name)
+
+        //方法二: 根据变量查找顺序 缺点如果变量名发生改变,还需要一个个取调整
+        //  obj.eating()
+        //  obj.running()
+        //  obj.palyGame()
+
+        //方法三: 根据this指向 优点 无需考虑变量名的更替
+         obj.eating()
+         obj.running()
+         obj.palyGame()
+
+
+    </script>
+
+</body>
+</html>

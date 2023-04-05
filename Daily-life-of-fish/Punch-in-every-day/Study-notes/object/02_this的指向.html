@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 函数中是有一个this的变量, this变量会指向一个对象(在大多数情况下)
+        // arguments保存的是传入的所有参数
+      
+        //情况一: 如果普通的函数被默认调用, 那么this指向的就是window
+        function foo(name, age) {
+            console.log(arguments)
+            console.log(this) // window对象
+        }
+        foo('pzq', 23)
+
+        //情况二: 如果函数它是被一个对象来引用并且调用它, 那么this会指向这个对象
+        // const obj = {
+        //     name: 'pzq',
+        //     age: 23,
+        //     eating: function() {
+        //         console.log(this) // obj
+        //         console.log(obj) // obj
+        //         console.log(obj === this) //true
+        //     }
+        // }
+        // obj.eating()
+
+        const eating = obj.eating
+        eating() //window
+
+        function bar() {
+           console.log(this)
+        }
+        const obj = {
+            name: "mz",
+            bar
+        }
+        obj.bar() // obj
+    </script>
+
+</body>
+</html>
