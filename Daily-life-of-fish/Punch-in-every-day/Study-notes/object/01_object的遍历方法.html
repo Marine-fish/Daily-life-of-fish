@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const info = {
+            name: 'pzq',
+            age: '23',
+            agrees: 'chengdu'
+        }
+
+        // Object.keys() 能拿到对象里所有的key
+        console.log(Object.keys(info)) // ['name', 'age', 'agrees']
+        //顶一个变量存储刚刚所遍历出来的key
+        const infoKeys = Object.keys(info)
+        //在通过for 循环遍历(解决对象没有length导致无法依据长度来进行遍历)
+        for (i = 0; i < infoKeys.length; i++) {
+            //用一个变量来记录遍历出每一个key
+            const key = infoKeys[i]
+            // console.log(info[i]) //这样是错误的，因为这个对象key不是12345
+            console.log(info[key])
+        }
+
+        // for ..对象的key.. in ..对象..
+        for (const key in info) {
+          console.log(key) //拿到对应的对象里key值
+          console.log(info[key]) //根据对应的key拿到对应的value
+        }
+
+        // for ... of ... 默认不支持遍历对象,支持数组，因为对象不是可迭代的
+
+    </script>
+
+</body>
+</html>
