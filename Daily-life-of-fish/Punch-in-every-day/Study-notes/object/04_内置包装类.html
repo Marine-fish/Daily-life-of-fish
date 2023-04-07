@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const num = 12345
+        const str = "coder"
+        //为什么普通的值可以有 length的属性 spice方法
+        num.toFixed()
+        num.toString()
+        12345..toFixed()
+        12345..toString() 
+        //Number和parseFloat,parseInt这个是在window对象里
+        Number.parseFloat()
+        Number.parseInt()
+        parseFloat(num)
+        parseInt(num)
+        str.length
+        str.slice()
+        //因为他们是由一个构造函数产生出来的
+        function Number(num) { //里面的方法是浏览器已经给算好了的
+            this.toFixed = function() {}
+            this.toString = function() {}
+        }
+        new Number(num)
+    </script>
+
+</body>
+</html>
