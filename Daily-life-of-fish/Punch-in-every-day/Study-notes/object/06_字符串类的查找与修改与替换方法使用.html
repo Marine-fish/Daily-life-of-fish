@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const str = "Hello World"
+        //字符串不可以通过[索引值]去修改某个字符
+        str[2] = "x"
+        //字符串可以通过 length属性来查看字符串的长度
+        console.log(str.length)
+        //字符串可以通过 [索引值]来查找对应的字母
+        console.log(str[0])
+        //字符串可以通过 charAt()函数来查找对应的字母
+        console.log(str.charAt(0))
+        //区别通过[索引值]超出查找范围会报underfund 但是通过 charAt()函数来查找超出范围不会报underfund，会用空字符串代替
+        console.log(str[23])
+        console.log(str.charAt(23))
+        //字符串的toLocaleLowerCase()方法是让所有字母转成小写
+        console.log(str.toLocaleLowerCase())
+        //字符串的toLocaleLowerCase()方法是让所有字母转成大写
+        console.log(str.toLocaleUpperCase())
+        const message = "My name is Kike"
+        const message1 = "Kike"
+        const message2 = "kaki"
+        //判断一个字符串是否有另外一个字符串
+        /*
+            indexOf(需要搜索的字符串的内容，从什么位置进行搜索)
+            返回值结果为索引值
+            搜索到则返回对应的索引
+            搜索不到则返回 -1
+        */
+    //    console.log(message.indexOf(message1))
+    //    console.log(message.indexOf(message2))
+    //    if (message.indexOf(message1) !== -1) {
+    //     console.log("message里有Kike")
+    //    } else if (message.indexOf(message2) == -1) {
+    //     console.log("message里没有kaki")
+    //    }
+    /*
+        es6新增一个方法，针对与判断包含关系
+        includes
+        包含返回true
+        不包含返回fleas
+    */
+   if (message.includes(message1)) {
+    console.log("包含了")
+   }
+    /*
+        es6新增一个方法，判断是否以***开头的
+        startsWith
+        包含返回true
+        不包含返回fleas
+    */
+   if (message.startsWith("name")) {
+    console.log("没以这个开头")
+   } else if (message.startsWith("My")) {
+    console.log("以这个开头")
+   }
+     /*
+        es6新增一个方法，判断是否以***结尾的
+        endsWith
+        包含返回true
+        不包含返回fleas
+    */  
+    if (message.endsWith(message1)) {
+    console.log("以这个结尾")
+   } else if (message.endsWith(message2)) {
+    console.log("没以这个结尾")
+   }  
+   /*
+        字符串的slice(选中其中的字符串值也可以写正则表达式，替换成自定义的值可以是写一个值，也可以写函数，用返回值来替代)
+        不会修改原字符串会回返一个新的字符串
+   */
+   const newMessage = message.replace("name", "Mike")
+   console.log("新字符", newMessage)
+    </script>
+
+</body>
+</html>

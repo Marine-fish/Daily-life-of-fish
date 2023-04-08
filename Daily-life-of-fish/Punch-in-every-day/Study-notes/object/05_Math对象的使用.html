@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //因为 Math是对象不是一个函数，所以不能通过new的方式进行操作
+        // new Math()
+        const num = 3.15
+        const newNum = 3.55
+        //向下取整(怎样都不会进行四舍五入)
+        Math.floor(num) //3
+        Math.floor(newNum) //3
+        //向上取整(怎样都会五入不四舍)
+        Math.ceil(num) //4
+        Math.ceil(newNum) //4
+        //圆周率 π
+        Math.PI
+        //四舍五入并取整
+        Math.fround(num) //3
+        Math.fround(newNum) //4
+        //生成随机数 0-1但不包括1 [0, 1)
+        Math.random()
+        //生成一个10到70的随机数但是不包括70
+        /*
+            [a, b)
+            y = a
+            x = b - a
+            Math.floor(Math.random() * x) + y
+        */
+        // const randomNum = Math.floor(Math.random() * 60) + 10
+        for (let i = 0; i < 1000; i++) {
+            let randomNum = Math.floor(Math.random() * 60) + 10
+            console.log(randomNum)
+        }
+        //次方
+        Math.pow(2, 3)
+       
+    </script>
+
+</body>
+</html>

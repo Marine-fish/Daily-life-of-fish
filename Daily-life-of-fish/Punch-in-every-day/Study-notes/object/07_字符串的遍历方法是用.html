@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const str = "Hello World"
+        //通过for循环根据字符串的长度来进行遍历
+        // for (let i = 0; i < str.length; i++) {
+        //     console.log(str[i])
+        // }
+        //通过for ... of...方法进行遍历
+        for (value of str) {
+            console.log("单个字符", value)
+        }
+        //通过for ... in ... 方法遍历，但是会遍历出其他属性
+        for (value in str) { //遍历出字符串的"索引"
+            console.log("索引", value)
+        }
+    </script>
+
+</body>
+</html>
