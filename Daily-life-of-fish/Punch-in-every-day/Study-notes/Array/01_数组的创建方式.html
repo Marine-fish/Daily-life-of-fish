@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const arr = ["11", "22", "33"] //字面量创建方式
+        const ar = new Array() //实例创建方式 是一个空数组 []
+        //推导出widow对象里有个Array的函数 function Array() {}
+        const arr1 = new Array("xxx", "qqq", "oooo") // ["xxx", "qqq", "oooo"]
+        const arr2 = new Array(10) //如果传入一个数字, 默认会将数组的长度扩增到传入的数字
+
+        //数组可以通过索引去访问也可也通过length(长度)
+        console.log(arr[0]) //访问第一个
+        console.log(arr[arr.length-1]) //访问最后一个
+       
+    </script>
+
+</body>
+</html>

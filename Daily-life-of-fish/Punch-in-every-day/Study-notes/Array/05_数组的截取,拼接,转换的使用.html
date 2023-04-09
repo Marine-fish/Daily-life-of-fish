@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const arr = ["red", "blue", "pink", "yellow", "black"]
+        //数组的slice(从哪个索引位置开始截取, 不传就截取到结尾传入就是截取到指定索引位置但是不包括最后一个索引)
+        const newArr = arr.slice(2, 4)
+        console.log(newArr)
+        //数组的concat(传入需要拼接的值)
+        const name = ["Mike", "Jack", "Jolo"]
+        const info = ["chengdu", "shanghai", "guangzhou"]
+        const food = ["桃子", "苹果", "梨"]
+        //拼接方法一(这个方法是把他们的索引给遍历出来了)
+        const bigHouse = []
+        console.log(bigHouse.push(...name, ...info, ...food))
+        //拼接方法二
+        console.log(name.concat(info, food))
+        //数组的join(传入相隔的字符)转成字符串形式
+        console.log(arr.join("*"))
+
+    </script>
+
+</body>
+</html>

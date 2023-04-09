@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const arr = ["red", "blue", "pink", "yellow", "black"]
+        //查找一个基本数据类型的可以用indexOf()方法
+       if (arr.indexOf("blue") !== -1) {
+        console.log("找到了blue")
+       } 
+       //如果要查找复杂数据类型用indexOf()就不太好实现
+       const arrObj = [
+        {
+            id: 904,
+            name: "鼠标",
+            price: 30
+        },
+        {
+            id: 906,
+            name: "键盘",
+            price: 70
+        },
+        {
+            id: 915,
+            name: "显示器",
+            price: 130
+        },
+       ]
+       //需要通过for循环遍历来进行筛选要查找的值
+       let setId = null
+       for (let i = 0; i < arrObj.length; i++) {
+        if (arrObj[i].id === 906) {
+            setId =  arrObj[i].id
+            break
+        }
+       }
+       console.log(setId)
+       //数组的find(函数(参数))
+       //当一个数组调用find()方法时,数组里有多少length,这个find方法里函数就会回调几次
+       //会将数组的里每个值传入find方法里函数的形参里
+       //最后会将形参里的值返回出去
+       const newItem = arrObj.find(function(item) {
+        if (item.id === 915) return true
+       })
+       const newItems = arrObj.find(item => item.price === 70)
+       console.log(newItem)
+       console.log(newItems)
+    </script>
+
+</body>
+</html>

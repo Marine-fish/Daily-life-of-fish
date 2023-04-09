@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const message = "Hello"
+        const test = "My"
+        const info = "city"
+        const cant = "  city is my home  "
+
+        //字符串的拼接可以通过 +
+        const newContent = message + test + info
+        console.log(newContent)
+        //字符串的concat(需要拼接的字符串的值)方法
+        //返回新的值所以可以支持链式调用
+        //支持多个参数
+        const newInfo = message.concat(test).concat(info)
+        console.log(newInfo)
+        //字符串的trim()方法可以删除字符串的首尾空格
+        const newCant = cant.trim()
+        console.log(newCant) 
+        console.log(cant) 
+        //字符串的split(需要切割的字符)
+        //返回有个新的字符数组
+        const ranking = "one-two-three-four"
+        const newRanking = ranking.split("-")
+        console.log(newRanking)
+        //数组的join(需要什么字符拼接)
+        //返回一个新的字符串,拼接符为刚刚自定义的
+        const newStr = newRanking.join("~")
+        console.log(newStr)
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // const arr = ["1", "2", "3"]
+        // //数组的push(可以添加多个)
+        // //但只能在尾部添加
+        // console.log(arr.push("4"))
+        // //数组的pop()只能删除尾部,一次调用只能删一个
+        // //可以将pop()后的值返回
+        // const newArr = arr.pop()
+        // console.log(newArr)
+        // console.log(arr.pop())
+        // //数组的unshift(能添加多个)
+        // //只能在头部位置添加
+        // console.log(arr.unshift("-1", "0"))
+        // //数组的shift(),只能删除头部,一次调用只能删一次
+        // console.log(arr.shift())
+
+        const arr = ["red", "blue", "pink", "yellow", "black"]
+        //直接修改的是原数组
+        //数组的splice(从哪个索引位置开始操作, 删除多少个)
+        // arr.splice(2, 2)
+        // console.log(arr)
+        //数组的splice(从哪个索引位置开始操作, 传入0表示不会进行任何操作, 添加多个值)
+        arr.splice(3, 0, "bag", "house")
+        console.log(arr)
+        //数组的splice(从哪个索引位置开始操作, 删除后, 添加多个值并可以替换)
+        // arr.splice(1, 2, "dog", "fact")
+        // console.log(arr)
+    </script>
+
+</body>
+</html>
