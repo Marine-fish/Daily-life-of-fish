@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const arr = ["red", "blue", "pink", "yellow", "black"]
+        let newRrr
+        let arrItem
+        let arrIndex
+        arr.forEach((item, index, arr) => {
+          arrItem = arr
+          arrIndex = index
+          if (item == "blue") {
+           console.log("找到了")
+           newRrr = item
+          }
+        })
+        console.log(newRrr, arrItem, arrIndex)
+    </script>
+
+</body>
+</html>
