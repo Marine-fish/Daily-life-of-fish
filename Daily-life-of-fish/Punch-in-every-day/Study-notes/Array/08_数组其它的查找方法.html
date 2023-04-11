@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+         const arrObj = [
+        {
+            id: 904,
+            name: "鼠标",
+            price: 30
+        },
+        {
+            id: 906,
+            name: "键盘",
+            price: 70
+        },
+        {
+            id: 915,
+            name: "显示器",
+            price: 130
+        },
+       ]
+       //跟indexOf方法差不多的  lastIndexOf()
+        arrObj.lastIndexOf()
+        //数组的findIndex()匹配上时返回对应的索引
+        const arrIndex = arrObj.findIndex((item, index, arr) => {
+            return item.id === 915
+        })
+    </script>
+
+</body>
+</html>
