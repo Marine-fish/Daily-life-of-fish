@@ -10,18 +10,116 @@
     
     <script>
         const arr = ["red", "blue", "pink", "yellow", "black"]
-        let newRrr
-        let arrItem
-        let arrIndex
-        arr.forEach((item, index, arr) => {
-          arrItem = arr
-          arrIndex = index
-          if (item == "blue") {
-           console.log("找到了")
-           newRrr = item
-          }
-        })
-        console.log(newRrr, arrItem, arrIndex)
+        // let newRrr
+        // let arrItem
+        // let arrIndex
+        //数组中的forEach(每个值，每个索引，每个整条数据)函数
+        //属于高级函数:一个函数作为另外一个函数的参数
+        /*
+            forEach()函数内部大概的原理是
+            当forEach(fn:传入一个函数时)
+            会根据for循环区遍历传入的函数的回调
+            一个数组有多少条数据
+            则传入的函数的回调就会执行多少次
+        */
+        // arr.forEach((item, index, arr) => {
+        //   arrItem = arr
+        //   arrIndex = index
+        //   if (item == "blue") {
+        //    console.log("找到了")
+        //    newRrr = item
+        //   }
+        // })
+        // console.log(newRrr, arrItem, arrIndex)
+        // //手动实现一：利用高阶函数的原理去实现
+        // //最后利用回调传参实现forEach()函数
+        // //缺点: 不是通过arr对象 . 的方式区调用
+        // function PerForEach(fn) {
+        //    for (let i = 0; i < arr.length; i++) {
+        //     fn(arr[i], i, arr)
+        //    }
+        // }
+
+        // PerForEach(function(item, index, arr) {
+        //     console.log("-----", item, index, arr)
+        // })
+
+        //手动实现二: 利用对象 . 的方法去进行添加方法
+        //为什么要用this喃?
+        //这个跟this指向有关
+        /*
+            如果一个函数普通调用fn()
+            那么这个this会指向window对象
+            如果将一个函数作为参数放入一个对象里 fun (fn) {obj: fn()}
+            通过 fun.obj() 方式区调用那么
+            this会指向fun这个函数，谁调用this就指向谁
+        */
+       //缺点: 只能arrObj这个对象才能调用PerForEach()函数，不够灵活
+        const arrObj = [
+        {
+            id: 904,
+            name: "鼠标",
+            price: 30
+        },
+        {
+            id: 906,
+            name: "键盘",
+            price: 70
+        },
+        {
+            id: 915,
+            name: "显示器",
+            price: 130
+        },
+       ]
+    //    arrObj.PerForEach =  function (fn) {
+    //        for (let i = 0; i < this.length; i++) {
+    //         fn(this[i], i, this)
+    //        }
+    //     }
+    //     arrObj.PerForEach(function(item, index, arr) {
+    //         console.log("arrObj", item, index, arr)
+    //     })
+        //手动实现三
+        //利用调用PerForEach()函数除了传一个函数外，在将外面的数组传进去
+        //解决外面数组名不确定问题
+        function PerForEach(fn, arrData) {
+           for (let i = 0; i < arrData.length; i++) {
+            fn(arrData[i], i, arrData)
+           }
+        }
+        PerForEach((item, index, arr) => {
+            console.log("传参方式", item, index, arr)
+        }, arrObj)
+
+        //手动实现三：利用prototype 原型去实现，解决数组对象名不确定，调用PerForEach()函数赋值也不确定
+        /*
+            Array函数它是存在window对象里
+            Array函数内部估计是 
+            function Array() {
+                this = []
+                里面各种方法和属性
+                return this
+            } 这是没有通过 new 关键字去实现
+             function Array() {
+                里面各种方法和属性
+            }
+            arr = new Array()
+            arrObj = new Array()
+        */
+       //给Array函数的原型添加的方法和对象，只有通过实例调用都会有这个方法
+        // Array.prototype.PerForEach = function (fn) {
+        //    for (let i = 0; i < this.length; i++) {
+        //     fn(this[i], i, this)
+        //    }
+        // }
+        // arrObj.PerForEach(function(item, index, arr) {
+        //     console.log("原型", item, index, arr)
+        // })
+        // arr.PerForEach(function(item, index, arr) {
+        //     console.log("原型", item, index, arr)
+        // })
+        // console.log(window)
     </script>
 
 </body>
