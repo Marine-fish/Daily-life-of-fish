@@ -46,7 +46,8 @@
           Array.prototype.perFind = function(fn) {
             let getData
             for (let i = 0; i < this.length; i++) {
-                let getData = fn(this[i], i, this)
+                getData = fn(this[i], i, this)
+                console.log("first", getData)
                 if (getData) {
                     return this[i]
                 }

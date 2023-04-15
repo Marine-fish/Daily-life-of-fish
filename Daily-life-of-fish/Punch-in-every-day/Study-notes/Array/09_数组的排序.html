@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const arr = [55, 77, 65, 454, 985]
+        //数组的sort(每次调用都会拿到前两个值)
+        //如果第一个参数减去第二个参数为正数时，说明第一个参数大 （放在后面）
+        //如果第一个参数减去第二个参数为负数时，说明第二个参数大（放在前面）
+        //默认sort()方法排序是升序（从小到大）
+        //它是直接修改原数组
+        // arr.sort((item1, item2) => item1 - item2)
+        // console.log(arr)
+        // //如果想变成倒序（从大到小）
+        // //可以通过reverse()反转
+        // //也可以用sort()的第二个参数减去第一个参数
+        // arr.reverse()
+        // console.log(arr)
+
+        /*
+            把数组里所有的奇数都给过滤掉
+            通过数组的filter(item, index, arr)
+            它内部是将数组进行遍历
+            然后由外部去传入条件
+            最后将符合条件的塞进一个新的数组里面并return出去
+        */
+    //    const newArr = arr.filter(item => item % 2 == 0)
+    //    console.log(newArr)
+    // //手动实现filter方法
+    //    Array.prototype.PerFilter = function(fn) {
+    //         let arrObj = []
+    //         for (let i = 0; i < this.length; i++) {
+    //         if (fn(this[i], i, this)) {
+    //             arrObj.push(this[i])
+    //         }
+    //         }
+    //         return arrObj
+    //    }
+    //    const arrData = arr.PerFilter(item => item % 2 !== 0)
+    //    console.log("手动", arrData)
+
+    /*
+       计算数组里所有每个数字的平方
+       数组的map()方法是将遍历出来的每个值
+       放进一个新数组里面
+       不会修改原数组
+    */ 
+    // const numArr = arr.map(item => item * item)
+    // console.log(numArr)
+    // //手动实现
+    // Array.prototype.PerMap = function(fn) {
+    //     let newArr = []
+    //     for (let i = 0; i < this.length; i++) {
+    //         newArr.push(fn(this[i], i, this))
+    //     }
+
+    //     return newArr
+    // }
+    // const dataArr = arr.PerMap(item => item * item)
+    // console.log("手动", dataArr)
+    
+    /*
+        计算数组里每个值加起来的和
+        数组里reduce(初始值, item, index, arr)
+        内部是将遍历出来的值
+        由外部进行操作
+        如果外面除了传了第一个函数作为参数，还传了一个值作为第二个参数
+        那么这个第二个参数会作为内部调用参入的第一个参数
+        如果不传入第二个参数，则会将item的第一个值作为第一个初始化参数
+    */
+    // const addNum = arr.reduce((previousValue, item) => {
+    //     console.log(previousValue, item)
+    //     // return  previousValue + item
+    // })
+    // console.log(addNum)
+    //
+    // Array.prototype.PerReduce = function(fn, previousValue) {
+    //     let newAddNum
+    //     if (previousValue === 0) {
+    //         let newValue = previousValue + ""
+
+    //         for (let i = 0; i < this.length; i++) {
+    //         if (newValue) {
+    //             console.log("正确")
+    //             newAddNum = fn(previousValue, this[i], i, this)
+    //             console.log("加", newAddNum)
+    //         }
+    //     }
+    //     } else {
+    //         for (let i = 0; i < this.length; i++) {
+    //             console.log("正确1")
+    //             newAddNum = fn(this[i], this[i], i, this)
+    //             console.log("加1", newAddNum)
+    //         }
+    //     }
+
+    //     return newAddNum
+    // }
+    // const result =  arr.PerReduce((previousValue, item) => {
+    //     console.log(previousValue, item)
+    //     return previousValue + item
+    // })
+    // console.log("手动", result)
+    </script>
+
+</body>
+</html>
