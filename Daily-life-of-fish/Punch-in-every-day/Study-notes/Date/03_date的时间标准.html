@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            Sun Apr 16 2023 10:28:31 GMT+0800 (中国标准时间)
+            默认标准是: RFC 2822标准
+        */
+        const date1 = new Date()
+        console.log(date1)
+        /*
+            可以通过toISOString()方法改变默认时间表示标准
+            2023-04-16T02:29:34.382Z
+            这是: ISO 8601标准
+            YYYY 年份  0000 ～9999
+            MM 月份 01～ 12
+            DD 日 01～ 31
+            T 分割日期和时间，没有
+            HH 小时 00 ～24
+            mm 分钟 00 ～ 59
+            ss 秒 00～ 59
+            .sss 毫秒
+            Z 时区
+        */
+        console.log(date1.toISOString())
+    </script>
+
+</body>
+</html>

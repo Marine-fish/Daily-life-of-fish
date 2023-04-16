@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Hello Word</h1>
+        <ui>
+            <li>哈哈哈</li>
+            <li>哈哈哈</li>
+            <li>哈哈哈</li>
+            <li>哈哈哈</li>
+            <li>哈哈哈</li>
+        </ui>
+    </div>
+    <div class="footer">
+        <h5>谢谢</h5>
+    </div>
+
+    <script>
+        /*
+            拿到body对象
+            body里面有很多字对象
+           会放在一个数组里
+           children是一个伪对象
+           拿到body对象里的子对象里的第一个对象
+           拿到子对象再去调用它的属性
+        */
+        const DOM = document.body
+        console.log(DOM.children[0]) 
+        const domEl = DOM.children[0]
+        domEl.style.color = "red"
+    </script>
+</body>
+</html>
