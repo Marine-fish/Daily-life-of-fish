@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /*
+            Fri Oct 01 2021 00:00:00 GMT+0800 (中国标准时间)
+            这是传入字符串时间
+        */
+        const date1 = new Date("2021-10-1")
+        console.log(date1)
+        /*
+            Tue Jan 14 2025 16:24:58 GMT+0800 (中国标准时间)
+            这是传入具体的年,月,日,时,分,秒,毫秒
+        */
+        const date2 = new Date(2024, 12, 14, 16, 24, 55, 3311)
+        console.log(date2)
+        /*
+            Sat Jan 03 1970 05:57:05 GMT+0800 (中国标准时间)
+            这是传入一个时间戳
+            时间戳它是一个整数，表示的是 1970年1月1日00：00：00UTC以来的毫秒数
+            1秒等于1千毫秒，意味着它会在1970年时间上加一秒
+        */
+        const date3 = new Date(165425476)
+        console.log(date3)
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const date1 = new Date()
+        /*
+            获取年月日时分秒毫秒的方法
+            因为月份它默认是从0开始的如果要正确的月份需要+1
+            就可以进行按照自己的方式去拼接
+            年2023月4日16时10分40秒23
+            但是显示到个位数时,后面默认不会拼接一个0
+        */
+        const year = date1.getFullYear()
+        const moth = date1.getMonth()
+        const day = date1.getDate()
+        const hour = date1.getHours()
+        const minute = date1.getMinutes()
+        const second = date1.getSeconds()
+        console.log(`年${year}月${moth+1}日${day}时${hour}分${minute}秒${second}`)
+
+        console.log(date1.getDay()) //一周中的第几天 星期天为第一天 所以为0   0-6(周日到周六)
+
+        /*
+            可以获取时间
+            当然也可可以设置时间
+            set方法它会自动校验
+            让你设置一个月份里的号时
+            设置超出当月的天数它就会自动校准
+            超出多少天,就加多少天
+        */
+        console.log(date1.setDate())
+    </script>
+
+</body>
+</html>

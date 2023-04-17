@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //方法一
+        console.log(Date.now())
+        //方法二
+        const date1 = new Date()
+        const date2 = new Date("2050-10-14")
+        console.log(date1.getTime(), date2.getTime())
+        console.log(date1.valueOf(), date2.valueOf())
+        //方法三
+        console.log(+date1)
+      
+        //计算一个方法执行完花费了多少时间
+        const startTime = Date.now()
+        for (let i =0; i < 10002; i++) {
+            console.log(i)
+        }
+        const endTime = Date.now()
+        const result = endTime - startTime
+        console.log(`开始${startTime}---结束时间${endTime}--结果${result}毫秒`)
+    </script>
+
+</body>
+</html>
