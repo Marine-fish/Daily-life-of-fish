@@ -10,12 +10,41 @@
     
     <script>
         /*
-            Sun Apr 16 2023 10:15:23 GMT+0800 (中国标准时间)
-            这个默认通过new出来的Date实例
-            这个是按照RFC 2822标准来设定的
+            Sat Apr 15 2023 16:17:47 GMT+0800 (中国标准时间)
+            这个标准是：RFC 2822标准
         */
-        const date1 = new Date()
+        const date1 = new Date() 
         console.log(date1)
+        /*
+            Sun Oct 01 2023 08:00:00 GMT+0800 (中国标准时间)
+            传入字符串的返回值
+        */
+        const date2 = new Date("2023-10-01")
+        console.log(date2)
+        /*
+            Fri Jun 02 2023 18:44:17 GMT+0800 (中国标准时间)
+            传入具体的年，月，日，时，分，秒，毫秒
+        */
+        const date3 = new Date(2023, 5, 2, 18, 44, 15, 2458)
+        console.log(date3)
+        /*
+            时间戳它是：1970年1月1日00:00:00
+            去掉文字：1970110000
+            Tue Mar 30 1976 13:16:40 GMT+0800 (中国标准时间)
+            可以通过toISOString()方法将new Date()出来的字符串的标准变成ISO 8601标准
+            1973-02-14T19:02:25.421Z
+            YYYY 年份  0000 ～9999
+            MM 月份 01～ 12
+            DD 日 01～ 31
+            T 分割日期和时间，没有
+            HH 小时 00 ～24
+            mm 分钟 00 ～ 59
+            ss 秒 00～ 59
+            .sss 毫秒
+            Z 时区
+        */
+        const date4 = new Date(1681549204)
+        console.log(date4.toISOString())
     </script>
 
 </body>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="box">
+        <h2>我是h2</h2>
+        <div class="container">
+            <p>
+                我是p, <span class="keyName">Per</span> cheers
+            </p>
+        </div>
+    </div>
+
+    <script>
+        //元素导航获取
+        // const documentEl = document.body
+        // const boxDivEl = documentEl.children[0]
+        // const containerBoxEl = boxDivEl.children[1]
+        // const pEl = containerBoxEl.children
+        // const pHtmlEl = pEl[0]
+        // const keyNameSpanEl = pHtmlEl.children
+        // keyNameSpanEl[0].style.color = "red"
+
+        //DOM方法获取
+        const keyNameSpanEl = document.getElementsByClassName("keyName")[0]
+        keyNameSpanEl.style.color = "red"
+        console.log(keyNameSpanEl)
+    </script>
+
+</body>
+</html>
