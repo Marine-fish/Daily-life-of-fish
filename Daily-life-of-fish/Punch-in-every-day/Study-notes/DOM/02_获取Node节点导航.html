@@ -23,20 +23,14 @@
 
     <script>
         /*
-            拿到body对象
-            body里面有很多字对象
-           会放在一个数组里
-           children是一个伪对象
-           拿到body对象里的子对象里的第一个对象
-           拿到子对象再去调用它的属性
+            节点导航(当获取到一个节点时，可以根据这个节点去获取他节点内或者周边的信息)
+            获取body节点里所有的子节点
+            NodeList(6) [text, div.header, text, div.footer, text, script]0: text1: div.header2: text3: div.footer4: text5: script6: textlength: 7[[Prototype]]: NodeList
+            空格也算文本
         */
-        const DOM = document.body
-        console.log(DOM.children[0]) 
-        const domEl = DOM.children[0]
-        domEl.style.color = "red"
-
-        HTMLDivElement
-        HTMLHtmlElement
+       const bodyEl = document.body
+       console.log(bodyEl.childNodes)
     </script>
+
 </body>
 </html>

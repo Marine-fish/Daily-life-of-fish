@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Hello Word</h1>
+        <ui>
+            <li>哈哈哈</li>
+            <li>哈哈哈</li>
+            <li>哈哈哈</li>
+            <li>哈哈哈</li>
+            <li>哈哈哈</li>
+        </ui>
+    </div>
+    <div class="footer">
+        <h5>谢谢</h5>
+    </div>
+
+    <script>
+        /*
+            由于获取节点会连同空格一起获取到
+            导致无用信息过多
+            所以可以获取Element元素
+            Element元素导航(当获取到一个 Element元素时，可以根据这个 Element元素去获取他 Element元素内或者周边的信息)
+            获取body节点里所有的子节点
+            获取body节点里所有的Element元素
+            NodeList(6) [text, div.header, text, div.footer, text, script]0: text1: div.header2: text3: div.footer4: text5: script6: textlength: 7[[Prototype]]: NodeList
+            空格也算文本
+        */
+       const bodyEl = document.body
+       const element = bodyEl.children
+       
+       console.log(bodyEl.childNodes)
+    </script>
+
+</body>
+</html>
