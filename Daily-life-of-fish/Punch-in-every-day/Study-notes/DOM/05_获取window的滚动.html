@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 200px;
+            background-color: hotpink;
+        }
+        .addBtn {
+            position: fixed;
+            right: 0;
+            bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button class="addBtn">回到顶部</button>
+    <div class="box"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script>
+        // //获取window的宽度不包括工具栏
+        // console.log(window.innerWidth)
+        // //获取window的宽度包括工具栏和滚轮轴
+        // console.log(window.outerHeight)
+        // //获取window的X轴的宽度
+        // console.log(window.scrollX)
+        //将页面滚动到指定的x,y轴某个位置
+        //它是在原来的基础上加
+        // console.log(window.scrollBy(x, y))
+        const addBtn = document.querySelector(".addBtn")
+        addBtn.onclick = function() {
+            // window.scrollBy(0, 100)
+            //滚动到具体的指定位置就不会在动了
+             window.scrollTo(0, 0)
+        }
+        // window.onclick = function() {
+        //     console.log(window.scrollY)
+        //     console.log(window.scrollX)
+        // }
+        window.onscroll = function() {
+            console.log(window.scrollY)
+            if (window.scrollY < 600) {
+                addBtn.style.display = "none"
+            } else {
+                addBtn.style.display = "block"
+            }
+        }
+          
+    </script>
+
+</body>
+</html>
