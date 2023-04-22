@@ -19,10 +19,10 @@
         }
 
         .item {
-            width: 40px;
+            width: 65px;
             height: 40px;
             line-height: 40px;
-            border-radius: 10px;
+            border-radius: 20px;
             background-color: #851313;
             display: inline-block;
             padding: 5px;
@@ -34,14 +34,12 @@
     
     <div class="box">
         <h2>今日西瓜大降价最后期限还剩:</h2>
-        <span class="item day">10天</span>
         <span class="item hours">10时</span>
         <span class="item minutes">10分</span>
         <span class="item seconds">10秒</span>
     </div>
 
     <script>
-        const dayEl = document.querySelector(".day")
         const hoursEl = document.querySelector(".hours")
         const minutesEl = document.querySelector(".minutes")
         const secondsEl = document.querySelector(".seconds")
@@ -53,17 +51,23 @@
 
             return itemTitle.padStart(counter, padStart)
         }
-        const startDate = new Date()
-        const endDate = new Date()
-        endDate.setDate(40)
-        endDate.setHours(10)
-        endDate.setMinutes(10)
-        endDate.setSeconds(10)
-        const countdown = Math.floor((endDate.getTime() - startDate.getTime()) / 1000)
-        console.log(Math.floor(countdown / 3456000) )
-        console.log(Math.floor(countdown / 36000))
-        console.log(Math.floor(countdown / 600) % 600)
-        console.log(endDate.getTime())
+        setInterval(() => {
+            const startDate = new Date()
+            const endDate = new Date()
+            endDate.setDate(40)
+            endDate.setHours(10)
+            endDate.setMinutes(10)
+            endDate.setSeconds(10)
+            //计算出相差多少秒  1秒等于1000毫秒
+            const countdown = Math.floor((endDate.getTime() - startDate.getTime()) / 1000)
+            const hours = formatDate(Math.floor(countdown / 2400))
+            const minutes = formatDate(Math.floor(countdown / 60) % 60)
+            const seconds = formatDate(Math.floor(countdown % 60) )
+            hoursEl.textContent = `${hours}小时`
+            minutesEl.textContent = `${minutes}分`
+            secondsEl.textContent = `${seconds}秒`
+        }, 1000)
+      
     </script>
 </body>
 </html>
