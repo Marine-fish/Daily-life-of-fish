@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="addBtn">计数+1</button>
+    <button class="delBtn">计数-1</button>
+    <h3 class="num">0</h3>
+
+    <script>
+        const addBtn = document.querySelector(".addBtn")
+        const delBtn = document.querySelector(".delBtn")
+        const num = document.querySelector(".num")
+        let initialValue = 0
+        addBtn.onclick = function () {
+        //    initialValue+=1
+           initialValue++
+           num.textContent = initialValue
+           console.log(initialValue)
+        }
+        addBtn.onclick =  () =>{
+        //    initialValue+=1 
+           initialValue++
+           num.textContent = initialValue
+           console.log(initialValue)
+        }
+        delBtn.onclick = function () {
+        //    initialValue-=1
+           initialValue--
+           num.textContent = initialValue
+           console.log(initialValue)
+        }
+    </script>
+</body>
+</html>

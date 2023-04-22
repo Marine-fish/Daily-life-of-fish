@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="box">
+        <span>我在前</span>
+        <span>我在后</span>
+    </div>
+
+    <script>
+        const boxDivEl = document.querySelector(".box")
+        /*
+            通过innerHTML对象去新增元素
+            弊端：
+                1.它是字符串
+                2.浏览器去解析的时候会先解析这个字符串，然后发现是一个元素，在解析元素
+                3.浏览器性能比较低
+        */
+        boxDivEl.innerHTML= `
+            <h1>我是新增的h1</h1>
+        `
+        /*
+            创建一个真实的DOM
+        */
+        const h1El = document.createElement("h1")
+        h1El.className = "abc per"
+        h1El.textContent = "我是元素"
+        // boxDivEl.append(h1El)
+        // boxDivEl.before(h1El)
+        boxDivEl.prepend(h1El)
+        // boxDivEl.after(h1El)
+    </script>
+</body>
+</html>

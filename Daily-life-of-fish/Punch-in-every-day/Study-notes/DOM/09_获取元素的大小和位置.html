@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            border: 5px solid  rgb(37, 97, 156);
+            /* box-sizing: border-box; */
+            background-color: hotpink;
+            overflow: auto;
+            /* margin: 20px 40px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        SDK 底层已经自动实现了断点续传的功能，因此暂停的本质即是调用uploader.cancel()这个方法。同理，暂停后的恢复上传也是调用初始的tcVod.upload方法，区别在于恢复上传时调用该方法的参数，应该是之前缓存起来的参数（例如可以在启动上传时全局变量存储一份参数，上传完成后再清掉）。
+    </div>
+
+    <script>
+        const boxDivEl = document.querySelector(".box")
+        //获取元素宽度
+        /*
+            它不会把滚轮轴的宽度算进去
+            它是内容宽度加上padding的宽度
+            如果加上了 box-sizing: border-box;
+            则是实际的内容 = 宽高 - padding - border
+            实际的内容 + padding
+        */
+        console.log(boxDivEl.clientWidth)
+        //整个盒子所有的宽度
+        console.log(boxDivEl.offsetWidth)
+        //距离父元素的高度
+        console.log(boxDivEl.offsetTop)
+        //距离父元素的左宽度度
+        console.log(boxDivEl.offsetLeft)
+        //可滚动的高度
+        console.log(boxDivEl.clientHeight)
+        //滚动出去的高度
+        console.log(boxDivEl.clientTop)
+    </script>
+</body>
+</html>

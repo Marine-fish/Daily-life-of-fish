@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" data-age="23" data-house="none">
+        <!-- <h2>我是h2</h2>
+        <div class="container">
+            <p>
+                我是p, <span class="keyName">Per</span> cheers
+            </p>
+        </div> -->
+    </div>
+
+    <script>
+        /*
+            如果是非标准的属性
+            就需要加上data-前缀（这个是HTML5新增的）
+            然后拿到元素后通过dataset属性（是个对象）
+            就能拿到非标准属性里的值了
+            在微信小程序就是这样设定的
+        */
+        const boxDivEl = document.querySelector(".box")
+        console.log(boxDivEl.dataset.age)
+        console.log(boxDivEl.dataset.house)
+    </script>
+</body>
+</html>

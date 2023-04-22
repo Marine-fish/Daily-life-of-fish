@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">移除</button>
+    <button class="btn" onclick="click()">移除+1</button>
+    <button class="addBtn">复制</button>
+    <div class="box">
+        <h3>ღ( ´･ᴗ･` )比心</h3>
+    </div>
+
+    <script>
+        const btn = document.querySelector(".btn")
+        const boxDivEl = document.querySelector(".box")
+        btn.addEventListener("click", () => {
+            boxDivEl.remove()
+        })
+        // btn.onclick = function() {
+        //     boxDivEl.remove()
+        // }
+        const addBtnDivEl = document.querySelector(".addBtn")
+        addBtnDivEl.onclick = function() {
+           const newNode = boxDivEl.cloneNode(true)
+           boxDivEl.append(newNode)
+        }
+    </script>
+</body>
+</html>
