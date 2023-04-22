@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="itemTitle"></h2>
+
+    <script>
+        function formatDate(itemTitle, counter, padStart) {
+            itemTitle = itemTitle + ""
+            counter = counter || 2
+            padStart = padStart || "0"
+
+            return itemTitle.padStart(counter, padStart)
+        }
+        const itemTitle = document.querySelector(".itemTitle")
+        setInterval(() => {
+            const date = new Date()
+            const year = date.getFullYear()
+            const month = formatDate(date.getMonth()+1)
+            const day = formatDate(date.getDate())
+            const hours = formatDate(date.getHours())
+            const minutes = formatDate(date.getMinutes())
+            const seconds = formatDate(date.getSeconds())
+            const itemContext = `
+                ${year}-${month}- ${day}-${hours}:${minutes}:${seconds}
+            `
+            itemTitle.textContent = itemContext
+        }, 1000)
+           
+        
+      
+    </script>
+</body>
+</html>

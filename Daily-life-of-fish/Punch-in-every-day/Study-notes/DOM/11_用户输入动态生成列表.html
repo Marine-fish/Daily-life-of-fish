@@ -7,19 +7,21 @@
     <title>Document</title>
 </head>
 <body>
+    <h2>祝你好运~</h2>
     <ul class="dataList"></ul>
 
     <script>
         const dataListEl = document.querySelector(".dataList")
-        
-        while(true) {
+        const isResult = true
+        while(isResult) {
             let userInput = prompt("请您输入想要展示的列表")
             if (!userInput) {
-               break
+                isResult = false
+            } else {
+                let liData = document.createElement("li")
+                liData.textContent = userInput
+                dataListEl.append(liData)
             }
-            let liData = document.createElement("li")
-            liData.textContent = userInput
-            dataListEl.append(liData)
         }
        
     </script>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            margin: auto auto;
+            width: 500px;
+            height: 200px;
+            text-align: center;
+            border-radius: 25px;
+            color: rgb(255, 38, 0);
+            -webkit-box-shadow: 2px 13px 38px 0px rgba(66,57,66,1);
+            -moz-box-shadow: 2px 13px 38px 0px rgba(66,57,66,1);
+            box-shadow: 2px 13px 38px 0px rgba(66,57,66,1);
+        }
+
+        .item {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 10px;
+            background-color: #851313;
+            display: inline-block;
+            padding: 5px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <h2>今日西瓜大降价最后期限还剩:</h2>
+        <span class="item day">10天</span>
+        <span class="item hours">10时</span>
+        <span class="item minutes">10分</span>
+        <span class="item seconds">10秒</span>
+    </div>
+
+    <script>
+        const dayEl = document.querySelector(".day")
+        const hoursEl = document.querySelector(".hours")
+        const minutesEl = document.querySelector(".minutes")
+        const secondsEl = document.querySelector(".seconds")
+
+        function formatDate(itemTitle, counter, padStart) {
+            itemTitle = itemTitle + ""
+            counter = counter || 2
+            padStart = padStart || "0"
+
+            return itemTitle.padStart(counter, padStart)
+        }
+        const startDate = new Date()
+        const endDate = new Date()
+        endDate.setDate(40)
+        endDate.setHours(10)
+        endDate.setMinutes(10)
+        endDate.setSeconds(10)
+        const countdown = Math.floor((endDate.getTime() - startDate.getTime()) / 1000)
+        console.log(Math.floor(countdown / 3456000) )
+        console.log(Math.floor(countdown / 36000))
+        console.log(Math.floor(countdown / 600) % 600)
+        console.log(endDate.getTime())
+    </script>
+</body>
+</html>
