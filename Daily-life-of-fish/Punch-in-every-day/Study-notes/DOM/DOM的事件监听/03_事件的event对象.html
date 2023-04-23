@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 500px;
+            background-color: hotpink;
+        }
+
+        span {
+            width: 200px;
+            height: 200px;
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <span></span>
+    </div>
+
+    <script>
+        const boxDivEl = document.querySelector(".box")
+        const spanEl = document.querySelector("span")
+        const bodyEl = document.body
+
+        /*
+            浏览器默认回调点击事件这些函数时
+            会传入一个event对象
+            这个对象包含了所有的事件方法和对象
+        */
+        boxDivEl.onclick = (event)  => {
+            //事件的类型
+            // console.log("boxDivEl发生了点击", event.type)
+            //事件的阶段(最开始有最上层的向内部传递事件(1), 内部接收到传递过来的事件(事件的捕获2), 最后由内部向顶部传递事件(事件的冒泡3))
+            // console.log("boxDivEl发生了点击", event.eventPhase)
+            //事件元素中的位置
+            // console.log("boxDivEl发生了点击", event.offsetX, event.offsetY)
+            //事件的客户端的位置
+            // console.log("boxDivEl发生了点击", event.clientX, event.clientY)
+            //
+            console.log("boxDivEl发生了点击", event.pageX, event.pageY)
+            console.log("boxDivEl发生了点击", event.screenX, event.screenY)
+
+            /*
+                如果是在一个定义了事件方法的元素上去执行
+                那么两个对象拿都是同一个元素
+                如果是通过事件冒泡方式去执行
+                那么target对象会去拿点击后的目标元素
+                currentTarget对象会去拿执行事件方法的目标对象
+            */
+            console.log("点击的目标元素", event.target)
+            console.log("执行了事件方法的目标元素", event.currentTarget)
+
+
+        }
+
+        spanEl.onclick = (event)  => {
+            console.log("spanEl发生了点击")
+        }
+    </script>
+</body>
+</html>

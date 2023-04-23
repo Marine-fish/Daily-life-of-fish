@@ -50,6 +50,13 @@
         // spanEl.addEventListener("click", () => console.log("spanEl元素发生了点击"))
         // bodyEl.addEventListener("click", () => console.log("bodyEl元素发生了点击"))
 
+        /**
+         * addEventListener(事件名称, 事件方法, 布尔值)
+         * 当布尔值为true时
+         * 这当点击该元素,执行内部定以的方法时
+         * 其包裹的子元素可以接收到包裹自己的夫元素的事件
+         * 这样的过程就称之为事件捕获
+        */
         boxDivEl.addEventListener("click", () => console.log("boxDivEl元素发生了点击"), true)
         spanEl.addEventListener("click", () => console.log("spanEl元素发生了点击"), true)
         bodyEl.addEventListener("click", () => console.log("bodyEl元素发生了点击"), true)
