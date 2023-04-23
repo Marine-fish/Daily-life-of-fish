@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 500px;
+            background-color: hotpink;
+        }
+
+        span {
+            width: 200px;
+            height: 200px;
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <!-- 元素内部定义点击事件 -->
+        <!-- <span onclick="console.log('span元素内部发生了点击') "></span> -->
+        <span></span>
+    </div>
+
+    <script>
+        /*
+            事件流
+            当一个元素发生了点击事件时
+            不仅被点击的元素发生了点击事件
+            它被包裹的父级的元素也会发生同样的点击
+            这一层层的事件传递就形成了事件流
+        */
+        const boxDivEl = document.querySelector(".box")
+        const spanEl = document.querySelector("span")
+
+        //定义在外面的点击事件
+        //通过onclick属性进行添加
+        //缺点不能绑定多个事件,绑定多个最新的事件会替换掉上一个的事件
+        // function divEvent() {
+        //     console.log("div元素的外部事件")
+        // }
+        // boxDivEl.onclick = divEvent
+
+        // function spanEvent() {
+        //     console.log("span元素的外部事件")
+        // }
+        // spanEl.onclick = spanEvent
+        
+        /*
+            通过addEventListener(事件名, 事件方法)
+            可以添加多个方法,并且多个方法都不会互相覆盖
+        */
+        boxDivEl.addEventListener("click", () => {
+            console.log("div元素的外部事件1")
+        })
+
+        boxDivEl.addEventListener("click", () => {
+            console.log("div元素的外部事件2")
+        })
+
+        boxDivEl.addEventListener("click", () => {
+            console.log("div元素的外部事件3")
+        })
+    </script>
+</body>
+</html>

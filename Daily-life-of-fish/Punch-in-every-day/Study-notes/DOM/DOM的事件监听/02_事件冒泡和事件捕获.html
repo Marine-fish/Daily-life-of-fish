@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 500px;
+            background-color: hotpink;
+        }
+
+        span {
+            width: 200px;
+            height: 200px;
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <span></span>
+    </div>
+
+    <script>
+        const boxDivEl = document.querySelector(".box")
+        const spanEl = document.querySelector("span")
+        const bodyEl = document.body
+        /**
+         * 当你点击某个元素时,会触发定义好的事件方法
+         * 如果这个元素有被父级元素所包裹
+         * 则父级元素也会触发定义在父级内部的方法
+         * 这样会一层一层的向外面所包裹的父级元素传递
+         * 这样的传递过程就称之为事件冒泡
+        */
+        // boxDivEl.addEventListener("click", () => console.log("boxDivEl元素发生了点击"))
+        // spanEl.addEventListener("click", () => console.log("spanEl元素发生了点击"))
+        // bodyEl.addEventListener("click", () => console.log("bodyEl元素发生了点击"))
+
+        boxDivEl.addEventListener("click", () => console.log("boxDivEl元素发生了点击"), true)
+        spanEl.addEventListener("click", () => console.log("spanEl元素发生了点击"), true)
+        bodyEl.addEventListener("click", () => console.log("bodyEl元素发生了点击"), true)
+    </script>
+</body>
+</html>
