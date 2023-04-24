@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 500px;
+            background-color: hotpink;
+        }
+
+        span {
+            width: 200px;
+            height: 200px;
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <span></span>
+    </div>
+
+    <script>
+        const boxDivEl = document.querySelector(".box")
+        const spanEl = document.querySelector("span")
+        const bodyEl = document.body
+        //事件的捕获
+        boxDivEl.addEventListener("click", () => console.log("boxDivEl元素发生了捕获"), true)
+        spanEl.addEventListener("click", () => console.log("spanEl元素发生了捕获"), true)
+        bodyEl.addEventListener("click", () => console.log("bodyEl元素发生了捕获"), true)
+
+        //事件的冒泡
+        boxDivEl.addEventListener("click", () => console.log("boxDivEl元素发生了冒泡"))
+        spanEl.addEventListener("click", () => console.log("spanEl元素发生了冒泡"))
+        bodyEl.addEventListener("click", () => console.log("bodyEl元素发生了冒泡"))
+
+        boxDivEl.onclick = function(event) {
+            //event对象的stopPropagation()方法
+            //阻止了点击div元素的事件冒泡
+            //所以由div接收到顶上的传递的事件时,就不会再往自己上面传递了
+            // event.stopPropagation()
+
+            event.preventDefault()
+        }
+    </script>
+</body>
+</html>
