@@ -74,6 +74,62 @@
         spanEl.onclick = (event)  => {
             console.log("spanEl发生了点击")
         }
+
+        // function todayEndTimestamp() {
+        //     const timestamp = Math.floor(new Date(new Date().setHours(23, 59, 59, 999)).getTime() / 1000)
+        //     return timestamp
+        // }
+        // const timeStamp = todayEndTimestamp()
+
+        /**
+         * 上月天数
+         * @returns {number}
+         */
+        function lastMonthDats() {
+            const date = new Date()
+            const year = date.getFullYear()
+            //  上个月月份
+            let month = (date.getMonth() + 1) - 1 //  0-11 表示 1月-12月
+            //  0 表示12月
+            month = month || 12
+            //  30天的月份
+            const arr30 = [4, 6, 9, 11]
+            //  31天的月份
+            const arr31 = [1, 3, 5, 7, 8, 10, 12]
+            if (arr30.indexOf(month) !== -1) {
+                //  上个月是 30 天
+                return 30
+            } else if (arr31.indexOf(month) !== -1) {
+                //  上个月是 31 天
+                return 31
+            } else {
+                //  2月
+                if (isRunYear(year)) {
+                return 29
+                } else {
+                return 28
+                }
+            }
+        }
+        function lastMonthTimestamp() {
+            //  一天的秒数
+            const MillisecondsADay = 24 * 60 * 60
+
+            const date = new Date()
+            date.setDate(1)
+            date.setHours(0, 0, 0, 0)
+            //  当月开始时间戳
+            const timeStamp = date.getTime() / 1000
+            //  上个月的天数
+            const days = lastMonthDats()
+            //  上月开始时间戳
+            const lastMonthStart = timeStamp - (MillisecondsADay * days)
+            //  上月结束时间戳
+            const lastMonthEnd = timeStamp - 1
+            return [lastMonthStart, lastMonthEnd]
+        }
+        const time = lastMonthTimestamp()
+        console.log(time)
     </script>
 </body>
 </html>

@@ -53,8 +53,10 @@
             //event对象的stopPropagation()方法
             //阻止了点击div元素的事件冒泡
             //所以由div接收到顶上的传递的事件时,就不会再往自己上面传递了
+            //冒泡和捕获都可以阻止
             // event.stopPropagation()
 
+            //取消事件的默认行为
             event.preventDefault()
         }
     </script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button class="btn">按钮</button>
+
+    <script>
+        /*
+            EventTarget类
+            所有的docent元素里的默认方法都继承于window
+            而window里所有的默认方法都继承于 EventTarget类
+            它主要： 添加，删除， 派发event事件
+            addEventListener
+            removeEventListener
+            dispatchEvent 派发某个事件类型到EventTarget上
+        */
+
+        const btnEl = document.querySelector(".btn")
+        const getEvent = () => console.log("按钮点击事件")
+        btnEl.addEventListener("click", getEvent)
+        setTimeout(() => btnEl.removeEventListener("click", getEvent), 5000)
+        
+    </script>
+</body>
+</html>
