@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            color: rgb(255, 30, 0);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>我是要变色1</li>
+        <li>我是要变色2</li>
+        <li>我是要变色3</li>
+        <li>我是要变色4</li>
+        <li>我是要变色5</li>
+        <li>我是要变色6</li>
+    </ul>
+
+    <script>
+        const bodyEl = document.body
+        const liEl = document.querySelectorAll("li")
+        // const liEvent = function(e) {
+        //    e.currentTarget.style.color = "red"
+        // }
+        // liEl.forEach((item, index) => {
+        //     liEl[index].addEventListener("click", liEvent, true)
+        // })
+        // const bodyEvent = function() {
+            
+        // }
+        // bodyEl.addEventListener("click", bodyEvent)
+        bodyEl.onclick = function(e) {
+            console.log("li", e.target)
+            e.target.classList.add("active")
+        }
+    </script>
+</body>
+</html>

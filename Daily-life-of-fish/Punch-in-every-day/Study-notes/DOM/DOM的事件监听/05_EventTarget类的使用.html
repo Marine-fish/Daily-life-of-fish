@@ -22,10 +22,14 @@
         */
 
         const btnEl = document.querySelector(".btn")
-        const getEvent = () => console.log("按钮点击事件")
-        btnEl.addEventListener("click", getEvent)
-        setTimeout(() => btnEl.removeEventListener("click", getEvent), 5000)
+        // const getEvent = () => console.log("按钮点击事件")
+        // btnEl.addEventListener("click", getEvent)
+        // setTimeout(() => btnEl.removeEventListener("click", getEvent), 5000)
         
+        const perEvent = () => console.log("自定义事件发生了")
+        btnEl.addEventListener("per", perEvent)
+        setTimeout(() =>  btnEl.dispatchEvent(new Event("per")), 5000)
+
     </script>
 </body>
 </html>
