@@ -12,7 +12,7 @@
     </style>
 </head>
 <body>
-    <ul>
+    <ul class="ulEl">
         <li>我是要变色1</li>
         <li>我是要变色2</li>
         <li>我是要变色3</li>
@@ -22,7 +22,7 @@
     </ul>
 
     <script>
-        const bodyEl = document.body
+        const ulEl = document.querySelector(".ulEl")
         const liEl = document.querySelectorAll("li")
         // const liEvent = function(e) {
         //    e.currentTarget.style.color = "red"
@@ -34,10 +34,13 @@
             
         // }
         // bodyEl.addEventListener("click", bodyEvent)
-        bodyEl.onclick = function(e) {
+        ulEl.onclick = function(e) {
             console.log("li", e.target)
             e.target.classList.add("active")
         }
+
+
+
     </script>
 </body>
 </html>

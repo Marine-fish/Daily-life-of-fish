@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+    <script>
+    //     as HTMLDivElement
+        const boxEl = document.querySelector(".box") 
+
+        boxEl.onclick = () => console.log("点击了div盒子")
+        boxEl.oncontextmenu = (e) => {
+            console.log("点击了右键了啊")
+            //如果不想右键的默认行为可以阻止掉
+            e.preventDefault()
+        }
+        let isTrue = false
+        boxEl.onmousedown = (e) => {
+            console.log("鼠标按下去咯")
+            isTrue = true
+        }
+        boxEl.onmouseup = (e) => {
+            console.log("鼠标抬起来咯")
+            isTrue = false
+        }
+        boxEl.onmousemove = (e) => {
+            if (isTrue) {
+                console.log("鼠标在移动咯")
+            }
+        }
+    </script>
+</body>
+</html>
