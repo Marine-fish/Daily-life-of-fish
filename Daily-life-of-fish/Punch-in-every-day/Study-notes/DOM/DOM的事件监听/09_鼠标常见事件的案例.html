@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+           display: inline-block;
+        }
+
+        .box button {
+            height: 50px;
+            background-color: #fff;
+        }
+
+        .box button:hover {
+            color: #fe3434;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+       <button>I</button>
+       <button>love</button>
+       <button>you</button>
+       <h1 class="h1El">请将鼠标移动到每个按钮上</h1>
+    </div>
+
+    <script>
+        const boxEl = document.querySelector(".box")
+        const h1El = document.querySelector(".h1El")
+        boxEl.onmouseover = (e) => {
+            h1El.textContent = e.target.textContent
+        }
+         boxEl.onmouseout = () => {
+            h1El.textContent = "请将鼠标移动到每个按钮上"
+         }
+    </script>
+</body>
+</html>
