@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <input type="text"> -->
+
+    <form action="">
+        <input type="text">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        <button type="reset">重置</button>
+        <button type="submit">提交</button>
+    </form>
+       
+    <script>
+        const inputEl = document.querySelector("input")
+
+        // //在输入框输入内容的时候会触发里面的事件
+        // inputEl.oninput = () => console.log("获取输入的内容", inputEl.value)
+        // //当输入框失去焦点时,才会触发这个方法
+        // inputEl.onchange = () => console.log("获取输入完成的内容", inputEl.value)
+
+        const formEl = document.querySelector("form")
+        formEl.onreset = () => console.log("表单发生了重置事件")
+        formEl.onsubmit = (e) => {
+            //因为浏览器默认表单提交,浏览器会默认由刷新
+            //可以通过event事件里的方法去阻止浏览器默认行为
+            e.preventDefault()
+            console.log("表单发生了提交事件")
+        }
+    </script>
+</body>
+</html>

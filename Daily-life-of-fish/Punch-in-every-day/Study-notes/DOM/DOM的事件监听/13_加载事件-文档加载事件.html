@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        /*
+            因为代码的执行顺序是从上到下依次执行(除了定指了特定的规则外)
+            所以在元素前面获取元素
+            元素还没加载到,所以为一个null
+            导致获取不到元素
+        */
+        // const boxDivEl = document.querySelector(".box")
+        // boxDivEl.style.backgroundColor = "hotpink"
+        // window.onload = () => {
+        //     /*
+        //         有一个属性onload
+        //         当文档加载完成后会调用属性的value(是个方法)
+        //         就可以解决了后面元素还未加载完成
+        //         导致无法执行下一步操作
+        //     */
+        //     const boxDivEl = document.querySelector(".box")
+        //     boxDivEl.style.backgroundColor = "hotpink"
+        // }
+
+        window.onresize = () => console.log("窗口发生了变化的事件")
+    </script>
+
+    <div class="box"></div>
+</body>
+</html>

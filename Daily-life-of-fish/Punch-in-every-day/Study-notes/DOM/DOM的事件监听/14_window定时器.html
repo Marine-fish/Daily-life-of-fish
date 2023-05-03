@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button class="TimeOut">取消setTimeout执行</button>
+    <button class="valOut">取消setInterval执行</button>
+
+    <script>
+        //setTimeout是延迟指定几秒后再执行里面的代码块,不传入第二个参数就会立即执行代码块
+        const valId= setTimeout(() => {console.log("first")}, 5000)
+
+        //setInterval是延迟几秒后重复执行代码块, 不传入第二个参数就会立即重复执行代码块
+        const outId = setInterval(() => {console.log("val")}, 5000)
+
+        /*
+            通过拿到setTimeout的返回值
+            然后调用clearTimeout方法
+            传入setTimeout的返回值
+            就可以取消掉setTimeout里面要执行的代码块
+        */
+        const TimeOutEl = document.querySelector(".TimeOut")
+        const valOutEl = document.querySelector(".valOut")
+        TimeOutEl.onclick = () => clearTimeout(outId)
+        valOutEl.onclick = () => clearInterval(outId)
+    </script>
+</body>
+</html>
