@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .showContext {
+            padding: 0 20px;
+            margin: 0 auto;
+            background-color: #c0b9b9;
+            border-radius: 36px;
+        }
+
+        img {
+            width: 50px;
+           border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="showContext">
+        <img src="https://p2.music.126.net/_Ej6TahANI-aqsJCTf7uCA==/109951163240060789.jpg" alt="">
+        <span>呜啦啦欸,丫吼</span>
+    </div>
+
+    <script>
+        const list = [
+            {
+                src: "https://p1.music.126.net/PR4GO5PKbw8zR7OszdT4ug==/109951168155491603.jpg",
+                test: "青春恰自来"
+            },
+            {
+                src: "https://p2.music.126.net/Y3GdVYAd3zAWIRfHLFfuAQ==/109951168212216948.jpg",
+                test: "爱一人到极致的样子看一次就够了"
+            },
+            {
+                src: "https://p2.music.126.net/hLv4YJOiLTE16LlRpdxZgQ==/109951164152314267.jpg",
+                test: "用音乐保持你每天的嘴角上扬"
+            },
+        ]
+        /**
+         * 第一步拿到要动态修改的整体框架
+         * 第二步拿到要动态修改的单个数据
+         * 第三步利用定时器每过三秒就更替一次list数组里的数据
+         * 通过动态索引去拿数据
+        */
+       const showContextEl = document.querySelector(".showContext")
+       const imgEl = showContextEl.querySelector("img")
+       const textEl = showContextEl.querySelector("span")
+       let activeIndex = 0
+       setInterval(() => {
+        imgEl.src = list[activeIndex].src
+        textEl.textContent = list[activeIndex].test
+
+        if (list.length > activeIndex) {
+            activeIndex++
+            if (list.length === activeIndex) {
+                activeIndex = 0
+                
+            }
+        } 
+       }, 3000)
+    </script>
+</body>
+</html>

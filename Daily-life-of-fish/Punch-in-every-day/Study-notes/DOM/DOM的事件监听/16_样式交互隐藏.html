@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+           margin: 0;
+           background-color: hotpink;
+        }
+        .div {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: rgb(109, 108, 108);
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            width: 500px;
+            background-color: #2b2929;
+            position: relative;
+        }
+
+        .showContext {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: #c0b9b9;
+            border-radius: 36px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        img {
+            width: 50px;
+           border-radius: 30px;
+        }
+
+        .open {
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            background-color: #fff;
+            line-height: 50px;
+            text-align: center;
+            color: rgb(201, 49, 22);
+            position: absolute;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    我在body的内容哦
+    <div class="div">
+        <div class="box">
+            <span class="open">关闭</span>
+            <div class="showContext">
+                <img src="https://p2.music.126.net/_Ej6TahANI-aqsJCTf7uCA==/109951163240060789.jpg" alt="">
+                <span>呜啦啦欸,丫吼</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const divEl = document.querySelector(".div") 
+        const openEl = document.querySelector(".open")
+        // setTimeout(() => {
+        //     divEl.style.display = "none"
+        // }, 3000)
+        openEl.onclick = () => divEl.style.display = "none"
+    </script>
+</body>
+</html>
