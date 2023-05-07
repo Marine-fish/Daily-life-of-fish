@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const obj = {
+            name: "per",
+            age: 23,
+            eating: {
+                food: "banana",
+                water: "koel"
+            }
+        }
+
+        //将这个对象存入localStorage里
+        localStorage.setItem("obj", obj)
+        
+        //将存入在localStorage的值取出来 值为[object Object]
+        //因为将一个复杂的对象存入localStorage里面会被转成[object Object]
+        console.log(localStorage.getItem("obj"))
+
+        //这个时候就需要将obj对象进行序列化在进行存储
+        //最后它会将obj对象转化成字符串形式的JSON格式存入localStorage里
+        localStorage.setItem("objJSON", JSON.stringify(obj) )
+
+        //再取出来时,因为obj对象已经被化成字符串形式的JSON格式
+        //所以要通过反序列方法转化成一个obj对象
+        console.log( JSON.parse(localStorage.getItem("objJSON")))
+    </script>
+</body>
+</html>

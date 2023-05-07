@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>修改history值</button>
+    <button class="ban">返回上一级</button>
+    <button class="go">向前上一级</button>
+    <script>
+        /**
+         * 以前都是后端渲染的
+         * 当一个URL地址或则网页发生了刷新
+         * 都会发起网络请求
+         * 
+         * 现在都是前端渲染
+         * 通过前端路由
+         * 前端路由核心(修改了URL, 但是页面不会刷新)
+         * 怎样让修改了URL但不会让网页发生刷新喃?
+         * 第一种方式: 修改hash值
+         * 第二种方式: 修改history
+        */
+
+        //history对应的属性
+        console.log(history.length, "浏览器历史记录条数")
+        console.log(history.state, "保存当前的状态值")
+
+        //修改history值
+        //history.pushState的第一个参数和第二个参数暂时用不上,第三个参数是传入一个地址, 当修改history时,网页并不会进行刷新
+        const btnEl = document.querySelector("button")
+        btnEl.onclick = () => history.pushState({"name": "per", "age": 23}, "", "/baidu")
+
+        const banEl = document.querySelector(".ban")
+        banEl.onclick = () => history.back()
+        const goEl = document.querySelector(".go")
+        goEl.onclick = () => history.go(1)
+    </script>
+</body>
+</html>

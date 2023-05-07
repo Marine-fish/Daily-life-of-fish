@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const obj = {
+            name: "per",
+            age: 23,
+            eating: {
+                food: "banana",
+                water: "koel"
+            },
+            toJSON: () => "789"
+        }
+         //可以在转化过程中修改value的值, 只能修改value
+        // console.log(JSON.stringify(obj, (key, value) => {
+        //     if (key === "water") {
+        //         value = "123"
+        //     }
+        //     if (value === 23) {
+        //         value = 24
+        //     }
+        //     return value
+        // }, 4) )
+
+        //如果obj对象里key有toJSON的方法那么在转化后,直接返回方法里的内容
+        console.log(JSON.stringify(obj))
+    </script>
+</body>
+</html>

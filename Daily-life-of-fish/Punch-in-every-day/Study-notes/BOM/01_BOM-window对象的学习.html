@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        span {
+            color: -webkit-link;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://ke.qq.com/" target="_blank">去往学习乐园</a>
+    
+    <!-- 利用window全局对象里的open方法,任意一个元素变成a元素功能 -->
+    <span>span元素模拟a标签功能去往学习乐园</span>
+    <button>关闭窗口</button>
+    <button class="btn">切换hash值</button>
+
+
+
+    <script>
+        /**
+         * 在ECMAScript规范里: 全局对象 => globalThis
+         * 在浏览器来说 => window
+         * 在Node来说 => global
+         * 所以打印globalThis 和打印 window 都是一样的
+        */
+        console.log(window)
+        console.log(globalThis)
+
+        /**
+         * 如果从窗口角度来看
+         * 浏览器能获取到浏览器的窗口信息
+         * 但是单纯从全局对象来讲是没有浏览器窗口这个方法
+         * 这个是在浏览器角度来看的特殊场景下
+         * 
+         * 浏览器窗口
+        */
+       console.log(window.outerHeight)
+
+       const spanEl = document.querySelector("span")
+       spanEl.onclick = () => window.open("https://ke.qq.com/", "_blank")
+    
+       const btnEl = document.querySelector("button")
+       btnEl.onclick = () => window.close()
+
+       window.onblur = () => console.log("窗口失去焦点")
+       window.onfocus = () => console.log("窗口获取焦点")
+
+       const btnCEl = document.querySelector(".btn")
+       btnCEl.onclick = () => window.location.hash = "#per"
+       window.onhashchange = () => {
+        console.log("hash值发生了改变")
+        console.log(window.location.hash, "获取到hash值") 
+       }
+    </script>
+</body>
+</html>
