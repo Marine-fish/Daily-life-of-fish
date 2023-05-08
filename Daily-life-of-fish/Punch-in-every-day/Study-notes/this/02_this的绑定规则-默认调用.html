@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function foo() {
+            console.log("foo:", this)
+        }
+
+        //默认调用指向window
+        foo()
+
+        //通过对象里定义一个函数,再将一个对象里的函数复制给你一个变量
+        /*
+            相当于把obj对象里的函数复制出来给obj1
+            通过obj1去调用
+            本质上就是一个函数的普通调用
+            就好比有个成语叫借剑杀人
+        */
+        const obj = {
+            name: "per",
+            eating: function() {
+                console.log("obj:", this)
+            }
+        }
+        const obj1 = obj.eating
+        obj1()
+
+        //这个虽然是高阶函数,但是本质上还是默认调用的
+        function boz() {
+            console.log("boz:", this)
+        }
+        function bar(fn) {
+            fn()
+        }
+        bar(boz)
+    </script>
+</body>
+</html>
