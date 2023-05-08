@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        /*
+            通过new关键字执行的函数
+            会在该执行函数的内部创建一个空对象
+            并且this会指向这个空对象
+            可以在该函数内部执行this的操作
+            在没有明确return一个非空对象时
+            会默认将这个空对象返回出去
+        */
+        function foo() {
+            this.age = 23
+            // console.log("foo:", this)
+           
+            
+        }
+
+      console.log(new foo())  
+    </script>
+</body>
+</html>

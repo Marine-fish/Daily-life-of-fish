@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //通过对象调用的方式将this隐式绑定
+        function bar() {
+            console.log("bar:", this)
+        }
+
+        const obj = {
+            name: "per",
+            bar
+        }
+
+        obj.bar()
+
+        function foo() {
+            console.log("foo:", this)
+        }
+
+        const boj1 = {
+            age: 23,
+            foo
+        }
+
+        const obj2 = {
+            from: "china",
+            eating: foo
+        }
+
+        obj2.eating()
+    </script>
+</body>
+</html>
