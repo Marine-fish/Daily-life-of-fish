@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //将一个函数复制一个变量,在把函数复制给一个变量过程中,通过bind方法绑定obj
+        //这样调用obj1,就是在执行foo函数通过bind绑定后的返回值了
+        const obj = {
+            name: "per",
+            age: 23
+        }
+
+        function foo(name, age) {
+            console.log("foo:", this)
+            console.log("foo:", name, age)
+        }
+
+        const obj1 = foo.bind(obj, "Mike", 25)
+        obj1()
+    </script>
+</body>
+</html>
