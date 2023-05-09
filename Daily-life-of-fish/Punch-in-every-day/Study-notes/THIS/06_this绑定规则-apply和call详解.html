@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //call的参入实参的方式是列表   apply的参入实参方式是以数组方式   他们传入自定义的绑定参数时,会呈现包装类
+        function bar(name, age) {
+            console.log("bar:", this)
+            console.log("bar:", name, age)
+        }
+
+        bar("per", 23)
+
+        bar.call("obj", "Mike", 25)
+
+        bar.apply("obj1", ["Jack", 30])
+    </script>
+</body>
+</html>
