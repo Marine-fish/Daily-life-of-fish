@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 普通函数和箭头函数的区别
+         * 1.普通函数里面绑定有this,arguments
+         * 2.能通过new关键字一起使用
+         * 箭头函数
+         * 1.不绑定this,arguments
+         * 2.不能和new关键字一起使用 因为箭头函数没有原型
+         * 3.箭头函数因为没有绑定this,所以如果用this的时候它会往自己的上层作用域去寻找
+         * 4.它不能通过显示绑定去指定this绑定对象
+        */
+        function foo(name, age) {
+            console.log(name, age, this, arguments)
+        }
+
+        (name, age) => {
+            console.log(name, age)
+        }
+    </script>
+</body>
+</html>

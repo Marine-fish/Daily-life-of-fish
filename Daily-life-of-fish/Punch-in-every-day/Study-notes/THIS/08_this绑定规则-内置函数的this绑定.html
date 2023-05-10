@@ -7,13 +7,32 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button>我是按钮</button>
 
     <script>
+        /*
+            对于内置函数的this绑定
+            因为this绑定是当函数执行后才能确定绑定谁
+            所以内置函数是有内部调用无法确定this的绑定对象
+            forEach函数比较特殊,它第二个参数可以传入this绑定对象
+        */
         setTimeout(function() {
             console.log("time:", this)
         }, 3000)
         
+        const arr = ["1", "2", "3", "4"]
+        arr.forEach(function(item, index) {
+            console.log(item, index, arr, this)
+        } , "哈哈哈哈" )
+
+        const btnEl = document.querySelector("button")
+        btnEl.onclick = function() {
+            console.log("btnEl", this)
+        }
+
+        btnEl.addEventListener("click", function() {
+            console.log("click", this)
+        })
     </script>
 </body>
 </html>
