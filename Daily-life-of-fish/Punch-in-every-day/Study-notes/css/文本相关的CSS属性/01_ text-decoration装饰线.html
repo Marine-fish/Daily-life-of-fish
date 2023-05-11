@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            /* 可以消除a标签默认的下划线 */
+            text-decoration: none;
+        }
+
+        .price {
+            color: #000;
+        }
+
+        .price-data {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .old-price {
+            text-decoration:  line-through;
+            color: #da2828;
+        }
+
+        .new-title {
+            color: #d48b8b;
+        }
+
+        .new-price {
+            font-size: 25px;
+            font-weight: 700;
+            color: #f32f2f;
+        }
+
+        .div {
+            /* 下划线 */
+            text-decoration: underline;
+            /* 上划线 */
+            text-decoration: overline;
+            /* 中划线 */
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    
+    <a href="#">暂无链接</a>
+    <div class="price-data">
+        <div>
+            <div>
+                原价: <span class="old-price"><span class="price">499¥</span></span>
+                <span class="new-title">现在价格:</span> <span class="new-price">199¥</span>
+            </div>
+        </div>
+    </div>
+    <div class="div">我是div元素</div>
+</body>
+</html>

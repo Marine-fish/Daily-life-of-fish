@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  text-align: center是控制在块级元素里的行内元素的对齐方式 */
+        .div {
+            text-align: center;
+        }
+
+        .box {
+            text-align: center;
+        }
+
+        .foo {
+            text-align: center;
+        }
+
+        .bar {
+            text-align: center;
+        }
+
+        /* 利用text-align: center;原理通过display属性修改可以实现居中对齐 */
+        .box1 {
+            height: 400px;
+            background-color: #ce5e5e;
+            text-align: center;
+        }
+
+        .box2 {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-color: #7e89e7;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="div">
+        <p>哈哈哈哈哈</p>
+    </div>
+
+    <div class="box">
+        <img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.PsgVqPrrms-36IfTDAyFKgHaHa" alt="木星">
+    </div>
+
+    <div class="foo">
+        <input type="text">
+    </div>
+
+    <div class="bar">
+        <strong>我是strong标签</strong>
+    </div>
+
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
