@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div {
+            background-color: rgb(255, 8, 0);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /**
+         * line-hight的原理:
+         * 一个类似一个包容器
+         * 它由顶线,中线,基线,底线
+         * 一个文字或者字母都不可能超过底线
+         * 两个包容器的基线的高度就是行高
+         * 所以设置line-hight高度就是设置两个包容器的基线的高度
+         * 一个包容器的底线和另一个包容器的顶线的距离叫做行距
+         * 两个包容器的基线的高度刚好等于一个包容器的高度
+         * line-hight的高度减去文字本身的高度
+         * 再将减去后的高度平等分给顶线和底线
+         * 最后就实现了水平居中
+         * 
+        */
+    </script>
+    <div class="div">我是xyz</div>
+</body>
+</html>
