@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 相邻兄弟选择器 +  表示.foo旁边的元素设置CSS属性*/
+        .foo + .bar {
+            background-color: hotpink;
+        }
+
+        /* 全兄弟选择器 ~ */
+        .bar ~ div {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="div">
+        <div class="foo">1</div>
+        <div class="bar">2</div>
+        <div class="box">3</div>
+        <div class="list">4</div>
+    </div>
+</body>
+</html>

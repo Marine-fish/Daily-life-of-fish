@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 当像设置拥有自定义属性的CSS样式时就像需要用属性选择器 
+           表示拥有meta属性的对应的元素
+        */
+        [meta] {
+            color: brown;
+        }
+
+        /* 如果需要拥有meta属性的对应的元素还需要该属性的值为bar标签才行
+           给一个限制条件    
+        */
+        [meta=bar] {
+           font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        9
+        <div meta="foo">5</div>
+        <span meta="bar">5</span>
+    </div>
+</body>
+</html>
