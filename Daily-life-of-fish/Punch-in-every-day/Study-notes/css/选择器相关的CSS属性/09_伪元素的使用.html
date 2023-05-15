@@ -5,8 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            background-color: hotpink;
+            color: #fff;
+        }
+
+        /* 
+            如果需要设置首行的样式
+            再不管任何情况下
+            只修改首行的样式
+            就选择这个伪元素
+        */
+        .box::first-line {
+            font-size: 25px;
+            background-color: blueviolet;
+        }
+
+        /* 
+            如果想要对首行的第一个字或者第一个字母设置样式
+            可以用这个伪元素
+        */
+        .box::first-letter {
+            font-size: 30px;
+            color: rgb(218, 33, 20);
+        }
+
+        .foo {
+            width: 500px;
+            background-color: aquamarine;
+        }
+
+        .foo::first-letter {
+            font-size: 30px;
+            background-color: aqua;
+            color: #fff;
+        }
+
+        /* 
+            需要在某个位置的前面或者后面添加东西时
+            可以用这个伪元素
+            又方便,简洁
+            因为这个伪元素是出于交集选择器
+            所以可以给一个特定的类名(id,元素)
+            设置共同样式
+        */
+
+        .foo::before {
+            content: url(http://www.mozilla.org/favicon.ico) " MOZILLA: ";
+            display: inline-block;
+            width: 100px;
+            background-color: brown;
+            color: #fff;
+        }
+        
+        .foo::after {
+            content: "我是新插入的内容";
+            display: inline-block;
+            background-color: black;
+            color: #fff;
+        }
+
+        .bar::after {
+            font-size: 30px;
+        }
+    </style>
 </head>
 <body>
     
+    <div class="box">
+        地球的大气主要由氮和氧组成。热带地区接收的太阳能多于极地地区，并通过大气和海洋环流重新分配。温室气体在调节地表温度方面也发挥着重要作用。一个地区的气候不仅由纬度决定，还由海拔和与该地区和海洋的接近程度等因素决定。热带气旋、雷暴、热浪等恶劣天气多发于广大地区，对生活影响较大。
+    </div>
+
+    <div class="foo bar">
+        While Earth is only the fifth largest planet in the solar system, it is the only world in our solar system with liquid water on the surface. Just slightly larger than nearby Venus, Earth is the biggest of the four planets closest to the Sun, all of which are made of rock and metal.
+    </div>
 </body>
 </html>

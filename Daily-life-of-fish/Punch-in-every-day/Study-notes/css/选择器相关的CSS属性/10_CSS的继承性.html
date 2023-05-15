@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 当一个CSS具有继承性
+           那么这个CSS的属性就会有继承性
+           它的后代都会有相同的属性
+           常见的继承属性:
+            color 前景色
+            cursor 变小手
+            font-family 字体风格
+            font-size 字体大小
+            font-style 字体样式
+            font-variant 字体站立样式
+            font-weight 字体粗细
+            font 字体简写
+            letter-spacing 字母间距
+            line-height 行高
+
+            继承过来的是计算值,不是设置值
+            em是相对于自身字体的大小(父元素)
+            那么下面后代继承的就不是设置的em的值
+            而是计算后的em的值
+         */
+
+         .box {
+            color: #f00;
+            font-size: 3em;
+            border: 3px solid hotpink;
+         }
+
+         /* 
+            当一个属性不具备继承性
+            你又想让其他元素强制继承它就用这个
+            就好像不喜欢吃折耳根
+            强制给ta吃折耳根
+         */
+
+         .box h1 {
+            border: inherit;
+         }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        0
+        <p>1</p>
+        <span>2</span>
+        <h1>3</h1>
+        <strong>4</strong>
+    </div>
+</body>
+</html>
