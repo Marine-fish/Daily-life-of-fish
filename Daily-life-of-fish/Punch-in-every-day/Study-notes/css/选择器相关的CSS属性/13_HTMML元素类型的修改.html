@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            有一个属性display
+            它可以修改元素的类型
+            块级元素的特性是独占一行可以设置宽和高
+            本质是通过display属性中的block值
+            行内级元素的特性是不能设置宽高,宽高是由内容大小决定的,且不是独占一行
+            本质是通过display属性中的inline值
+            因为浏览器通过元素选择器把所有div元素的display属性的值设置为block
+            所以div在浏览器默认是独占一行的
+        */
+        .box {
+            display: inline;
+        }
+
+        input {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">1</div>
+    <span>2</span>
+    <input type="text" placeholder="请输入内容~">
+    <img src="https://th.wallhaven.cc/small/l8/l83o92.jpg" alt="仙境">
+</body>
+</html>
