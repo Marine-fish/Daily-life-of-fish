@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            让给一个容器设置了固定宽高时
+            内容超出设置宽度会换行
+            内容超出设置高度会继续显示 (本质是通过 overflow: visible;让文本溢出后显示)
+            当overflow: hidden;内容溢出后会被隐藏掉
+            为什么就算内容溢出后,它兄弟元素的内容会被溢出的内容遮住喃?
+            因为只是设置了div块级元素的高度,内容溢出的高度不算在设置div块级元素的高度内
+            所以溢出的内容才会把兄弟的内容给遮住
+            当 overflow: scroll;会出个滚轮轴,内容溢出后会隐藏掉,通过滚轮轴来滚动查看隐藏掉的内容
+            滚轮轴的宽高会算在设置div块级元素宽高里
+            当overflow: auto;当内容不会溢出时,滚轮轴就会消失掉,但当内容溢出时,滚轮轴就会出现
+        */
+        .box {
+            width: 200px;
+            height: 300px;
+            background-color: hotpink;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="box">
+        Let's build something new.
+        To deploy a new Project, import an existing Git Repository or get started with one of our Templates.
+    </div>
+    <span>1</span>
+</body>
+</html>

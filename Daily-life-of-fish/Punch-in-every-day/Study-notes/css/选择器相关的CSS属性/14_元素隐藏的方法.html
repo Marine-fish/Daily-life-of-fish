@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+             display: none
+             会让元素隐藏,并且原本元素占据的空间就会消失掉,但是元素依然还存在DOM树里
+
+             visibility: hidden;
+             会让元素隐藏,并且原本元素占据的空间不会消失掉,但是元素依然还存在DOM树里
+
+             color设置rgba中的a 和 background-color设置rgba中的a
+             会让文本或者背景透明化,并且原本元素占据的空间不会消失掉,但是元素依然还存在DOM树里
+
+             opacity
+             会让自身也包括其所有后代元素一起透明化,并且原本元素占据的空间不会消失掉,但是元素依然还存在DOM树里
+        */
+        .box {
+            /* display: none; */
+
+            /* visibility: hidden; */
+
+            /* background-color: rgba(0, 0, 0, 0); */
+
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        我是box元素
+        <h1>
+            我是h1
+            <strong>5</strong>
+        </h1>
+    </div>
+    <span>2</span>
+</body>
+</html>
