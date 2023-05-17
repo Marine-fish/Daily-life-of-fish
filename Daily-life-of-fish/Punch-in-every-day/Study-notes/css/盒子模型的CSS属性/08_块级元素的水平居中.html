@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            块级元素的宽度 = 宽度 + 内边距 + 边框 + 外边距
+            已知宽度 = 200 内边距默为0 边框的宽度为0 外边距为0
+            因为一个块级元素默认宽度是独占一行的
+            然而将宽度设置为200,导致右边的宽度减去200后,无法沾满浏览器宽度
+            这个时候就将剩余的宽度的分配给margin-right,完成块级元素的独占一行的特性
+            当设置margin-left为auto, margin-right为auto
+            浏览器会把浏览器窗口的宽度减去设置的200
+            然后就减去后的值,平均分给左右margin
+            从而形成了块级元素的水平居中,也完成了块级元素默认独占一行的特性
+        
+        */
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+            margin: 0 auto;
+        }
+
+        .foo {
+            width: 400px;
+            height: 400px;
+            background-color: #f00;
+        }
+
+        .content {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+    <div class="foo">
+        <div class="content"></div>
+    </div>
+</body>
+</html>

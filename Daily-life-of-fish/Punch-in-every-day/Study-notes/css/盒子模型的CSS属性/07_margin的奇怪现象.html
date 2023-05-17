@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 800px;
+            /* height: 800px; */
+            background-color: cadetblue;
+
+            /* 
+                解决margin上下传递的方法 
+                设置边框border
+                设置overflow: auto
+                设置padding
+            */
+
+            /* overflow: auto; */
+        }   
+
+        .foo {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+
+            /* 当设置左右margin时不会造成margin左右传递 */
+            margin-left: 20px;
+
+            /* 但是当设置上margin时就会传递给父元素 */
+            margin-top: 20px;
+
+            /* 当子元素的高度等同于父元素的高度时,并且父元素的高度为auto,那么下margin就会传递给父元素 */
+            margin-bottom: 100px;
+
+        }
+
+        /* 
+            当设置下上margin时,一下情况会造成折叠(两个值比较, 值最大的生效)
+            父子关系, 兄弟关系
+            如果是左右margin,(两个值就相加)
+            一般只有父子关系才会出现这种现象
+        */
+        .bar {
+            background-color: #f00;
+            margin-bottom: 50px;
+        }
+
+        .cop {
+            background-color: blueviolet;
+            margin-top: 100px;
+        }
+
+        .x {
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="foo"></div>
+    </div>
+    <a href="#">好嗨哦</a>
+
+    <div class="bar x"></div>
+    <div class="cop x"></div>
+</body>
+</html>
