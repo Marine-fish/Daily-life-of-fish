@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .back-gauge {
+            margin: 0 auto;
+        }
+
+        /* 
+            box-sizing是设置内容的大小
+            默认的box-sizing的值是content-box
+            content-box是 宽度 + 高度 + 内边距 + 边框
+            当除了设置宽和高,还设置了内边距,边框,2个的值会被算进盒子的宽高里,从而把盒子撑大
+            border-box是 宽度 + 高度
+            当除了设置宽和高,还设置了内边距,边框,2个的值不会被算进盒子的宽高里,从而不会把盒子撑大,还是设置的宽和高的值
+        */
+
+        .box {
+            width: 800px;
+            height: 800px;
+            background-color: hotpink;
+            box-sizing: border-box;
+            padding: 30px;
+        }
+
+        .foo {
+            width: 400px;
+            height: 400px;
+            background-color: #f00;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box back-gauge">
+        <div class="foo back-gauge"></div>
+    </div>
+</body>
+</html>

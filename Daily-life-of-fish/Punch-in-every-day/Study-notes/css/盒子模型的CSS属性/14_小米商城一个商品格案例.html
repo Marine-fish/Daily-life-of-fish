@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        a {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            color: #000;
+            padding: 20px 0;
+        }
+
+        .box {
+            width: 234px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-sizing: border-box;
+            font-size: 12px;
+        }
+
+        .product-drawing {
+            width: 160px;
+            height: 160px;
+            margin: 0 37px 18px auto;
+        }
+
+        .product-drawing img {
+            width: 100%;
+            display: block;
+        }
+
+        .product-info {
+            text-align: center;
+        }
+
+        .product-header {
+            margin: 0 10px 2px;
+            color: #333;
+        }
+
+        .product-description {
+            margin: 0 10px 10px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            color: #b0b0b0;
+        }
+
+        .product-price {
+            margin: 0 10px 14px;
+            color: #ff6700
+        }
+
+        .box:hover {
+            box-shadow: 0 15px 30px rgba(0,0,0,.1);
+            transform: translate3d(0,-2px,0);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box" title=" Xiaomi 13 Ultra">
+        <a href="#">
+            <div class="product-drawing">
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202304171459_dd35f1e6215da63c356e352d4d398ce6.png" alt="小米手机" >
+            </div>
+            <div class="product-info">
+                <div class="product-header">
+                    Xiaomi 13 Ultra
+                </div>
+                <div class="product-description">
+                    徕卡光学全焦段四摄| 一英寸可变光圈| 徕卡专业街拍模式
+                </div>
+                <div class="product-price">
+                    5999元起
+                </div>
+            </div>
+        </a>
+    </div>
+</body>
+</html>

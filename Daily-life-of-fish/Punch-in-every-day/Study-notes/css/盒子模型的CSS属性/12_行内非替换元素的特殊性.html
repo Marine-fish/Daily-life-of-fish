@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            background-color: hotpink;
+
+            /* 
+                设置宽度和高度无效
+                在设置行内非替换元素的padding和border和margin值时
+                左右的内边距有被扩开,并且占有实际的空间
+                上下的内边距有被扩开,但是不占据实际空间
+            */
+            padding: 200px 200px;
+            border: 10px solid #f00;
+
+        }
+    </style>
+</head>
+<body>
+    Hello
+    <span>我是span元素</span>
+    My name is liq
+    <div class="box">我是div元素</div>
+</body>
+</html>

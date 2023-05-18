@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 900px;
+            height: 500px;
+            background-color: hotpink;
+            /* 
+                background-image可以存在多张,第一张会覆盖第二张下面以此类推
+                默认background-image会平铺
+                平铺可以只向X轴或者Y轴平铺
+                background-size: contain;
+                当背景图片的宽度达不到容器的某个角度时,它会自动延伸到容器某一个位置一样的宽度,并且保持图片原始比例
+                background-size: cover;
+                背景图片会从起始位置,拉伸并覆盖整个容器
+                background-position
+               背景图片的位置,X轴和Y轴
+               background-position: left bottom;
+               背景图片位置也可以设置Top,left,center,bottom,right
+               如果只设置了一个方向的的值,那另外一个值默认是center
+            */
+            /* background-image: url(https://i1.hdslb.com/bfs/archive/86ff570b6a1933c8c17283e638792124f4a80e0a.jpg), url(https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202304171459_dd35f1e6215da63c356e352d4d398ce6.png); */
+            background-image: url(https://i1.hdslb.com/bfs/archive/86ff570b6a1933c8c17283e638792124f4a80e0a.jpg);
+            background-repeat: no-repeat;
+            /* background-size: cover; */
+            /* background-position: 200px 200px; */
+            background-position: left bottom;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
