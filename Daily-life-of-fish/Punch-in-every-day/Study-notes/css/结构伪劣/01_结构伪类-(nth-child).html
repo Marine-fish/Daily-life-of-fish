@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            :nth-child(是父元素中的第几个子元素)
+            必须子元素的标签一样
+            :nth-child(2n)
+            n表示任意正整数和0(只能这个标准)
+            是父元素第偶数个元素
+        */
+        span:nth-child(2) {
+            color: hotpink;
+        }
+        /* 偶数 */
+        span:nth-child(2n) {
+            color: #f00;
+        }
+        /* 奇数 */
+        span:nth-child(2n + 1) {
+            color: #eee
+        }
+
+        /* html元素 */
+        :root {
+            background-color: aquamarine;
+        }
+        /* 将为空的元素进行设置样式 */
+        :empty {
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+    </div>
+
+    <div class="foo"></div>
+</body>
+</html>
