@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            background-color: hotpink;
+            box-sizing: border-box;
+            /* 
+                分析border四边的布局 
+                整个盒子的宽度为400
+                上下的边框宽度各为40
+                当边框的宽度的大于内容宽度时,三角形就形成了
+            */
+            border: 200px solid ;
+            border-left-color: #f00;
+            border-top-color:  rgb(157, 255, 0);
+            border-right-color:  rgb(55, 0, 255);
+            border-bottom-color:  rgb(255, 0, 242);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+    <p>jjj</p>
+</body>
+</html>
