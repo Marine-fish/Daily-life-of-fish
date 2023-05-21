@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            默认这些元素都是按照标准的布局排布
+            规则就是从左到右，从上到下进行排列
+            并且默认情况下，(如果互为子元素除外)互相都不会存在互相层叠现象
+            设置margin或者padding时会影响旁边的布局
+        */
+        span {
+            margin: 10px;
+        }
+
+        p {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>我是div元素</div>
+    <span>我是span元素</span>
+    <p>我是p元素</p>
+</body>
+</html>
