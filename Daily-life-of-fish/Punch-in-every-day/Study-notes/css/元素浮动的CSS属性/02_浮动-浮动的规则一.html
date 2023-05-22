@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            当设置float属性为left值时
+            特点:
+            1.该元素已经脱标
+            2.元素会占空间,旁边的元素不会将其覆盖
+            3.会紧贴其的父包含块的边
+            4.定位元素会层叠在浮动元素上面
+            5.浮动元素之间不能层叠
+        */
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .box {
+            background-color: skyblue;
+            float: left;
+            padding: 10px;
+        }
+
+        .foo {
+            background-color: purple;
+        }
+
+        .item {
+            width: 200px;
+            height: 200px;
+        }
+
+        .box {
+            background-color: #f00;
+        }
+
+        .box1 {
+            background-color: slateblue;
+        }
+
+        .box2 {
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">1</div>
+    <div class="foo">2</div>
+
+    <div class="box item"></div>
+    <div class="box1 item"></div>
+    <div class="box2 item"></div>
+</body>
+</html>

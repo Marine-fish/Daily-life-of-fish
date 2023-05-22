@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  因为div是块级元素,宽度是auto
+            里面有内容所以会被被撑开,不是文本所以超出宽度不会进行换行
+            利用相对定位让图片始终水平居中
+            1.先让图片向左移动图片宽度一半的距离
+            2.在让图片向右移动盒子的宽度一般 (margin-left的百分比是相对于它的包含块)
+        */
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            height: 489px;
+            overflow: hidden;
+        }
+
+        .box img {
+            position: relative;
+            /* 这是计算死的 */
+            /* left: -960px; */
+            /* transform: translate() 相对与自己的位置移动 */
+            transform: translate(-50%);
+            margin-left: 50%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box" title="梦幻西游">
+        <img src="../背景样式的CSS属性/img/mhxy.jpg" alt="梦幻西游">
+    </div>
+</body>
+</html>

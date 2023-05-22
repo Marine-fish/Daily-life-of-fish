@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+           绝对定位 position: absolute;
+           特点:
+            1.设置了该属性会让其脱标
+            2.可以设置left， right， top， bottom值时它不会影响旁边的元素
+            3.它的参照对象是靠的最近定位的祖先元素
+            4.如果没有找到符合上面条件的,则参考对象是视口
+         */
+         
+         i {
+            position: absolute;
+            right: 0;
+            top: 0;
+         }
+    </style>
+</head>
+<body>
+    <span>我是span元素</span>
+    <i>我是i元素</i>
+    <a href="#">我是a元素</a>
+</body>
+</html>

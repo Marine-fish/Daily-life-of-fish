@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            设置position属性值为absolute或者fixed
+            有以下特点:
+            1.可以设置宽和高(不管是元素的类型是什么了)
+            2.默认宽和高是由内容决定的
+            3.不在受标准流布局的管束了(
+                不再按照从上到下,从左到右排布
+                不在区分块级,行内级,行内块级的特性
+            )
+            4.不在向父元素汇报宽和高(
+                正常一个盒子没有设置宽度和高度,会被里面的内容
+                给撑开,但如果不在向父元素汇报宽和高时,盒子的宽和高
+                就不在受内容的宽度和高度影响了
+            )
+            5.脱标元素内部还是按照标准流布局的
+            6.参照对象的宽度 = left + right + margin-left + margin-right + 该两个元素的实际占用宽度
+            7.参照对象的高度 = top + bottom + margin-top + margin-bottom + 该两个元素的实际占用高度
+        */
+
+        .box {
+            background-color: aquamarine;
+        }
+
+        span {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background-color: #f00;
+        }
+
+        /* 利用特点6和7实现元素水平垂直居中 */
+        .foo {
+            width: 800px;
+            height: 400px;
+            background-color: hotpink;
+            position: relative;
+        }
+
+        .bar {
+            width: 300px;
+            height: 200px;
+            background-color: blueviolet;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        1
+        <span>
+            我是span元素
+            <span>我是span2</span>
+            <div>我是div</div>
+            <strong>我是strong</strong>
+        </span>
+    </div>
+    
+    <div class="foo">
+        <div class="bar"></div>
+    </div>
+</body>
+</html>
