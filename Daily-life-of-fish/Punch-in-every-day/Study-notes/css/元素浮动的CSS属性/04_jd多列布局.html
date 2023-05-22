@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 内容所占据的宽度 */
+        .box {
+            width: 1190px;
+            height: 900px;
+            margin: 0 auto;
+            background-color: hotpink;
+        }
+        /* 
+            每个单个内容的宽高 
+            每个单个内容外边距的计算:
+            整个大盒子的宽度为1190
+            单个的内容盒子的宽度为230(有5个总宽度:1150)
+            大盒子的宽度减去每个内容盒子的总宽度1150还剩40
+            每个盒子刚好有个4个间隙margin(40/4)
+            4个间隙margin,单个margin的值为10
+            当给5个间隙margin的值40加上5个盒子的总宽度1150等于1200
+            大于大盒子的宽度,所以其中有一个盒子就会换到下行
+        */
+        .item {
+            width: 230px;
+            height: 322px;
+            background-color: powderblue;
+            float: left;
+            margin-right: 10px;
+        }
+        /* 
+            解决以上的麻烦方法一: 
+            利用结构伪类:last-child
+            给元素最后一个的 margin-right的值设置为0
+            缺点:
+            1.属性过于太新,无法适配老的浏览器
+            2.如果存在多行,因为:last-child只能给该元素的最后一个设置,就会导致不够灵活
+            虽然可以利用:nth-child(5n)去解决,但还是会存在兼容性问题
+        */
+        /* .item:last-child {
+            margin-right: 0;
+        } */
+        /* 
+             解决以上的麻烦方法二: 
+             给每行最后一个加上一个类名
+             缺点:
+             1.虽然解决了兼容性问题,但是存在不够灵活,如果数据说动态的将不好给指定类名
+        */
+        /* .last-item {
+            margin-right: 0;
+        } */
+        /* 
+            解决以上的麻烦方法三: 
+            用一个盒子把每个内容的盒子给包裹起来
+            父级块级盒子的宽度等于子盒子的宽度加上margin-left+margin-right
+            1190 = 1190 + 0 + 0
+            1190 != 1190 + 0 + -10(1200)
+            因为.content的div的宽度是auto(1190)
+            当给.content的盒子加上10px就超出了1190
+            因为div的宽度是auto,为了要将.content盒子的宽度等于.box盒子的宽度
+
+        */
+        .content {
+            margin-right: -10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="content">
+            <div class="item1 item">1</div>
+            <div class="item2 item">2</div>
+            <div class="item3 item">3</div>
+            <div class="item4 item">4</div>
+            <div class="item5 item">5</div>
+        </div>
+    </div>
+</body>
+</html>
