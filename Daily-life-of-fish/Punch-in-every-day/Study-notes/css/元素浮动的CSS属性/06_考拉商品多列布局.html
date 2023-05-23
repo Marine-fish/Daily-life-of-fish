@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 1100px;
+            height: 800px;
+            margin: 0 auto;
+            background-color: #000;
+        }
+        /* 
+            方法一：
+            需要解决的问题
+            1.每个item盒子都有至少一边边框会重合
+        */
+        /* .item {
+            width: 219px;
+            height: 167px;
+            float: left;
+            border: 1px solid #f00;
+            background-color: skyblue;
+        } */
+         /* 
+            方法二：
+            需要解决的问题
+            1.每个item盒子都有至少一边边框会重合
+        */
+
+        .content {
+            width: 1095px;
+            height: 100%;
+            border: 1px solid #fff;;
+        }
+
+        .item {
+            width: 219px;
+            height: 167px;
+            float: left;
+            border-right: 1px solid #fff;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="content">
+            <div class="item1 item">1</div>
+            <div class="item2 item">2</div>
+            <div class="item3 item">3</div>
+            <div class="item4 item">4</div>
+            <div class="item5 item">5</div>
+        </div>
+    </div>
+</body>
+</html>
