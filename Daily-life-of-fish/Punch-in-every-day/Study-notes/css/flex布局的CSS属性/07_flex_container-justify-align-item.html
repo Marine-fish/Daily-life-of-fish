@@ -7,12 +7,12 @@
     <title>Document</title>
     <style>
         /* 
-            justify-content属性是控制flex item咋爱主轴的对齐方式
-            justify-content属性默认值flex-start值(让flex item沿着主轴左边方向对齐)
-            flex-end值(让flex item沿着主轴右边方向对齐)
-            center值(让flex item在主轴方向水平居中)
-            space-between值(让flex item之间的间距相等,并让flex item在主轴的左边和右边各自两端对齐)
-            space-around值(让flex item之间的间距相等,并让flex item距离主轴的左右两边的距离是flex item之间的距离的一半)
+            align-items属性是控制flex item咋在交叉轴的对齐方式
+            align-items属性默认值flex-start值(让flex item沿着交叉轴上边方向对齐)
+            flex-end值(让flex item沿着交叉轴下边方向对齐)
+            center值(让flex item在交叉轴方向水平居中)
+            baseline值(让flex item之间的间距相等,并让flex item在交叉轴的基准线对齐, 以字母x的底部为对齐)
+            align-items属性默认值normal值(在不设置高度情况下,高度会自动撑满 flex container盒子和stretch效果一样)
             space-evenly值(让flex item之间的间距相等,并让flex item距离主轴的左右两边的距离等于flex item之间的距离)
         */
 
@@ -20,7 +20,7 @@
             width: 800px;
             height: 800px;
             display: flex;
-           justify-content: space-evenly;
+            align-items: stretch;
             background-color: hotpink;
         }
 
@@ -32,41 +32,45 @@
 
         .box1 {
             width: 200px;
-            height: 200px;
+            height: 260px;
+            /* font-size: 25px; */
             background-color: rgb(185, 135, 235);
         }
 
         .box2 {
             width: 200px;
-            height: 200px;
+            height: 184px;
+            font-size: 14px;
             background-color: rgb(235, 205, 135);
         }
 
         .box3{
             width: 200px;
-            height: 200px;
+            height: 80px;
+            font-size: 60px;
             background-color: rgb(203, 235, 135);
         }
 
         .box4 {
             width: 200px;
-            height: 200px;
+            height: 150px;
+            font-size: 19px;
             background-color: rgb(235, 135, 135);
         }
 
         .box5 {
             width: 200px;
-            height: 200px;
+            height: 100px;
             background-color: rgb(183, 135, 235);
         }
     </style>
 </head>
 <body>
     <div class="content">
-        <div class="box1 item">1</div>
-        <div class="box2 item">2</div>
-        <div class="box3 item">3</div>
-        
+        <div class="box1 item">x</div>
+        <div class="box2 item">我</div>
+        <div class="box3 item">好</div>
+        <div class="box4 item">p</div>
     </div>
    
 </body>
