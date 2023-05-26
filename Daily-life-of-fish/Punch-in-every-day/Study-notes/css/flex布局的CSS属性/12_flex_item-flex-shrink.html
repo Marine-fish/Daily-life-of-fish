@@ -7,49 +7,48 @@
     <title>Document</title>
     <style>
         /* 
-            flex-grow属性的值控制flex item在主轴或者交叉轴如何拉伸的
+            flex-shrink属性的值控制flex item在主轴或者交叉轴如何收缩(缩小)的
             触发前提:
-            1.flex item在flex container盒子的宽度里还有空间
-            2.flex-grow的值越大,拉伸的长度就越大
-            3.flex-grow的默认值是0
-            4.如果所有的flex items的flex-grow总和sum超过1,那么每个flex item扩展的大小为:
-              - flex container 的剩余大小 * flex-grow / sum
-            5.flex items扩展的最终大小不能超过max-width和max-hight
+            1.当flex items在主轴或者交叉轴方向超过了flex container的大小,flex-shrink才会生效
+            2.flex-shrink的值越大,收缩的就越大
+            3.flex-shrink的默认值是1(所以当flex items的宽度超过了flex container的宽度会自动压缩)
+            4.如果所有的flex items的flex-shrink的总值超过了1,那么每个flex item收缩的大小为:
+             - flex items超出的flex container的大小 * 收缩比例 / 所有flex items的收缩比例之和
+            5.flex items收缩的最终大小不能小于max-width和max-hight
         */
 
         .content {
-            width: 1000px;
-            height: 1000px;
+            width: 800px;
+            height: 900px;
             display: flex;
-            flex-direction: column;
             background-color: hotpink;
         }
 
         .item {
-            width: 200px;
-            height: 200px;
+            width: 400px;
+            height: 400px;
             background-color: skyblue;
         }
 
         .box1 {
-            flex-grow: 7;
-            width: 200px;
+            flex-shrink: 1;
+            width: 400px;
             /* height: 260px; */
             /* font-size: 25px; */
             background-color: rgb(185, 135, 235);
         }
 
         .box2 {
-            flex-grow: 4;
-            width: 200px;
+            flex-shrink: 4;
+            width: 400px;
             /* height: 184px; */
             font-size: 14px;
             background-color: rgb(235, 205, 135);
         }
 
         .box3{
-            flex-grow: 1;
-            width: 200px;
+            flex-shrink: 1;
+            width: 400px;
             /* height: 80px; */
             font-size: 60px;
             background-color: rgb(203, 235, 135);

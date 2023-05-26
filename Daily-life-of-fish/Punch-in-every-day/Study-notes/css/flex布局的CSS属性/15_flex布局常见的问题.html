@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            一下布局当一行就只有两个或者3个时会出现布局紊乱
+        */
+        /* .content {
+            width: 900px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: hotpink;
+        }
+
+        .item {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(185, 135, 235);
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(235, 205, 135);
+        }
+
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(203, 235, 135);
+        }
+
+        .box4 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(235, 135, 135);
+        }
+
+        .box5 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(183, 135, 235);
+        }
+
+        .box6{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(135, 203, 235);
+        }
+
+        .box7 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(104, 27, 27);
+        }
+
+        .box8 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(45, 13, 80);
+        } */
+        /* 
+            用一个可以设置宽度的元素占位
+            给宽度设置和flex item一样的宽度
+            设置的可以设置宽度的元素占位的个数(一行缺多少个,就补多少个的基础上再加1个依照justify-content: space-between;的原理)
+            算法: 列数减去2
+        */
+        .content {
+            width: 900px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: hotpink;
+        }
+
+        .item {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(185, 135, 235);
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(235, 205, 135);
+        }
+
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(203, 235, 135);
+        }
+
+        .box4 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(235, 135, 135);
+        }
+
+        .box5 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(183, 135, 235);
+        }
+
+        .box6{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(135, 203, 235);
+        }
+
+        .box7 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(104, 27, 27);
+        }
+
+        .box8 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(45, 13, 80);
+        }
+
+        .content > span {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="box1 item">x</div>
+        <div class="box2 item">我</div>
+        <div class="box3 item">好</div>
+        <div class="box4 item">p</div>
+        <div class="box5 item">p</div>
+        <div class="box6 item">好</div>
+        <div class="box7 item">p</div>
+        <span></span>
+        <span></span>
+        
+    </div>
+   
+</body>
+</html>

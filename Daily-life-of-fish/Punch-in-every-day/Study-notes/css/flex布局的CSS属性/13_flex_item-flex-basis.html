@@ -7,49 +7,46 @@
     <title>Document</title>
     <style>
         /* 
-            flex-grow属性的值控制flex item在主轴或者交叉轴如何拉伸的
+            flex-basis属性的值控制flex item里内容在主轴或者交叉轴方向上的基础尺寸
             触发前提:
-            1.flex item在flex container盒子的宽度里还有空间
-            2.flex-grow的值越大,拉伸的长度就越大
-            3.flex-grow的默认值是0
-            4.如果所有的flex items的flex-grow总和sum超过1,那么每个flex item扩展的大小为:
-              - flex container 的剩余大小 * flex-grow / sum
-            5.flex items扩展的最终大小不能超过max-width和max-hight
+            1.默认值是auto
+            2.如果给flex item一个固定的宽度,里面内容写一个特别长的连体的英文,这个英文超出flex item宽度会展示不完整
+            3.但是给flex item一个flex-basis,flex item会自动拉伸到可以展示完整的英文信息
         */
 
         .content {
-            width: 1000px;
-            height: 1000px;
+            width: 800px;
+            height: 900px;
             display: flex;
-            flex-direction: column;
             background-color: hotpink;
         }
 
         .item {
-            width: 200px;
-            height: 200px;
+            width: 400px;
+            height: 400px;
             background-color: skyblue;
         }
 
         .box1 {
-            flex-grow: 7;
-            width: 200px;
+            flex-shrink: 1;
+            width: 400px;
             /* height: 260px; */
+            flex-basis: 120px;
             /* font-size: 25px; */
             background-color: rgb(185, 135, 235);
         }
 
         .box2 {
-            flex-grow: 4;
-            width: 200px;
+            flex-shrink: 4;
+            width: 400px;
             /* height: 184px; */
             font-size: 14px;
             background-color: rgb(235, 205, 135);
         }
 
         .box3{
-            flex-grow: 1;
-            width: 200px;
+            flex-shrink: 1;
+            width: 400px;
             /* height: 80px; */
             font-size: 60px;
             background-color: rgb(203, 235, 135);

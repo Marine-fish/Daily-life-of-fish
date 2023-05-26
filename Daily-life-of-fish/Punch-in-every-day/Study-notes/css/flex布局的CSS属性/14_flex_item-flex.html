@@ -7,49 +7,56 @@
     <title>Document</title>
     <style>
         /* 
-            flex-grow属性的值控制flex item在主轴或者交叉轴如何拉伸的
-            触发前提:
-            1.flex item在flex container盒子的宽度里还有空间
-            2.flex-grow的值越大,拉伸的长度就越大
-            3.flex-grow的默认值是0
-            4.如果所有的flex items的flex-grow总和sum超过1,那么每个flex item扩展的大小为:
-              - flex container 的剩余大小 * flex-grow / sum
-            5.flex items扩展的最终大小不能超过max-width和max-hight
+            flex属性是flex-grow,flex-shrink,flex-basis的简写
+            可以写一个,两个或者3个
+            特殊情况:
+            一:单值情况下 值必须为一下其中一个
+            1.一个无单位数,它会被当做flex-grow的值 10
+            2.一个有效的宽度值,它会被当做flex-basis的值 20px
+            3.关键字none, auto或者initial
+            二:双值情况下 第一个值必须为一个无单位数, 并且它会被当作flex-grow的值
+            值必须为一下其中一个
+            1.一个无单位数,它会被当做flex-shrink的值 10
+            2.一个有效的宽度值,它会被当做flex-basis的值 20px
+            一:三值情况下 
+            1.一个无单位数,它会被当做flex-grow的值 10
+            2.一个无单位数,它会被当做flex-shrink的值 20px
+            3.一个有效的宽度值,会被当做flex-basis的值 20px
         */
 
         .content {
-            width: 1000px;
-            height: 1000px;
+            width: 800px;
+            height: 900px;
             display: flex;
-            flex-direction: column;
             background-color: hotpink;
         }
 
         .item {
-            width: 200px;
-            height: 200px;
+            width: 400px;
+            height: 400px;
             background-color: skyblue;
         }
 
         .box1 {
-            flex-grow: 7;
-            width: 200px;
+            flex-shrink: 1;
+            width: 400px;
             /* height: 260px; */
+            flex-basis: 120px;
             /* font-size: 25px; */
             background-color: rgb(185, 135, 235);
         }
 
         .box2 {
-            flex-grow: 4;
-            width: 200px;
+            flex-shrink: 4;
+            width: 400px;
             /* height: 184px; */
             font-size: 14px;
             background-color: rgb(235, 205, 135);
         }
 
         .box3{
-            flex-grow: 1;
-            width: 200px;
+            flex-shrink: 1;
+            width: 400px;
             /* height: 80px; */
             font-size: 60px;
             background-color: rgb(203, 235, 135);
