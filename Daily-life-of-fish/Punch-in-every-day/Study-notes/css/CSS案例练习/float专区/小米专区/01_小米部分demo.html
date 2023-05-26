@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <style>
 
@@ -26,7 +27,16 @@
         .per_wrapper .per_header .per_header_right {
             float: right;
             color: #424242;
+        }
+
+        .per_wrapper .per_header .per_inside_left {
             margin-right: 30px;
+        }
+
+        .per_wrapper .per_header .per_line:hover{
+            padding: 3px 0;
+            color: #ff6700;
+            border-bottom: 2px solid #ff6700;
         }
     </style>
 </head>
@@ -36,9 +46,12 @@
         <div class="per_header per_bg_color">
             <h2 class="per_header_left">智能穿戴</h2>
             <div class="per_header_right">
-                <span class="per_inside_left">耳机</span>
-                <span class="per_inside_right">穿戴</span>
+                <a href="#" class="per_inside_left per_line">耳机</a>
+                <a href="#" class="per_inside_right per_line">穿戴</a>
             </div>
+        </div>
+        <div class="per_footer">
+            <div class="per_content"></div>
         </div>
     </div>
 </body>

@@ -2,9 +2,14 @@
     将公共的css样式集中在这里
 */
 
-body, h2 {
-    margin: 0;
-    padding: 0;
+/* 清除浮动 */
+.per_clear_fix::after {
+    content: "";
+    display: block;
+    clear: both;
+
+    height: 0;
+    visibility: hidden;
 }
 
 .per_bg_color {

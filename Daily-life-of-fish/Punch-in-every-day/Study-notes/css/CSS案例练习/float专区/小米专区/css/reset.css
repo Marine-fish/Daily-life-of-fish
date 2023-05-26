@@ -1,0 +1,11 @@
+/* 
+    需要重置的样式
+*/
+
+body, h2, a {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    list-style: none;
+    text-decoration: none;
+}
