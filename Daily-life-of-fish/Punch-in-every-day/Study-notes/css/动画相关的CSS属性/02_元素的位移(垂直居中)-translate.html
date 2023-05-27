@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            transform属性的translate函数(x, y)
+            会在原来的基础上平移
+            特点:
+            1.不会影响其他元素的布局
+            2.百分比(参照物是元素的本身, x参照自己的宽度, y参照自己的高度)
+            3.如果是box-sizing: border-box;就只算宽和高
+            4.box-sizing: content-box;除了算宽和高还要加上内边距和边框
+            transform属性的translate函数(x, y)是 translateX()和translateY()的简写
+
+            垂直居中
+            1.让元素向下移动父元素的50%
+            2.让元素向上移动自身的50%
+        */
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+        }
+
+        .box:hover {
+            transform: translate(300px, 125px);
+        }
+
+        .foo {
+            width: 400px;
+            height: 400px;
+            background-color: #f00;
+        }
+
+        .bar {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0, 132, 255);
+            position: relative;
+            /* 
+                top的百分比是相对于自己的父级包含块 
+                这样可以垂直居中
+            */
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+    <div class="foo">
+        <div class="bar"></div>
+    </div>
+</body>
+</html>

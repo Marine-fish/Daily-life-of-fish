@@ -22,15 +22,12 @@
     margin: 0 auto;
 }
 
-/* 下面盒子的背景色 */
-.per_-bg_color_footer {
-    background-color: #fff;
-}
-
 /* 小米盒子的宽度 */
 .per_width {
     width: 234px;
     box-sizing: border-box;
+    background-color: #fff;
+    float: left;
 }
 
 /* 小米手表的高 */
@@ -41,9 +38,22 @@
 /* 小米耳机的高 */
 .per_earphone {
     height: 300px;
+    padding: 20px 0;
+}
+
+/* 小米耳机图片的宽高 */
+.per_earphone_content {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
 }
 
 /* 小米的更多数据的高 */
 .per_more_data {
     height: 143px;
+}
+
+/* 小米每个盒子的间距 */
+.per_margin {
+    margin: 0 0 14px 14px;
 }

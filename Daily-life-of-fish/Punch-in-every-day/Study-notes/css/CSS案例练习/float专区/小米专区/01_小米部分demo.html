@@ -33,14 +33,45 @@
             margin-right: 30px;
         }
 
-        .per_wrapper .per_header .per_line:hover{
+        .per_wrapper .per_header .per_line:hover, .per_active{
             padding: 3px 0;
             color: #ff6700;
             border-bottom: 2px solid #ff6700;
         }
 
-        .per_wrapper  .per_earphone, .per_more_data{
-            float: left;
+        .per_wrapper .per_footer .per_width img{
+            width: 100%;
+        }
+
+        .per_wrapper .per_footer .per_earphone img {
+            width: 100%;
+        }
+
+        .per_wrapper .per_footer .per_earphone .per_title {
+            font-size: 14px;
+            font-weight: 400;
+            color: #333;
+            text-align: center;
+            margin: 0 10px 2px;
+            background-color: #fff;
+        }
+
+        .per_wrapper .per_footer .per_earphone .per_desc {
+            margin: 0 10px 10px;
+            height: 18px;
+            font-size: 12px;
+            color: #b0b0b0;
+            text-align: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .per_wrapper .per_footer .per_earphone .per_price {
+            margin: 0 10px 14px;
+            text-align: center;
+            color: #ff6700;
+            background-color: #fff;
         }
     </style>
 </head>
@@ -48,23 +79,36 @@
     
     <div class="per_wrapper per_hight">
         <div class="per_header per_bg_color">
-            <h2 class="per_header_left">智能穿戴</h2>
-            <div class="per_header_right">
-                <a href="#" class="per_inside_left per_line">耳机</a>
+            <h2 class="per_header_left per_clear_fix::after">智能穿戴</h2>
+            <div class="per_header_right per_clear_fix::after">
+                <a href="#" class="per_inside_left per_line per_active">耳机</a>
                 <a href="#" class="per_inside_right per_line">穿戴</a>
             </div>
         </div>
         <div class="per_footer">
-            <div class="per_width per_watch per_-bg_color_footer"></div>
-            <div class="per_earphone per_-bg_color_footer"></div>
-            <div class="per_earphone per_-bg_color_footer"></div>
-            <div class="per_earphone per_-bg_color_footer"></div>
-            <div class="per_earphone per_-bg_color_footer"></div>
-            <div class="per_earphone per_-bg_color_footer"></div>
-            <div class="per_earphone per_-bg_color_footer"></div>
-            <div class="per_earphone per_-bg_color_footer"></div>
-            <div class="per_more_data per_-bg_color_footer"></div>
-            <div class="per_more_data per_-bg_color_footer"></div>
+            <div class="per_width per_watch per_width">
+                <a href="#">
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c9550c95ee33a22dc8db677dada00f09.jpg" alt="">
+                </a>
+            </div>
+            <div class="per_earphone per_width per_margin">
+                <a href="#">
+                    <div class="per_earphone_content">
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202304181447_fff5c19e16988b91042cfddba800fc19.png" alt="">
+                    </div>
+                    <h3 class="per_title">小米手环8 NFC版</h3>
+                    <p class="per_desc">多样快拆时尚腕带 | 跑步豆模式 | 体感互动拳击</p>
+                    <p class="per_price">299元</p>
+                </a>
+            </div>
+            <div class="per_earphone per_width per_margin"></div>
+            <div class="per_earphone per_width per_margin"></div>
+            <div class="per_earphone per_width per_margin"></div>
+            <div class="per_earphone per_width per_margin"></div>
+            <div class="per_earphone per_width per_margin"></div>
+            <div class="per_earphone per_width per_margin"></div>
+            <div class="per_more_data per_width per_margin"></div>
+            <div class="per_more_data per_width per_margin"></div>
         </div>
     </div>
 </body>

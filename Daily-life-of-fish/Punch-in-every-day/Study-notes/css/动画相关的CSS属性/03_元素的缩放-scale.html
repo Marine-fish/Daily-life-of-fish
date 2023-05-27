@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            transform属性的scale(x, y)函数
+            transform属性的scale(x, y)函数是scaleX()和scaleY()的缩写
+            x和y的值的表示方式
+            1.具体的值不带单位(相对与自身的百分比, 0.4=40%).
+            值大于1是对元素放大
+            0~1是对元素缩小
+            2.数字
+            2.1: 1(保持不变)
+            2.2: 2(放大1倍)
+            2.3: 0.5(缩小一半)
+        */
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+        }
+
+        .box:hover {
+            transform: scale(.5, .5);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+</body>
+</html>
