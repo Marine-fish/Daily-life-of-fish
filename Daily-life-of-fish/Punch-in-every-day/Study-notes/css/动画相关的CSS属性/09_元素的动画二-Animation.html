@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            Animation
+            transition动画的缺点:
+            1.只能定义开始状态和结束状态,只有两个状态,不能定义中间状态
+            2.不能重复执行, 如果要重复还需要再次触发动画
+            3.需要在特定状态下会触发才能执行, 比如某一个属性发生了变化
+        */
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+
+            animation-delay: 1.5s; /* 要延迟的时长*/
+            animation-name: move; /* 要执行动画的名字*/
+            animation-duration: 3.5s; /* 要执行动画速度的延迟*/
+            animation-timing-function: ease-in-out; /* 要做动画的效果轨迹*/
+
+            animation-iteration-count: 2; /* 动画执行的次数*/
+        }
+
+        @keyframes move{
+            /* 
+                每一帧需要移动或者变化的内容
+                0% - 100%
+            */
+            form {
+                transform: translate(0, 0) scale(0.5, 0.5);
+            }
+
+            45% {
+                transform: translate(200px, 400px) scale(1.5, 1.5);
+            }
+
+            75% {
+                transform: translate(400px, 800px) scale(1, 1);
+            }
+
+            to {
+                transform: translate(100px, 200px) scale(.5, .5 );
+            }
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+</body>
+</html>
