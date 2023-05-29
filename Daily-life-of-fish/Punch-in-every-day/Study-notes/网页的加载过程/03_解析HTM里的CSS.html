@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        简略
+        在解析HTML里的CSS时,最终会将CSS里的值添加在DOM Tree里,中间通过渲染数,最后在页面展示
+        在解析CSS模块时,会一个个解析CSS里的各种值
+        详解
+        解析HTM里的元素中 => 生成DOM Tree在生成DOM Tree的时候会执行DOM里的操作
+        解析CSS里的值中 => 解析CSS里的各种规则最后添加到DOM Tree里
+        两个在解析的过程中不会互相堵塞影响
+        两个会进入渲染树里,在渲染树进行排布
+        渲染树和DOM不是一一对应的,因为如果display值为none时,
+        虽然display值还是会在DOM Tree里,但是在渲染树里并不需要渲染了
+        最近经过加载 并 展示到浏览器上
+        但是由于需要解析HTML和解析CSS一起才能通过渲染树
+        所以在生成渲染树的时候就会等解析完DOM Tree才能解析渲染树
+
+     -->
+</body>
+</html>
