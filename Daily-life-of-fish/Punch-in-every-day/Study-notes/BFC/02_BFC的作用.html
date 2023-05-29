@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .content {
+            background-color: aqua;
+            overflow: auto;
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+            background-color: hotpink;
+            margin-bottom: 40px;
+
+            float: left;
+        }
+
+        .foo {
+            height: 200px;
+            background-color: #f00;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        BFC让一个个块级元素垂直往下一个个排列从顶部开始
+        块级元素与块级元素的距离由margin操作
+        在同一个BFC的相邻的块级元素的上下margin会进行折叠
+        每个块级元素的左边缘会紧挨着包含块的左边缘
+
+        作用
+        1.解决margin上下折叠
+        因为当块级元素在同一个BFC环境下才会产生margin上下折叠
+        用一个块级元素进行包裹,这样首先两个块级元素不是同一个BFC环境下
+        在overflow: auto;触发BFC效果
+        2.解决浮动高度塌陷问题
+        条件: 
+        1.浮动元素才能触发BFC
+        2.浮动元素的父级元素的高度是auto
+
+        浮动元素的父级元素的高度是auto计算高度的方法
+        1.如果只有行内盒子,是行高的顶部和底部的距离
+        2.如果有块块级盒子,是有最底部的块上边缘和最底层块盒子的下边缘之间的距离
+        3.如果有决定定位元素,则以上会被忽略掉
+        4.如果有浮动元素,那么会增加高度已包括这些浮动元素的下边缘
+     -->
+<!-- 
+     <div class="content">
+        <div class="box"></div>
+     </div>
+
+     <div class="foo"></div> -->
+
+     <div class="content">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+     </div>
+</body>
+</html>

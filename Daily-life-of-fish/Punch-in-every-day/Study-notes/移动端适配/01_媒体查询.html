@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 在link元素使用 media 编写规则-->
+    <!-- <link rel="stylesheet" media="(max-width: 600px)" href="./box-show.css"> -->
+    <style>
+        /* 结合 @import url引入文件 后面当达成某个条件时将css文件引入*/
+        /* @import url(./box-show.css) (max-width: 600px); */
+
+        /* 利用  @media 后面写规则 条件达成实现里面的样式*/
+        @media (max-width: 600px) and (min-width: 584px){
+            .box {
+                background-color: hotpink;
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- 
+        媒体查询是针对不同的设备提供对应的接口
+        主要方式
+        一:
+     -->
+     <div class="box"></div>
+</body>
+</html>
