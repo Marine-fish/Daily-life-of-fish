@@ -1,0 +1,474 @@
+<mxfile host="65bd71144e">
+    <diagram id="iAsKP4wb4zrt6tdwsEYB" name="函数执行前">
+        <mxGraphModel dx="1076" dy="781" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="120" width="290" height="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="120" width="360" height="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;b&gt;栈内存&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="80" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;b&gt;堆内存&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="80" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="250" y="120" as="sourcePoint"/>
+                        <mxPoint x="300" y="70" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="480" y="120" as="sourcePoint"/>
+                        <mxPoint x="430" y="70" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="&lt;b&gt;函数多次执行前流程&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="10" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="VO: GO&lt;br&gt;this&lt;br&gt;作用域" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="670" width="270" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="执行上下文栈" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="640" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;b&gt;GO(window)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="150" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="foo: 0x100" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="11" vertex="1">
+                    <mxGeometry y="30" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="" style="endArrow=classic;html=1;strokeColor=#FF3333;fontSize=12;fontColor=#020203;" parent="11" target="44" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="30" y="50" as="sourcePoint"/>
+                        <mxPoint x="130" y="50" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="64" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;foo函数产生的AO对象&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;没执行函数前并没有AO对象&lt;/b&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#020203;fillColor=none;gradientColor=none;" parent="63" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="17" y="5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="&lt;b&gt;funtion object(foo)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="630" y="150" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="name" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="15" vertex="1">
+                    <mxGeometry y="30" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="this" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="15" vertex="1">
+                    <mxGeometry y="60" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="length&lt;br&gt;代码块内容&lt;br&gt;&lt;br&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="15" vertex="1">
+                    <mxGeometry y="90" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.063;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#FF3333;" parent="1" target="3" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="230" y="670" as="sourcePoint"/>
+                        <mxPoint x="280" y="620" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="" style="endArrow=classic;html=1;strokeColor=#FF3333;entryX=-0.021;entryY=0.142;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="15" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="520" y="190" as="sourcePoint"/>
+                        <mxPoint x="570" y="140" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="37" value="VO: AO&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;this&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;作用域" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="555" width="270" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="执行foo函数的上下文栈(第一次执行)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="510" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="&lt;b&gt;执行函数时的AO对象&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="455" y="330" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="endArrow=classic;html=1;strokeColor=#FF3333;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="230" y="560" as="sourcePoint"/>
+                        <mxPoint x="450" y="375" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="46" value="&lt;br style=&quot;font-size: 14px&quot;&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#6C767D;html=1;whiteSpace=wrap;fillColor=#ffffff;fontColor=#212529;verticalAlign=bottom;align=left;spacing=20;spacingBottom=0;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="360" width="160" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="&lt;font color=&quot;#020203&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;AO(foo)&lt;/b&gt;&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#F7F7F7;strokeColor=#6C767D;fontColor=#6C767D;resizeWidth=1;fontSize=18;align=center;spacing=20;" parent="46" vertex="1">
+                    <mxGeometry width="160" height="30" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="name: underfind" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" parent="46" vertex="1">
+                    <mxGeometry x="10" y="40" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="age: underfind" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" parent="46" vertex="1">
+                    <mxGeometry y="60" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="message: underfind" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" parent="46" vertex="1">
+                    <mxGeometry x="10" y="80" width="130" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="" style="endArrow=classic;html=1;strokeColor=#FF3333;fontSize=12;fontColor=#020203;" parent="46" target="37" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="80" as="sourcePoint"/>
+                        <mxPoint x="100" y="80" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="57" value="&lt;b&gt;key存的位置&lt;/b&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#020203;" parent="56" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fontColor=#020203;gradientColor=none;fillColor=none;" parent="46" vertex="1">
+                    <mxGeometry y="30" width="150" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#FF3333;fontSize=12;fontColor=#020203;exitX=0.417;exitY=-0.083;exitDx=0;exitDy=0;exitPerimeter=0;" parent="46" source="60" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="60" y="180" as="sourcePoint"/>
+                        <mxPoint x="110" y="130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="52" value="" style="endArrow=classic;html=1;strokeColor=#FF3333;fontSize=14;fontColor=#020203;entryX=0.906;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="47" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="640" y="280" as="sourcePoint"/>
+                        <mxPoint x="740" y="280" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="53" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;代码块里的key&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#020203;" parent="52" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontColor=#020203;fillColor=none;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="555" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="&lt;b&gt;用arguments对象作为初始化,key存在的地方&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#020203;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="570" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="VO: AO&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;this&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;作用域" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="430" width="270" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="执行foo函数的上下文栈(第二次执行)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="390" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="VO: AO&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;this&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;作用域" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="310" width="270" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="执行foo函数的上下文栈(第三次执行)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="270" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="&lt;br style=&quot;font-size: 14px&quot;&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#6C767D;html=1;whiteSpace=wrap;fillColor=#ffffff;fontColor=#212529;verticalAlign=bottom;align=left;spacing=20;spacingBottom=0;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="630" y="360" width="160" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="&lt;font color=&quot;#020203&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;AO(foo)&lt;/b&gt;&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#F7F7F7;strokeColor=#6C767D;fontColor=#6C767D;resizeWidth=1;fontSize=18;align=center;spacing=20;" vertex="1" parent="69">
+                    <mxGeometry width="160" height="30" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="name: underfind" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" vertex="1" parent="69">
+                    <mxGeometry x="10" y="40" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="age: underfind" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" vertex="1" parent="69">
+                    <mxGeometry y="60" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="message: underfind" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" vertex="1" parent="69">
+                    <mxGeometry x="10" y="80" width="130" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#FF9933;fontSize=12;fontColor=#020203;" edge="1" parent="69" source="90">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="60" y="180" as="sourcePoint"/>
+                        <mxPoint x="110" y="130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="76" value="" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fontColor=#020203;gradientColor=none;fillColor=none;" vertex="1" parent="69">
+                    <mxGeometry y="30" width="150" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="&lt;br style=&quot;font-size: 14px&quot;&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#6C767D;html=1;whiteSpace=wrap;fillColor=#ffffff;fontColor=#212529;verticalAlign=bottom;align=left;spacing=20;spacingBottom=0;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="560" width="160" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="&lt;font color=&quot;#020203&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;AO(foo)&lt;/b&gt;&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#F7F7F7;strokeColor=#6C767D;fontColor=#6C767D;resizeWidth=1;fontSize=18;align=center;spacing=20;" vertex="1" parent="78">
+                    <mxGeometry width="160" height="30" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="name: underfind" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" vertex="1" parent="78">
+                    <mxGeometry x="10" y="40" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="age: underfind" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" vertex="1" parent="78">
+                    <mxGeometry y="60" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="message: underfind" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" vertex="1" parent="78">
+                    <mxGeometry x="10" y="80" width="130" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#CC0066;fontSize=12;fontColor=#020203;exitX=0.417;exitY=-0.083;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="78" target="91">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="90" y="150" as="sourcePoint"/>
+                        <mxPoint x="140" y="100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="85" value="" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fontColor=#020203;gradientColor=none;fillColor=none;" vertex="1" parent="78">
+                    <mxGeometry y="25" width="150" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;用arguments对象作为初始化,key存在的地方&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontColor=#020203;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="810" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;用arguments对象作为初始化,key存在的地方&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontColor=#020203;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="810" y="640" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="&lt;b&gt;第二次foo&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="805" y="450" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="&lt;b&gt;第一次foo&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="530" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="&lt;b&gt;第三次foo&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="800" y="610" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#FF9933;fontSize=12;fontColor=#020203;exitX=0;exitY=0.86;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="69">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="370" y="470.3892307692307" as="sourcePoint"/>
+                        <mxPoint x="300" y="459.62" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="98" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#CC0066;fontSize=12;fontColor=#020203;exitX=0.417;exitY=-0.083;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.013;entryY=0.61;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="85">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="280" y="340" as="sourcePoint"/>
+                        <mxPoint x="380" y="300" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="BDf9AtH1_0xJpYC3AMcC-98" value="&lt;b&gt;&lt;font color=&quot;#cc0066&quot;&gt;当执行完该上文栈时,该栈会弹出栈内存&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="90" width="120" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="函数执行后" id="brMkGrNib6hqxvyzwmnD">
+        <mxGraphModel dx="1076" dy="781" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-0"/>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-1" parent="K3HTOUOkzt5t2ENeWdU4-0"/>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="30" y="120" width="290" height="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="440" y="120" width="360" height="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-4" value="&lt;b&gt;栈内存&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="130" y="80" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-5" value="&lt;b&gt;堆内存&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="600" y="80" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-6" value="" style="endArrow=classic;html=1;" edge="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="250" y="120" as="sourcePoint"/>
+                        <mxPoint x="300" y="70" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-7" value="" style="endArrow=classic;html=1;" edge="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="480" y="120" as="sourcePoint"/>
+                        <mxPoint x="430" y="70" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-8" value="&lt;b&gt;函数多次执行后流程&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="310" y="10" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-9" value="VO: GO&lt;br&gt;this&lt;br&gt;作用域" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="40" y="670" width="270" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-10" value="执行上下文栈" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="120" y="640" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-11" value="&lt;b&gt;GO(window)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="460" y="150" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-12" value="foo: 0x100" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-11">
+                    <mxGeometry y="30" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-13" value="" style="endArrow=classic;html=1;strokeColor=#FF3333;fontSize=12;fontColor=#020203;" edge="1" parent="K3HTOUOkzt5t2ENeWdU4-11" target="K3HTOUOkzt5t2ENeWdU4-23">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="30" y="50" as="sourcePoint"/>
+                        <mxPoint x="130" y="50" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-14" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;foo函数产生的AO对象&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;没执行函数前并没有AO对象&lt;/b&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#020203;fillColor=none;gradientColor=none;" connectable="0" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-13">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="17" y="5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-15" value="&lt;b&gt;funtion object(foo)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="630" y="150" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-16" value="name" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-15">
+                    <mxGeometry y="30" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-17" value="this" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-15">
+                    <mxGeometry y="60" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-18" value="length&lt;br&gt;代码块内容&lt;br&gt;&lt;br&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-15">
+                    <mxGeometry y="90" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-19" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.063;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#FF3333;" edge="1" parent="K3HTOUOkzt5t2ENeWdU4-1" target="K3HTOUOkzt5t2ENeWdU4-3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="230" y="670" as="sourcePoint"/>
+                        <mxPoint x="280" y="620" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-20" value="" style="endArrow=classic;html=1;strokeColor=#FF3333;entryX=-0.021;entryY=0.142;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="K3HTOUOkzt5t2ENeWdU4-1" target="K3HTOUOkzt5t2ENeWdU4-15">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="520" y="190" as="sourcePoint"/>
+                        <mxPoint x="570" y="140" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-21" value="VO: AO&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;this&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;作用域" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="40" y="555" width="270" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-22" value="执行foo函数的上下文栈(第一次执行)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="100" y="510" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-23" value="&lt;b&gt;执行函数时的AO对象&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="455" y="330" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-24" value="" style="endArrow=classic;html=1;strokeColor=#FF3333;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="230" y="560" as="sourcePoint"/>
+                        <mxPoint x="450" y="375" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-25" value="&lt;br style=&quot;font-size: 14px&quot;&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#6C767D;html=1;whiteSpace=wrap;fillColor=#ffffff;fontColor=#212529;verticalAlign=bottom;align=left;spacing=20;spacingBottom=0;fontSize=14;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="450" y="360" width="160" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-26" value="&lt;font color=&quot;#020203&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;AO(foo)&lt;/b&gt;&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#F7F7F7;strokeColor=#6C767D;fontColor=#6C767D;resizeWidth=1;fontSize=18;align=center;spacing=20;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-25">
+                    <mxGeometry width="160" height="30" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-27" value="name: per" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-25">
+                    <mxGeometry x="10" y="40" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-28" value="age: 18" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-25">
+                    <mxGeometry y="60" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-29" value="message: 哈哈哈" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-25">
+                    <mxGeometry x="10" y="80" width="130" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-30" value="" style="endArrow=classic;html=1;strokeColor=#FF3333;fontSize=12;fontColor=#020203;" edge="1" parent="K3HTOUOkzt5t2ENeWdU4-25" target="K3HTOUOkzt5t2ENeWdU4-21">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="80" as="sourcePoint"/>
+                        <mxPoint x="100" y="80" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-31" value="&lt;b&gt;key存的位置&lt;/b&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#020203;" connectable="0" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-30">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-33" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#FF3333;fontSize=12;fontColor=#020203;exitX=0.417;exitY=-0.083;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="K3HTOUOkzt5t2ENeWdU4-25" source="K3HTOUOkzt5t2ENeWdU4-36">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="60" y="180" as="sourcePoint"/>
+                        <mxPoint x="110" y="130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-32" value="" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fontColor=#020203;gradientColor=none;fillColor=none;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-25">
+                    <mxGeometry x="5" y="40" width="150" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-34" value="" style="endArrow=classic;html=1;strokeColor=#FF3333;fontSize=14;fontColor=#020203;entryX=0.906;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="K3HTOUOkzt5t2ENeWdU4-1" target="K3HTOUOkzt5t2ENeWdU4-26">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="640" y="280" as="sourcePoint"/>
+                        <mxPoint x="740" y="280" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-35" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;代码块里的key&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#020203;" connectable="0" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-34">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-36" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontColor=#020203;fillColor=none;gradientColor=none;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="490" y="555" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-37" value="&lt;b&gt;用arguments对象作为初始化,key存在的地方&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#020203;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="500" y="570" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-38" value="VO: AO&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;this&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;作用域" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="40" y="430" width="270" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-39" value="执行foo函数的上下文栈(第二次执行)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="110" y="390" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-40" value="VO: AO&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;this&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;作用域" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="40" y="310" width="270" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-41" value="执行foo函数的上下文栈(第三次执行)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="110" y="270" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-42" value="&lt;br style=&quot;font-size: 14px&quot;&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#6C767D;html=1;whiteSpace=wrap;fillColor=#ffffff;fontColor=#212529;verticalAlign=bottom;align=left;spacing=20;spacingBottom=0;fontSize=14;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="630" y="360" width="160" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-43" value="&lt;font color=&quot;#020203&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;AO(foo)&lt;/b&gt;&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#F7F7F7;strokeColor=#6C767D;fontColor=#6C767D;resizeWidth=1;fontSize=18;align=center;spacing=20;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-42">
+                    <mxGeometry width="160" height="30" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-44" value="name: li" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-42">
+                    <mxGeometry x="10" y="40" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-45" value="age: 19" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-42">
+                    <mxGeometry y="60" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-46" value="message: 啦啦啦" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-42">
+                    <mxGeometry x="10" y="80" width="130" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-50" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#FF9933;fontSize=12;fontColor=#020203;" edge="1" parent="K3HTOUOkzt5t2ENeWdU4-42" source="K3HTOUOkzt5t2ENeWdU4-60">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="60" y="180" as="sourcePoint"/>
+                        <mxPoint x="110" y="130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-49" value="" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fontColor=#020203;gradientColor=none;fillColor=none;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-42">
+                    <mxGeometry x="5" y="40" width="150" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-51" value="&lt;br style=&quot;font-size: 14px&quot;&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#6C767D;html=1;whiteSpace=wrap;fillColor=#ffffff;fontColor=#212529;verticalAlign=bottom;align=left;spacing=20;spacingBottom=0;fontSize=14;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="630" y="550" width="160" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-52" value="&lt;font color=&quot;#020203&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;AO(foo)&lt;/b&gt;&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#F7F7F7;strokeColor=#6C767D;fontColor=#6C767D;resizeWidth=1;fontSize=18;align=center;spacing=20;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-51">
+                    <mxGeometry width="160" height="30" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-53" value="name: koko" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-51">
+                    <mxGeometry x="10" y="40" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-54" value="age: 20" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-51">
+                    <mxGeometry y="60" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-55" value="message: 呵呵呵" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#020203;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-51">
+                    <mxGeometry x="10" y="80" width="130" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-59" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#CC0066;fontSize=12;fontColor=#020203;exitX=0.417;exitY=-0.083;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="K3HTOUOkzt5t2ENeWdU4-51" target="K3HTOUOkzt5t2ENeWdU4-61">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="90" y="150" as="sourcePoint"/>
+                        <mxPoint x="140" y="100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-58" value="" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fontColor=#020203;gradientColor=none;fillColor=none;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-51">
+                    <mxGeometry x="5" y="35" width="150" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-60" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;用arguments对象作为初始化,key存在的地方&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontColor=#020203;fillColor=none;gradientColor=none;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="810" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-61" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;用arguments对象作为初始化,key存在的地方&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontColor=#020203;fillColor=none;gradientColor=none;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="810" y="640" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-62" value="&lt;b&gt;第二次foo&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="805" y="450" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-63" value="&lt;b&gt;第一次foo&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="470" y="530" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-64" value="&lt;b&gt;第三次foo&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="800" y="610" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-65" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#FF9933;fontSize=12;fontColor=#020203;exitX=0;exitY=0.86;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="K3HTOUOkzt5t2ENeWdU4-1" source="K3HTOUOkzt5t2ENeWdU4-42">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="370" y="470.3892307692307" as="sourcePoint"/>
+                        <mxPoint x="300" y="459.62" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K3HTOUOkzt5t2ENeWdU4-66" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#CC0066;fontSize=12;fontColor=#020203;exitX=0.417;exitY=-0.083;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.013;entryY=0.61;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="K3HTOUOkzt5t2ENeWdU4-1" target="K3HTOUOkzt5t2ENeWdU4-58">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="280" y="340" as="sourcePoint"/>
+                        <mxPoint x="380" y="300" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="YThDvbLZCHQW0X5FS2H8-0" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;&lt;font style=&quot;border-color: var(--border-color);&quot; color=&quot;#cc0066&quot;&gt;当执行完该上文栈时,该栈会弹出栈内存&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="K3HTOUOkzt5t2ENeWdU4-1">
+                    <mxGeometry x="90" width="120" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
