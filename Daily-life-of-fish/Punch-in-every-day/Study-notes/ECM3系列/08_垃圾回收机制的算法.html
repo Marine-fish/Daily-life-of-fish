@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 堆内存垃圾回收机制通过一下几个比较常用的算法进行判断是否释放堆内存
+         * 一: 引用计数
+         * 在堆存储里每次创建一个对象,该对象里面会用一个属性记录栈内存引用个数
+         * 当堆内存里的对象引用数量为0时,那么栈内存对象将会被GC回收
+         * 缺点: 会出现循环引用弊端
+         * 栈内存多个对象引用堆内存的对象,形成堆内存互相引用
+         * 导致栈内存有一个对象不在执行它关联的堆内存对象
+         * 但因为堆内存里引用值除了自己的外,还有其他引用,
+         * 就会导致自己堆内存的无法内GC回收
+         * 
+         * 二: 标记清除
+         * 会有一个根对象，GC会从根对象开始找，如果有对象没有和根对象
+         * 相引用那么这个对象就会GC回收
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let name = "per"
+
+        // console.log(name)
+
+        function foo() {
+            console.log("foo", name)
+        }
+
+        let bar = {
+            message: "哈哈哈",
+            bar: function bar() {
+                let name = "lilo"
+                console.log("bar对象", name)
+                foo()
+            }
+        }
+        bar.bar()
+        
+
+        /**
+         * 作用域链是一个对象列表,用于变量标识符的求值
+         * 当进入一个执行上下文时,这个作用域会被创建,
+         * 根据代码类型,添加一系列的对象
+         * 在类型是全局代码时,作用域链列表里就是GO,只有GO一个对象
+         * 如果类型是函数.函数在创建那一刻就已经确定了自己的作用域链,所以和在哪里调用的没有关系,而是和在哪里定义的位置有关系
+         * 
+        */
+    </script>
+</body>
+</html>

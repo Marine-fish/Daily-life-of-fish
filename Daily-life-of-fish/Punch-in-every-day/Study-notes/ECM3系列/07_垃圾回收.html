@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 每个编程语言都有自己的内存管理
+         * 在早期的的语言比如C, C++等这些语言都是手动进行管理内容
+         * 会用mackle函数对内存进行管理,当需要释放内存时会调用free函数
+         * 到后面的语言比如Java, JavaScript, Python都是自动管理内存
+         * JavaScript内存分为栈内存和堆内存
+         * 简单数据类型比如number,string这些会在栈内存里面进行存储
+         * 复制数据类型比如object, function, Array这些会在堆内存进行存储
+         * 因为JavaScript存在作用域和作用域链的关系存在
+         * 所以就会在栈内存和堆内存里存储VO,GO,AO对象
+         * 当创建一系列代码时,会在堆内存里创建一个GO(window)
+         * 在创建GO对象时会在栈内存创建一个执行上下文栈,栈里面其中存储一个对象就是VO
+         * 在执行的时候储存在VO会关联GO,VO里的this也会指向GO
+         * 在执行函数时,会在栈内存创建一个执行上下文栈,因为执行上下文栈
+         * 因为VO要关联一个对象,GO已经关联了栈内存全局执行上线文栈里的VO了,当执行函数时
+         * 所以会在堆内存逛街一个对象叫AO,这个AO对象就会关联栈内存的AO
+         * 当执行上下文栈的代码执行完胡,该执行上下文栈会弹出栈内存
+         * 所关联的AO不一定要被堆内存消耗,要取决与垃圾回收机制(GC)
+         * 如果不进行堆内存空间释放,那么必然会造成堆内存空间泄露
+        */
+    </script>
+</body>
+</html>

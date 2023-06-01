@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // var n = 200
+        // function foo() {
+        //     n = 100
+        // }
+
+        // foo()
+
+        // console.log(n)
+        /**
+         * 在全局代码执行前, var n = undefined  fn n = underfind
+         * 在全局代码执行后 var n = 200 fn() 会现在自己的作用域去寻找n没有就回去上层作用域寻找 n = 100 \
+         * 最后找到var n 改成 100
+         * 最后 n = 100
+        */
+
+        // var n = 200
+        // function foo() {
+        //    var n = 100
+        // }
+
+        // foo()
+
+        // console.log(n)
+        /**
+         * 在全局代码执行前, var n = undefined  fn n = underfind
+         * 在全局代码执行后 var n = 200 fn() 在自己的作用域里定义了n = 100 \
+         * 最后是去寻找n的值,是在全局代码里的值
+         * 最后打印200
+        */
+
+        // function foo() {
+        //     console.log(n) //underfind
+        //     var n = 600
+        //     console.log(n) // 600
+        // }
+
+        // var n = 400
+        // foo()
+
+        /**
+         * 最后执行foo函数,打印第一个n时
+         * 会现在自己的作用域去寻找,此时的n还没定义还是underfind
+         * 打印第二个n,n已经被赋值为600, 所以打印的是600
+        */
+
+        // var n = 100
+
+        // function bar1() {
+        //     console.log(n) //100
+        // }
+
+        // function foo2() {
+        //     var n = 300
+        //     console.log(n) //300
+        //     bar1()
+        // }
+
+        // foo2()
+
+        // var n = 500
+
+        // function foo() {
+        //     console.log(a) //未被定义
+        //     return
+        //     var n = 200
+        // }
+
+        // foo()
+
+        // function foo() {
+        //     var a = b = 600
+        // }
+        // foo()
+
+        // console.log(a) //未被定义
+        // console.log(b) // 600
+
+        var n = 500
+
+        function foo() {
+            var num = 20
+            function bar() {
+                console.log(num) //20
+            }
+
+            return bar
+        }
+
+        var bar = foo()
+        bar()
+    </script>
+</body>
+</html>

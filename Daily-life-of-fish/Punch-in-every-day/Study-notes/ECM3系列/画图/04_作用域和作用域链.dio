@@ -1,0 +1,213 @@
+<mxfile host="65bd71144e">
+    <diagram id="gzhEuDLHHJiSIcBDV4Yo" name="初始化执行上下文前">
+        <mxGraphModel dx="1076" dy="781" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="120" width="240" height="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="121" width="600" height="639" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="栈内存(上下文执行栈(ECS))" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="70" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="堆内存" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="70" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="全局对象(GO) 0x200" style="swimlane;fillStyle=auto;fontSize=10;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="414" y="150" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;span style=&quot;font-size: 10px; font-weight: 400; text-align: left;&quot;&gt;String&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=17;fontStyle=1;verticalAlign=middle;align=center;fillStyle=auto;" parent="15" vertex="1">
+                    <mxGeometry x="-24" y="40" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;span style=&quot;font-size: 10px; font-weight: 400; text-align: left;&quot;&gt;Math&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=17;fontStyle=1;verticalAlign=middle;align=center;fillStyle=auto;" parent="15" vertex="1">
+                    <mxGeometry x="-24" y="60" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;span style=&quot;font-size: 9px; font-weight: 400; text-align: left;&quot;&gt;Number&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=17;fontStyle=1;verticalAlign=middle;align=center;fillStyle=auto;" parent="15" vertex="1">
+                    <mxGeometry x="-24" y="20" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="message: underfind" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" parent="15" vertex="1">
+                    <mxGeometry x="-4" y="85" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="age: underfind" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" parent="15" vertex="1">
+                    <mxGeometry y="100" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="name: underfind" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" parent="15" vertex="1">
+                    <mxGeometry y="120" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="初始化JS代码前" style="text;strokeColor=none;fillColor=none;html=1;fontSize=19;fontStyle=1;verticalAlign=middle;align=center;fillStyle=auto;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="120" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="执行上下文栈(初始化JS代码前)" style="swimlane;fillStyle=auto;fontSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="550" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="&lt;font color=&quot;#020203&quot;&gt;this&lt;br&gt;作用域链&lt;br&gt;VO: GO&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillStyle=auto;fontSize=11;fontColor=#FF3333;" parent="24" vertex="1">
+                    <mxGeometry x="10" y="35" width="160" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="24" vertex="1">
+                    <mxGeometry x="10" y="110" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="当执行全局代码时它会现在自身VO去寻找,此时的VO关联着GO就是会依照去寻找" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="24" vertex="1">
+                    <mxGeometry x="20" y="125" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="EC(上下执行栈)" style="text;strokeColor=none;fillColor=none;html=1;fontSize=19;fontStyle=1;verticalAlign=middle;align=center;fillStyle=auto;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="520" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="foo: 0x100" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="429" y="290" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="函数对象(foo)0x100" style="swimlane;fillStyle=auto;fontSize=10;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="647" y="160" width="180" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="&lt;span style=&quot;font-size: 10px; font-weight: 400; text-align: left;&quot;&gt;name&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=17;fontStyle=1;verticalAlign=middle;align=center;fillStyle=auto;" parent="33" vertex="1">
+                    <mxGeometry x="-24" y="40" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font size=&quot;1&quot;&gt;函数里本身的属性&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=17;fontStyle=1;verticalAlign=middle;align=center;fillStyle=auto;" parent="33" vertex="1">
+                    <mxGeometry x="-5" y="20" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="作用域" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" parent="33" vertex="1">
+                    <mxGeometry y="85" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="leght" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" parent="33" vertex="1">
+                    <mxGeometry x="1" y="60" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="代码块里的属性" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontStyle=1" parent="33" vertex="1">
+                    <mxGeometry x="-5" y="110" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="" style="endArrow=classic;html=1;fontSize=11;entryX=0.19;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=#FF3333;strokeColor=#FF3333;exitX=0.871;exitY=0.333;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="32" target="36" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="600" y="280" as="sourcePoint"/>
+                        <mxPoint x="650" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="46" value="作用域链对象列表 " style="swimlane;fillStyle=auto;fontSize=10;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="690" y="370" width="180" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font size=&quot;1&quot;&gt;0:: GO 0x200&amp;nbsp;&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=17;fontStyle=1;verticalAlign=middle;align=center;fillStyle=auto;" vertex="1" parent="46">
+                    <mxGeometry x="-5" y="20" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="" style="endArrow=classic;html=1;fontSize=11;entryX=0.12;entryY=-0.1;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=#FF3333;strokeColor=#FF3333;exitX=0.871;exitY=0.333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" target="48">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="570" y="170.98000000000002" as="sourcePoint"/>
+                        <mxPoint x="741.03" y="50" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="53" value="foo执行上下文栈(初始化JS代码前)" style="swimlane;fillStyle=auto;fontSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="320" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="&lt;font color=&quot;#020203&quot;&gt;this&lt;br&gt;作用域链&lt;br&gt;VO: AO&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillStyle=auto;fontSize=11;fontColor=#FF3333;" vertex="1" parent="53">
+                    <mxGeometry x="10" y="35" width="160" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="53">
+                    <mxGeometry x="10" y="110" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="当执行全局代码时它会现在自身VO去寻找,此时的VO关联着GO就是会依照去寻找" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="53">
+                    <mxGeometry x="20" y="125" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="AO(foo)" style="swimlane;fillStyle=auto;fontSize=10;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="414" y="410" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: 400;&quot;&gt;&lt;font size=&quot;1&quot;&gt;aguments&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=17;fontStyle=1;verticalAlign=middle;align=center;fillStyle=auto;" vertex="1" parent="57">
+                    <mxGeometry x="-24" y="20" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="message: underfind" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" vertex="1" parent="57">
+                    <mxGeometry x="-4" y="85" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="age: underfind" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" vertex="1" parent="57">
+                    <mxGeometry y="100" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="name: underfind" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" vertex="1" parent="57">
+                    <mxGeometry y="120" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="" style="endArrow=classic;html=1;fontSize=11;fontColor=#FF3333;strokeColor=#FF3333;exitX=0.871;exitY=0.333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="57" target="54">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="66" y="6.990000000000009" as="sourcePoint"/>
+                        <mxPoint x="193" y="223.01" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="初始化执行上下文后" id="YD22miUZsOoQfZfoyoO2">
+        <mxGraphModel dx="1076" dy="781" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="x2hkohSb6eSt9DefgK44-0"/>
+                <mxCell id="x2hkohSb6eSt9DefgK44-1" parent="x2hkohSb6eSt9DefgK44-0"/>
+                <mxCell id="x2hkohSb6eSt9DefgK44-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="x2hkohSb6eSt9DefgK44-1" vertex="1">
+                    <mxGeometry x="40" y="120" width="240" height="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="x2hkohSb6eSt9DefgK44-1" vertex="1">
+                    <mxGeometry x="390" y="121" width="600" height="639" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-4" value="栈内存(上下文执行栈(ECS))" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;rounded=0;" parent="x2hkohSb6eSt9DefgK44-1" vertex="1">
+                    <mxGeometry x="110" y="70" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-5" value="堆内存" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;rounded=0;" parent="x2hkohSb6eSt9DefgK44-1" vertex="1">
+                    <mxGeometry x="550" y="70" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-6" value="全局对象(GO)" style="swimlane;fillStyle=auto;fontSize=10;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="x2hkohSb6eSt9DefgK44-1" vertex="1">
+                    <mxGeometry x="414" y="150" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-7" value="&lt;span style=&quot;font-size: 10px; font-weight: 400; text-align: left;&quot;&gt;String&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=17;fontStyle=1;verticalAlign=middle;align=center;fillStyle=auto;" parent="x2hkohSb6eSt9DefgK44-6" vertex="1">
+                    <mxGeometry x="-24" y="40" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-8" value="&lt;span style=&quot;font-size: 10px; font-weight: 400; text-align: left;&quot;&gt;Math&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=17;fontStyle=1;verticalAlign=middle;align=center;fillStyle=auto;" parent="x2hkohSb6eSt9DefgK44-6" vertex="1">
+                    <mxGeometry x="-24" y="60" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-9" value="&lt;span style=&quot;font-size: 9px; font-weight: 400; text-align: left;&quot;&gt;Number&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=17;fontStyle=1;verticalAlign=middle;align=center;fillStyle=auto;" parent="x2hkohSb6eSt9DefgK44-6" vertex="1">
+                    <mxGeometry x="-24" y="20" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-10" value="message: &quot;哈哈哈" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" parent="x2hkohSb6eSt9DefgK44-6" vertex="1">
+                    <mxGeometry x="1" y="85" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-11" value="age: 18" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" parent="x2hkohSb6eSt9DefgK44-6" vertex="1">
+                    <mxGeometry x="15" y="100" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-12" value="name: underfind" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" parent="x2hkohSb6eSt9DefgK44-6" vertex="1">
+                    <mxGeometry y="120" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-13" value="初始化JS代码前" style="text;strokeColor=none;fillColor=none;html=1;fontSize=19;fontStyle=1;verticalAlign=middle;align=center;fillStyle=auto;" parent="x2hkohSb6eSt9DefgK44-1" vertex="1">
+                    <mxGeometry x="450" y="120" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-14" value="执行上下文栈(初始化JS代码前)" style="swimlane;fillStyle=auto;fontSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="x2hkohSb6eSt9DefgK44-1" vertex="1">
+                    <mxGeometry x="50" y="550" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-15" value="&lt;font color=&quot;#020203&quot;&gt;this&lt;br&gt;作用域&lt;br&gt;VO: GO&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillStyle=auto;fontSize=11;fontColor=#FF3333;" parent="x2hkohSb6eSt9DefgK44-14" vertex="1">
+                    <mxGeometry x="20" y="140" width="160" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-16" value="EC(上下执行栈)" style="text;strokeColor=none;fillColor=none;html=1;fontSize=19;fontStyle=1;verticalAlign=middle;align=center;fillStyle=auto;" parent="x2hkohSb6eSt9DefgK44-1" vertex="1">
+                    <mxGeometry x="90" y="520" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-17" value="foo: 0x100" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" parent="x2hkohSb6eSt9DefgK44-1" vertex="1">
+                    <mxGeometry x="429" y="290" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-18" value="函数对象(foo)0x100" style="swimlane;fillStyle=auto;fontSize=10;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="x2hkohSb6eSt9DefgK44-1" vertex="1">
+                    <mxGeometry x="730" y="150" width="180" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-19" value="&lt;span style=&quot;font-size: 10px; font-weight: 400; text-align: left;&quot;&gt;name&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=17;fontStyle=1;verticalAlign=middle;align=center;fillStyle=auto;" parent="x2hkohSb6eSt9DefgK44-18" vertex="1">
+                    <mxGeometry x="-24" y="40" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-20" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font size=&quot;1&quot;&gt;函数里本身的属性&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=17;fontStyle=1;verticalAlign=middle;align=center;fillStyle=auto;" parent="x2hkohSb6eSt9DefgK44-18" vertex="1">
+                    <mxGeometry x="-5" y="20" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-21" value="作用域" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" parent="x2hkohSb6eSt9DefgK44-18" vertex="1">
+                    <mxGeometry y="85" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-22" value="leght" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" parent="x2hkohSb6eSt9DefgK44-18" vertex="1">
+                    <mxGeometry x="1" y="60" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-23" value="代码块里的属性" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontStyle=1" parent="x2hkohSb6eSt9DefgK44-18" vertex="1">
+                    <mxGeometry x="-5" y="110" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="x2hkohSb6eSt9DefgK44-24" value="" style="endArrow=classic;html=1;fontSize=11;entryX=0.19;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=#FF3333;strokeColor=#FF3333;exitX=0.871;exitY=0.333;exitDx=0;exitDy=0;exitPerimeter=0;" parent="x2hkohSb6eSt9DefgK44-1" source="x2hkohSb6eSt9DefgK44-17" target="x2hkohSb6eSt9DefgK44-20" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="600" y="280" as="sourcePoint"/>
+                        <mxPoint x="650" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

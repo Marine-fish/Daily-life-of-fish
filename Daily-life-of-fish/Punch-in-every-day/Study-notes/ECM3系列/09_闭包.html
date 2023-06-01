@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let name = "per"
+        let message = "哈哈哈"
+
+        function bar() {
+            let info = "null"
+            console.log(info, name, message)
+        }
+
+        bar()
+
+        let n = 5
+        function sum(num) {
+          let nums =  n + num
+          console.log(nums)
+        }
+        sum(10)
+        sum(20)
+        sum(30)
+        sum(40)
+        /**
+         * 一个函数除了可以访问自己内部的值，也可以访问外部的值
+         * 之所以可以这样做，是因为有了闭包起了作用
+         * 闭包本质是通过作用域链去寻找的
+         * 
+        */
+    </script>
+</body>
+</html>
