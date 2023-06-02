@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /**
+         * 对象的属性默认情况下有很多操作方法
+         * .访问,添加属性
+         * delete 删除
+         * 如果要对某一个属性进行控制,比如禁止使用
+         * 就要用一个一个叫defineProperty属性进行操作
+         * 这个属性描述符是在Object类方法里的
+         * 如果对对象进行修改的话,
+         * 会将这个defineProperty的返回值给递出
+         * defineProperty分类
+         * 1.数据属性描述符
+         * 2.存取属性描述符
+        */
+
+        const obj = {
+            name: "per",
+            age: 23,
+            hight: 1.73
+        }
+
+        Object.defineProperty(obj, 'hight', {
+            configurable: false, //表示这个属性不能被删除,也不能在进行用defineProperty对obj对象的属性进行操作,默认没有用 Object.defineProperty,configurable属性是true,用了的话就是false
+            enumerable: false, //表示这个对象不能通过for in 或者Object.keys拿到这个属性
+            writable: false, //表示这个属性只能读取,不能修改
+            value: 1.88 //因为设置了writable属性只能读取,不能进行修改,可以通过value属性指定返回什么值
+        })
+
+        delete obj.age
+        // delete obj.hight 
+
+        console.log(Object.keys(obj))
+        console.log(obj.hight)
+    </script>
+</body>
+</html>

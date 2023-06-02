@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /**
+         * 从普通对象来讲
+         * 两个都可以通过obj.__proto__,Object.getPrototypeOf获取原型
+        */
+        const obj = {}
+        function foo() {}
+
+        /**
+         * 当是一个函数时
+         * 就可以通过prototype属性获取函数原型
+        */
+        console.log(foo.prototype)
+    </script>
+</body>
+</html>

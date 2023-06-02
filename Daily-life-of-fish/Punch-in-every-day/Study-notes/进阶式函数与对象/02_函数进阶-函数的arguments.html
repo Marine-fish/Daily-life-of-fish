@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        // function foo() {
+        //     // console.log(arguments)
+
+        //    for (let index = 0; index < arguments.length; index++) {
+        //      if (arguments[index] % 2 === 0) {
+        //         console.log(arguments[index])
+        //      }
+            
+        //    }
+        // }
+        // foo(1,2,3,4,5,6)
+        /**
+         * arguments是类数组对象
+         * 它可以通过索引去获取值
+        */
+
+        /**
+         * 将arguments转成数组类型的方法
+         * 一: 将arguments里的值遍历出来后,放到一个数组里
+        */
+    //    function foo() {
+    //     const arr = []
+    //     for (const arg of arguments) {
+    //         arr.push(arg)
+    //         arr.forEach(el => {
+    //             console.log(el)
+    //         });
+    //     }
+    //     console.log(arr)
+    //    }
+    //    foo(1,2,3,4,5,6,7,8,9) 
+
+        /**
+         * 方法二: 利用ES6方法 Array.from()转化成可迭代对象
+         * 通过...展开语法
+         * 
+        */
+    //       function foo() {
+    //         const newArg = Array.from(arguments)
+    //         return newArg
+    //     }
+    //  const newArgs = foo(1,2,3,4,5,6,7,8,9) 
+    //  newArgs.forEach(el => console.log(el))
+
+            // function foo() {
+            //     const newArg = [...arguments]
+            //     return newArg
+            //  }
+            // const newArgs = foo(1,2,3,4,5,6,7,8,9) 
+            // newArgs.forEach(el => console.log(el))
+            /**
+             * 方法三: 利用slice()的算法
+            */
+            function foo() {
+                const newArg = [].slice.call(arguments)
+                return newArg
+             }
+            const newArgs = foo(1,2,3,4,5,6,7,8,9) 
+            newArgs.forEach(el => console.log(el))
+    </script>
+</body>
+</html>

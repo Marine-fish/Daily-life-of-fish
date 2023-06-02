@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /**
+         * 柯里化函数
+         * 原来的函数传参都是调用一次,再一次调用的时候传入需要参数个数
+         * 而柯里化函数将函数调用多次将需要的传入的参数个数,每调用一次传入一个
+        */
+        // function foo(a, b, c) {
+        //     console.log(a, b, c)
+        // }
+        // foo(1, 2, 3)
+
+        // function foo(a) {
+
+        //    return function( b) {
+
+        //     return function(c) {
+        //         return a + b + c
+        //     }
+        //    }
+        // }
+        const foo = a => b => c => a+b+c
+       const sum = foo(1)(2)(3)
+       console.log(sum)
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            Vue2响应式原理
+        */
+        const obj = {
+            name: "per"
+        }
+
+        let newValue = ""
+        Object.defineProperty(obj, "name", {
+            configurable: true,
+            enumerable: false,
+            set: (value) => { //当对象里的属性发生修改时,会自动执行这个函数
+                console.log("name属性发生了修改", value)
+                newValue = "Mike"
+            },
+            get: () => { //获取到修改后的值
+                console.log("get方法", newValue)
+                return newValue
+            }
+        })
+
+        obj.name = "liao"
+        obj.name
+
+        Object.defineProperties(obj, {
+            name: {
+                configurable: true
+            },
+            age: {
+                configurable: true
+            },
+            name: {
+                configurable: true
+            },
+        })
+    </script>
+</body>
+</html>
