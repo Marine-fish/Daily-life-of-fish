@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class foo {
+            /**
+             * 当通过new关键字进行调用foo函数时
+             * 会自动调用foo函数里的constructor函数
+            */
+           constructor(name, age) {
+            this.name = name
+            this.age = age
+           }
+
+           /**
+            * 实例方法
+            * 会放在foo的prototype上面,
+            * 所以直接从foo自身获取是拿不到的
+           */
+          staying() {
+
+          }
+        }
+
+        const foo1 = new foo("per", 23)
+        console.log(foo.name)
+    </script>
+</body>
+</html>

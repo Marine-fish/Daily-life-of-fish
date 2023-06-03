@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function Map(position, province, city, area) {
+            this.position = position
+            this.province = province
+            this.city = city
+            this.area = area
+        }
+
+        Map.prototype.modeTransportation =  function(type) {
+            console.log("交通方式-", type)
+        } 
+        Map.prototype.foodCulture = function(type) {
+            console.log("饮食方式-", type)
+        } 
+        
+        function foo(position, province, name, age) {
+            Map.call(this, position, province)
+
+            this.name = name
+            this.age = age
+        }
+        const Chengdu = new Map("地球", "南部", "成都", "高新")
+        Chengdu.modeTransportation("汽车")
+        Chengdu.foodCulture("大米")
+
+        const Jiangnan = new Map("地球", "江南", "杭州", "西湖")
+        Chengdu.modeTransportation("船")
+        Chengdu.foodCulture("鱼")
+        console.log(Chengdu, Jiangnan,  Map.prototype)
+
+        const foo1= new foo("哈哈哈", "嘻嘻嘻", "Mike", 26)
+        console.log(foo1)
+    </script>
+</body>
+</html>

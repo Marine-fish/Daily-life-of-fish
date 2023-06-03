@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 必须创建出来一个对象
+         * 找个对象的隐式原型必须指向父类的显示原型
+         * 将这个对象赋值给子类的显示原型
+        */
+
+        function foo() {}
+        function bar() {}
+        const obj = {}
+        Object.setPrototypeOf(obj, foo.prototype)
+        bar.prototype = obj
+
+        const obj1 = Object.create(foo.prototype)
+        bar.prototype = obj1
+
+        function createF(sub ,obj) {
+            sub.prototype = Object.create(obj)
+           
+        }
+
+       createF(bar, foo.prototype)
+
+       /**
+        * 
+       */
+      function createC(z) {
+        function X() {}
+        X.prototype = z
+        return new F()
+      }
+
+      /**
+        * 这个就是寄生式函数
+       */
+      function createFoo(SUB, SUPER) {
+        SUB.prototype = Object.create(SUPER.prototype)
+        Object.defineProperty(SUB, "constructor", {
+            enumerable: false,
+            configurable: true,
+            writable: true,
+            value: SUB
+        })
+      }
+
+      createFoo(bar, foo)
+    </script>
+</body>
+</html>

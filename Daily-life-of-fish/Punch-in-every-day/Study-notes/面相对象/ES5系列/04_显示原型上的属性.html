@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function Person() {
+            name: "per"
+        }
+
+        /**
+         * 函数里有个显示原型prototype
+         * 函数指向显示原型prototype
+         * 原型prototype里有个constructor属性
+         * constructor属性指向函数
+         * 所以通过原型prototype获取函数里的内容也可以
+         * 通过constructor获取
+        */
+
+        console.log(Person.prototype)
+    </script>
+</body>
+</html>

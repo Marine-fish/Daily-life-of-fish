@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const obj = {
+            name: "per"
+        }
+
+        function Person() {
+
+        }
+
+        const Person1 = new Person()
+
+        /**
+         * new关键字完整的内部操作
+         * 在函数内部创建一个空对象
+         * 将空对象赋值给this
+         * 将函数的显示原型prototype赋值给隐式原型
+         * 如果函数本身没有内容时
+         * 则会将这个空对象给return出去
+         * 因为原型prototype是一个对象
+         * 所以在给显示原型prototype绑定方法时
+         * 通过new出来的实例只会调用一次父类
+         * 从而不会产生多个AO,节约了堆空间的利用
+        */
+    </script>
+</body>
+</html>
