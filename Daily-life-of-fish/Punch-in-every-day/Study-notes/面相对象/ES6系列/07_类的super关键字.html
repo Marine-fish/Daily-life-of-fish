@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * super.method()调用一个父类的方法
+         * super()调用父类里constructor
+        */
+
+        class foo {
+            constructor(name, age) {
+                this.name = name
+                this.age = age
+            }
+
+            eating(type) {
+                console.log("吃了啥-", type)
+            }
+        }
+
+        class bar extends foo {
+            constructor(name, age, hight, from) {
+                super(name, age)
+                this.hight = hight
+                this.from = from
+
+            }
+
+        }
+        const bar1 = new bar("per", 23, 1.73, "China")
+        console.log(bar1.eating("米饭"), bar1)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 针对对象利用描述符defineProperty去修改对象
+        */
+        // const obj = {
+        //     name: "per"
+        // }
+        // Object.defineProperty(obj, "name", {
+        //     configurable: false,
+        //     enumerable: true,
+        //     set() {
+
+        //     },
+        //     get() {
+
+        //     }
+        // })
+
+        /**
+         * 也可以直接在对象里进行set,get方法操作
+        */
+         const obj = {
+            _name: "per",
+            set _name(value) {
+                this._name = value
+            },
+            get _name() {
+                return this._name
+            }
+        }
+    </script>
+</body>
+</html>

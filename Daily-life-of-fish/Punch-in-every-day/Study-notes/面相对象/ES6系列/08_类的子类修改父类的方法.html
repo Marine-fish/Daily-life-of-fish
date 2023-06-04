@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class foo {
+    
+            eating() {
+                console.log("吃饭了")
+            }
+        }
+
+        class bar extends foo {
+         
+             /**
+                 * 方法一: 重写
+                */
+            //     eating() {
+            //     console.log("吃的是麻婆豆腐")
+            //    }
+
+            /**
+             *  方法二: 在调用重写的方法时同时也调用父类的方法
+            */
+
+            eating() {
+                
+                console.log("吃的是麻婆豆腐")
+
+                super.eating()
+             }
+        }
+
+        const bar1 = new bar()
+        console.log(bar1.eating())
+    </script>
+</body>
+</html>
