@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 函数在不传参数的时候
+         * 可以用默认值进行替代
+         * 如果不给默认值,在不传参的情况下形参的值是underfund
+        */
+       function foo(name = "per", age = 23) {
+            console.log(name, age)
+            name ?? "我是默认值" //es6之后
+       }
+       foo()
+    </script>
+</body>
+</html>

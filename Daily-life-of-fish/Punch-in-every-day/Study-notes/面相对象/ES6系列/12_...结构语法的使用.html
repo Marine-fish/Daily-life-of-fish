@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * ...解构的语法主要用于对对象和数组里的多个属性进行遍历
+        */
+       const obj = {name: "per", age: 23, from: "China"}
+       const arr = [1, 2, 3, 5, 6 ,7 , 8]
+       
+       /**
+        * 数组的结构方法一
+        * 会将数组里安顺序依次复制给[]里的变量
+       */
+    //   const [num1, num2, num3, num4, num5] = arr
+    //   console.log(num1, num2, num3, num4, num5)
+    // const [num1 = "默认值", num2, num3, num4, num5] = arr
+
+      /**
+        * 对象的结构方法一
+        * 会将对象里安顺序依次复制给{}里的变量
+        * 变量要和对象的key一样
+       */
+
+    //   const {name, age, from} = obj
+    //   console.log(name, age, from)
+    //   const {name: 重命名, age, from} = obj
+    //   const {name = 默认值, age, from} = obj
+
+    </script>
+</body>
+</html>

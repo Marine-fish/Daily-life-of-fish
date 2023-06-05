@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 当代码开始执行,初始化的时候
+         * 会在执行上文栈里创建出两个词法环境
+         * 一个叫词法环境
+         * 另一个叫变量词法环境
+         * 一个词法环境是由环境记录和一个外部词法环境组成
+         * 当我们用var和function声明变量时,它会被变量词法环境解析
+         * 变量词法环境会给var变量初始化,所以当在var前面访问时是underfund
+         * 这个就叫做作用域提升
+         * 但是let和const变量会被词法环境解析
+         * 词法环境在没给let和const赋值前,是不能被访问的
+         * 还有在这种环境(代码块到const或者let没被赋值前),
+         * 这个过程叫做暂时性死区
+         * 词法环境会在上下执行文栈里
+         * 环境记录会在堆里面
+        */
+    </script>
+</body>
+</html>

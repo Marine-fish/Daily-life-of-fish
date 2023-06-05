@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 展开语法其实也是浅拷贝
+        */
+        const obj = {
+            name: "per",
+            age: 23
+        }
+        console.log({...obj})
+
+        const arr = [1, 2, 3, 4]
+        console.log([...arr])
+        /**
+         * 在进行调用函数()展开运算符,是将数据进行展开, 并进行迭代
+         * 所以展开运算符用在对象时就会报错,对象不能可迭代
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function foo() {
+            console.log("foo", this)
+        }
+        /**
+         * new Function
+         * 其实函数也有原型prototype
+         * 当调用函数时,
+         * 函数的显示原型赋值给foo的隐式原型
+         * 所以apply-call-bind方法可以在foo上使用
+        */
+        Function.prototype.PerApply = function (thisArg, anyNum) {
+            /**
+             * 将调用PerApply函数时,
+             * 传入一个函数
+             * this的隐式绑定原则是
+             * 让this通过对象调用时
+             * this会指向this
+            */
+            // thisArg.fn = this
+            // thisArg.fn()
+            // delete thisArg.fn
+
+            thisArg = (thisArg === null || thisArg === undefined) ? window: Object(thisArg)
+            /**
+             * 利用对象属性描述符进行添加this
+             * 
+            */
+           Object.defineProperty(thisArg, 'fn', {
+            enumerable: true,
+            writable: true,
+            configurable: true,
+            value: this
+           })
+           thisArg.fn(...anyNum)
+           delete thisArg.fn
+        }
+        // foo.PerApply(foo)
+        foo.PerApply({name: "per", age: 23})
+
+       /**
+        * 封装成一个函数
+       */
+      function tool(thisArg, anyNum, fn) {
+        thisArg = (thisArg === null || thisArg === undefined) ? window: Object(thisArg)
+            /**
+             * 利用对象属性描述符进行添加this
+             * 
+            */
+           Object.defineProperty(thisArg, 'fn', {
+            enumerable: true,
+            writable: true,
+            configurable: true,
+            value: fn
+           })
+           thisArg.fn(...anyNum)
+           delete thisArg.fn
+      }
+    </script>
+</body>
+</html>

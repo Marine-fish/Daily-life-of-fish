@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // /**
+        //  * 普通的对象
+        // */
+
+        // const name = "per"
+        // const age = 23
+        // const obj = {
+        //     name: name,
+        //     age: age
+        // }
+
+        //  /**
+        //  * 普通的对象的属性增强
+        // */
+
+        // const name = "per"
+        // const age = 23
+        // const obj = {
+        //     name,
+        //     age
+        // }
+
+        //  /**
+        //  * 方法增强
+        //  * 这样就又简洁又有this
+        // */
+
+        // const obj = {
+        //     eating() {
+
+        //     }
+        // }
+
+         /**
+         * 计算属性名增强
+         * 会将变量的值变成key
+        */
+        const key = "from"
+        const obj = {
+           [key]: "China"
+        }
+        console.log(obj.from)
+    </script>
+</body>
+</html>

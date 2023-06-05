@@ -11,7 +11,33 @@
     <script>
         /**
          *  js只支持单继承
+         * 如果想实现多继承的话可以用其中一个方法
         */
+
+        function createClass(AnyClass) {
+            return class extends AnyClass {
+                constructor(potion, name, age) {
+                    super(potion)
+                    this.name = name
+                    this.age = age
+                }
+
+                eating(type) {
+                    console.log("食物-", type)
+                }
+            }
+        }
+
+        class FromClass {
+            constructor(potion) {
+                this.potion = potion
+            }
+        }
+
+        const AnyClass1 = createClass(FromClass)
+
+        const AnyClass2 = new AnyClass1("China", "per", 23)
+        console.log(AnyClass2.eating("大米"), AnyClass2)
     </script>
 </body>
 </html>

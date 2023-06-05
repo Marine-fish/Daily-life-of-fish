@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const message = "哈哈哈"
+        let age = 23
+        /**
+         * const和let共同特点
+         * 变量名不能重复
+         * 不能再变量名前面去访问
+         * 定义的值不会放进window里
+         * const的特点
+         * 变量的值一旦被赋值后,就不能被修改
+         * 如果赋值的是引用类型,就可以通过引用的方式去修改
+         * let的特点
+         * 变量的值被赋值后,可以进行修改
+        */
+       const obj = {
+        name: "per"
+       }
+       const obj1 = obj
+       obj.name = "休息"
+       console.log(obj1)
+    </script>
+</body>
+</html>

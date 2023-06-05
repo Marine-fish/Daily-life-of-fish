@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 基本用法
+        */
+       const fulfil = "履行"
+       const age = 23
+       /**
+         * 会将传入的值依次存放在一个数组里
+        */
+       function foo(...arg) {
+        console.log(arg)
+        return "我是foo的返回值"
+       }
+       console.log(`这是${fulfil},这是${foo()}`)
+
+    //    foo(1, 2, 4, 3)
+
+    /**标签模版字符串*/
+    foo`我会存放在${fulfil}arg的数组${age}里面`
+    </script>
+</body>
+</html>

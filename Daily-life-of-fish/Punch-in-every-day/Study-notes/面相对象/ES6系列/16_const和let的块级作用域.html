@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 代码块
+         * 当定义一个代码块
+         * 就会自己的作用域
+         * 自己除了可以访问自己的代码块的内容,也可以访问外面的内容
+         * 但是外面不能访问自己的内容
+         * var是没有块级作用域
+         * 但是let和const以及class有自己的块级作用域
+        */
+       {
+        const name = "per"
+       }
+
+       {
+        let age = 23
+       }
+
+       {
+        var message = "哈哈哈"
+       }
+       /**
+        * 函数如果是在代码块里
+        * 只能在后面进行访问
+        * 不能再前面进行访问
+       */
+       foo()
+       {
+        function foo() {
+
+        }
+       }
+       foo()
+    </script>
+</body>
+</html>
