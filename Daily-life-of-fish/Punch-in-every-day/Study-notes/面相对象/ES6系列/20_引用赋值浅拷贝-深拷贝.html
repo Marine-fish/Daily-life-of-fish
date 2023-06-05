@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const obj = {
+            name: "per",
+            age: 23
+        }
+
+        //这种叫做引用赋值,当修改foo对象里的值时,obj的值也会一起改掉
+        const foo = obj
+
+        /**
+         * 这种就是在堆内存创建了一个新的对象
+         * 在新的对象里将obj对象里的遍历赋给bar对象
+         * 当外面修改bar对象的值时不会修改到obj1对象的值
+         * 这种就叫浅拷贝
+         * 浅拷贝只能把简单数据类进行复制
+         * 但没办法将复杂数据类型进行复制,必须用深拷贝才行
+        */
+        const bar = {
+            ...obj
+        }
+        console.log(bar.age = 18)
+        console.log(obj, bar)
+
+        /**
+         * 利用JSON.stringify将obj对象转成字符串
+         * 在利用JSON.parse恢复原样
+         * 恢复原样的obj对象产生了一个新的对象赋值给bar1
+         * 就可以实现深拷贝
+        */
+       const bar1 = JSON.parse(JSON.stringify(obj))
+    </script>
+</body>
+</html>
