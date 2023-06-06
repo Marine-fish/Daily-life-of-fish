@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * Map用于存储的数据的映射关系
+         * 最开始对象储存的映射关系就只能用字符串
+         * 后面ES6新增了Symbol作为属性名
+         * 如果想用其他类型作为属性名,
+         * 比如对象,但是对象转成属性名
+         * 会出现不同的对象,但是会进行重复覆盖
+         * 如果想让对象作为key,并且不会被覆盖
+         * 那么久用Map
+         * 通过new Map()
+         * 然后通过.set(传入key, value)
+        */
+
+        const obj = {name: "per"}
+        const foo = {age: 23}
+        const mapArg = new Map()
+        mapArg.set(obj, "哈哈哈")
+        mapArg.set(age, 18)
+
+        /**
+         * size属性获取元素的个数
+         * set设置key和value
+         * get获取内容的值
+         * delete删除内容
+         * has判断是否存在
+         * clear清空
+        */
+    </script>
+</body>
+</html>

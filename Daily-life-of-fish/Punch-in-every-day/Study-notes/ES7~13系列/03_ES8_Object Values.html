@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 获取所有对象的value
+        */
+       const obj = {
+        name: "per",
+        age: 23,
+        hight: 1.73,
+        float: 70
+       }
+
+      console.log(Object.values(obj)) 
+
+      /**
+       * 获取所有对象的key和value
+      */
+      console.log(Object.entries(obj))
+
+      /**
+       * 对于像时间
+       * 当时间为个位数时
+       * 需要在个位数前面加个0进行展示
+       * 这时就可以用到padStart(填充几位, 以什么内容进行填充)
+       * 只能对字符串进行操作
+       * 对敏感数据进行个格式化
+      */
+     const item = "8".padStart(2, "0")
+     const day = "1".padEnd(2, "5")
+     console.log(item, day)
+
+     let num = "12346413245421245"
+     let newNum = num.slice(-4).padStart(num.length, "*")
+     console.log(newNum)
+
+     /**
+      * async  await
+     */
+    </script>
+</body>
+</html>

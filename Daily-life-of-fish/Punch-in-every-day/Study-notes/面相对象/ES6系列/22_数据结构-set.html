@@ -8,5 +8,37 @@
 </head>
 <body>
     
+    <script>
+        /**
+         * 数据结构set
+         * 用于存储数据
+         * 特点
+         * 里面的数据不能重复
+         * 如果有重复的数据会进行将重复的过滤掉
+         * 创建方式
+         * 通过 new
+         * 添加数据方式
+         * .add
+        */
+
+        const set = new Set()
+        set.add(12)
+        set.add({})
+        const arr = [1, 2, 2, 3, 5, 2, 4, 6, 3]
+        /**
+         * 先利用Set去重,
+         * 最后利用Array.from方法将Set类型转成数组类型
+        */
+        const setArg = Array.from(new Set(arr)) 
+        console.log(setArg)
+
+        /**
+         * set的size是获取set的个数
+         * delete删除和这个值相等的元素, 返回boolean类型
+         * has判断set是否存在某个元素, 返回boolean类型
+         * clear清空set所有的元素,没有返回值
+         * forEach遍历
+        */
+    </script>
 </body>
 </html>

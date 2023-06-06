@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * proxy是一个类
+         * set函数有四个参数
+         * target => 目标对象(侦听对象)
+         * property => 将被设置的属性key
+         * value => 新属性值
+         * receiver => 调用的代理对象
+         * 
+         * get函数有三个参数
+         * target => 目标对象(侦听对象)
+         * property => 被获取的属性key
+         * receiver => 调用的代理对象
+         * 
+         * 如果对set和get函数进行重写,那么
+         * 在获取和设置得到的值就是个undefined
+        */
+
+        const obj = {
+            name: "per",
+            age: 23,
+            from: "China"
+        }
+        /**
+         * 创建一个Proxy代理对象
+         * 默认什么都不传对obj对象的操作
+         * 还是可以监听到obj对象的值的改变和获取
+        */
+        const objProxy = new Proxy(obj, {
+            set(target, key, value) {
+                console.log("设置", target, key, value)
+                target[key] = value
+               
+            },
+            get(target, key) {
+                console.log("获取", target[key])
+                return target[key]
+            },
+            
+        })
+
+        console.log(objProxy.age)
+        objProxy.age = 29
+        console.log(objProxy.age)
+
+    </script>
+</body>
+</html>
