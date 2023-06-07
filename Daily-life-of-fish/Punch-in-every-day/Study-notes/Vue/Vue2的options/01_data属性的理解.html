@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"> </script>
+
+    <script>
+        /**
+         * data在Vue2的时候，可以传对象也可以传函数
+         * 在Vue3的时候就必须传入一个函数
+         * 函数里return 的是对象
+        */
+        const app = Vue.createApp({
+            data: function() {
+                return {
+
+                }
+            }
+        })
+    </script>
+</body>
+</html>

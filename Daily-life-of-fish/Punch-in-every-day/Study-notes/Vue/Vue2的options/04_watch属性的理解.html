@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"> </script>
+
+    <script>
+        /**
+         * computed主要负责处理复杂的响应式数据
+        */
+        const app = Vue.createApp({
+            data: function() {
+                return {
+
+                }
+            },
+            methods: {
+                    
+            },
+            watch: {
+                /**
+                 * 用于监听响应式数据的变化
+                 * data的key value 是一个函数
+                 * 如果要获取最新的修改的数据可以
+                 * 通过this获取data里的值
+                 * 如果想拿没被修改的值
+                 * 有两个参数， oldValue和newValue
+                 * 默认watch不是深沉侦听
+                */
+            }
+
+        })
+    </script>
+</body>
+</html>

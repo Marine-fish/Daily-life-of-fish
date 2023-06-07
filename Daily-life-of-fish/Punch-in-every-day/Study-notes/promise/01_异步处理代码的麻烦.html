@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 当写一个函数
+         * 但是不知道调用函数后
+         * 里面的数据多久才能拿到
+         * 这个时候可以在调用函数时
+         * 传入一个函数
+         * 一旦当函数里的数据产生后
+         * 就回调传入的函数
+         * 最后再将结果传入回调函数,从而拿到数据
+         * 如果想要进一步完善
+         * 当数据失败时也要得到回应
+         * 完整的流程:
+         * 调用函数时,
+         * 传入3个参数,
+         * 一个开启数据的钥匙
+         * 一个成功的时候的回调函数
+         * 一个失败的时候的回调函数
+        */
+        function foo(callback) {
+
+            setTimeout(() => {
+                console.log("延迟的数据")
+                let name = "per"
+
+                callback(name)
+            }, 3000)
+        }
+
+        foo((name) => {
+            console.log("延迟数据拿到", name)
+        })
+    </script>
+</body>
+</html>

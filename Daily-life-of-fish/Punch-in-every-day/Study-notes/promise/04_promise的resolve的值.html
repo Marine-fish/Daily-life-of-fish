@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const promise = new Promise((resolve) => {
+            /**
+             * 一个普通值: 1, "1", [{}, {}]
+            */
+            // resolve()
+
+            /**
+             * promise
+             * 当resolve里包裹一个promise时
+             * 那么当前的promise的状态由被resolve
+             * 包裹的promise的状态来决定
+            */
+            resolve(new Promise((resolve) => {
+                resolve()
+            }))
+
+        })
+
+        promise.then((res) => {
+            console.log("res", res)
+        })
+    </script>
+</body>
+</html>

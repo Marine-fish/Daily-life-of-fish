@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const promise = new Promise((resolve) => {
+            resolve("好的")
+        })
+
+        /**
+         * 因为then的返回值是promise
+        */
+        promise.then(res => {
+            console.log("结果1", res)
+
+            return "我是上个的返回值"
+        } 
+        ).then(res => console.log("结果2", res)).then(res => console.log("结果3", res))
+    </script>
+</body>
+</html>
