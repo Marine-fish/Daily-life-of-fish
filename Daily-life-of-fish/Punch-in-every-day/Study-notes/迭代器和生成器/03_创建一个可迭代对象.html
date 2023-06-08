@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+  
+    <script>
+
+        // let arrIndex = 0
+        // const arrObj = {
+        //     arr: [1, 2, 3, 5],
+        //     iterator:  {
+        //          next: function() {
+        //             if (arrIndex < arrObj.arr.length ) {
+        //                 return {
+        //                     done: false,
+        //                     value: arrObj.arr[arrIndex++]
+        //                 }
+        //             } else {
+        //                 return {
+        //                     done: true
+        //                 }
+        //             }
+        //          }
+        //     }
+        // }
+
+        //创建一个可迭代对象
+        /**
+         * 有一个特定的函数key [Symbol.iterator]
+         * 调用函数key [Symbol.iterator]时,返回一个迭代器
+         * 用于迭代改对象的值
+         * 将对象本来不属于可迭代对象的,变成可迭代对象
+         * 这个对象就可以通过 for  of  进行遍历
+        */
+        const arrObj = {
+            arr: [1, 2, 3, 5],
+            [Symbol.iterator]() {
+                let arrIndex = 0
+                const iterator = {
+                 next: () => {
+                    if (arrIndex < this.arr.length ) {
+                        return {
+                            done: false,
+                            value: this.arr[arrIndex++]
+                        }
+                    } else {
+                        return {
+                            done: true
+                        }
+                    }
+                 }
+                }
+
+                return iterator
+            }
+           
+        }
+
+        console.log(arrObj.iterator.next())
+        console.log(arrObj.iterator.next())
+        console.log(arrObj.iterator.next())
+        console.log(arrObj.iterator.next())
+        console.log(arrObj.iterator.next())
+    </script>
+</body>
+</html>

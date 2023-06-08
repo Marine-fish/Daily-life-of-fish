@@ -5,29 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            height: 900px;
-            
-            align-items: center;
-        }
-
-        .box {
-            width: 200px;
-            height: 200px;
-            background-color: #f00;
-        }
-    </style>
+   
 </head>
 <body>
-    <div class="box"></div>
+   
     <script>
         /**
          * 为什么数组可以 for of遍历
          * 底层是因为有迭代器在操作
+         * 迭代器的条件
+         * 创建一个对象
+         * 对象里有个key next是一个函数
+         * next函数可以传一个参数也可以不传参数
+         * 这个next函数的返回值是一个对象
+         * 对象里有两个属性
+         * 一个是 done 类型是Boolean
+         * 一个是value 具体值或者是undefined
+         * 在每一次迭代,只要没有迭代完
+         * done的值一直都是false
+         * value的值就是每次迭代的一个个值
+         * 迭代完后,
+         * done的值就变成true
+         * value的值就变成undefined
         */
+       const arr = [1, 2, 3, 4, 5]
+    //    const foo = {
+    //     next: function() {
+    //         return {
+    //             done: false,
+    //             value: undefined
+    //         }
+    //     }
+    //    }
+
+    //优化
+        let arrIndex = 0
+        const foo = {
+
+            next: function() {
+                if ( arrIndex < arr.length ) {
+                    return {
+                    done: false,
+                    value: arr[arrIndex++]
+                    }
+                } else {
+                    return {
+                        done: true,
+                        value: undefined
+                    }
+                }
+               
+            }
+        }
+
+       const value1 = foo.next() // done: false,value: 1
+       const value2 = foo.next() // done: false,value: 2
+       const value3 = foo.next() // done: false,value: 3
+       const value4 = foo.next() // done: false,value: 4
+       const value5 = foo.next() // done: false,value: 5
+       const value6 = foo.next() // done: true,value: undefined
     </script>
 </body>
 </html>

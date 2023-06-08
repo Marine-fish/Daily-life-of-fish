@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 生成器可以控制函数
+         * 什么时候继续执行
+         * 什么时候暂时执行
+        */
+
+        /**
+         * 创建一个生成器
+         * 先创建一个生成器函数
+         * 生成器函数的特点
+         * function*
+         * 调用生成器函数时代码不会执行
+         * 代码的执行由yield控制
+         * 调用生成器函数返回一个生成器对象
+         * 因为生成器对象是一个特殊的迭代器
+         * 要执行yield上的代码
+         * 需要调用生成器对象的next方法
+         * 
+         * 当在yield后面写入值时
+         * 就是在调用生成器函数返回的迭代器
+         * value的值
+        */
+        function* foo(info1) {
+            console.log(1, info1)
+            console.log(2)
+            const info = yield "我是第一次返回的结果"
+            console.log(3 , info)
+            console.log(4)
+            yield
+            console.log(5)
+        }
+
+       const generator = foo("第一次调用传入的参数")
+       console.log(generator.next())
+       console.log(generator.next("第二次调用传入的参数"))
+       console.log(generator.next())
+    </script>
+</body>
+</html>

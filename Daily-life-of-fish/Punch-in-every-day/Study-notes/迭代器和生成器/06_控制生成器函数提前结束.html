@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function* foo(info1) {
+            console.log(1), info1
+            const info2 = yield
+            console.log(2, info2)
+            const info3 = yield
+            console.log(3, info3)
+            const info4 = yield
+            console.log(4, info4)
+            const info5 = yield
+            console.log(5, info5)
+            const info6 = yield
+            console.log(6, info6)
+        }
+
+        const generator = foo("第一次调用传入的参数")
+        console.log(generator.next("第二次调用传入的参数"))
+        console.log(generator.next("第三次调用传入的参数"))
+        // generator.return()
+        generator.throw("停止执行")
+        console.log(generator.next("第四次调用传入的参数"))
+        console.log(generator.next("第五次调用传入的参数"))
+        console.log(generator.next("第六次调用传入的参数"))
+    </script>
+</body>
+</html>

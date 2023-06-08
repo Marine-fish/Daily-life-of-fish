@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 这个是利用promise完成异步请求的逻辑
+        */
+        function foo(url) {
+            return new Promise((relove, reject) =>{
+                setTimeout(() => {
+                    relove(url)
+                }, 3000);
+                
+            })
+
+        }
+
+        // foo("http").then((res) => {
+        //     console.log("res", res)
+        // })
+        /**
+         * 需求:
+         * 每掉一次函数就获得一次请求的值
+        */
+        /***这样会出现一个回调地狱*/
+            //  function fetchFoo() {
+            //     foo("http").then(res => {
+            //         console.log("res1", res)
+            //     })
+
+            //     foo("http").then(res2 => {
+            //         console.log("res1", res2)
+            //     })
+
+            //     foo("http").then(res3 => {
+            //         console.log("res1", res3)
+            //     })
+            // }
+
+        /**promise解决方案(链式调用)*/
+        // function fetchFoo() {
+        //   foo("http").then(res => {
+        //     console.log("res1", res)
+        //     return foo("http")
+        //   }).then(res => {
+        //     console.log("res2", res)
+        //     return foo("http")
+        //   }).then(res => {
+        //     console.log("res3", res)
+        //     return res
+        //   })
+        // }
+
+        /**利用promise和生成器来完成*/
+        // function* fetchFoo() {
+        //   const res = yield foo("http")
+        //   const res2 = yield foo(res,"http2")
+        //   const res3 = yield foo(res2, "http3")
+        //   console.log("res3", res3)
+        // }
+
+        // const generator = fetchFoo() 
+        // generator.next().value.then(res => {
+        //     generator.next(res).value.then(res2 => {
+        //         generator.next(res2).value.then(res => {
+        //             generator.next(res)
+        //         })
+        //     })
+        // })
+       
+        /**
+         * 最终的async和await解决上面一个
+        */
+        async function fetchFoo() {
+          const res = await foo("http")
+          const res2 = await foo(res,"http2")
+          const res3 = await foo(res2, "http3")
+          console.log("res3", res3)
+        }
+
+        const generator = fetchFoo() 
+       
+    </script>
+</body>
+</html>
