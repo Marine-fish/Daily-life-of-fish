@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /**
+         * 需求: 将所有的abcd 替换成 love
+        */
+
+        /**
+         * 在有大写情况下
+         * 使用replaceAll方法只能将小写才能进行转换
+         * 并返回新的字符串
+        */
+        const message = "axwasa313abcd skalj131233wajsjabCd sakxj4214214kahaaBcd"
+        // const newMessage = message.replaceAll("abcd", "love")
+        // console.log(newMessage)
+        /**
+         * 而将replaceAll匹配的规则换成正则时
+         * 就可以灵活去编写规则
+        */
+        // const newMessage = message.replaceAll(/abcd/ig, "love")
+        // console.log(newMessage)
+
+        /**
+         * 将字符串里的数字全部删掉
+        */
+         // const newMessage = message.replaceAll("无法动态删除所有数字", "love")
+          const newMessage = message.replaceAll(/\d+/ig, "love")
+          console.log(newMessage)
+
+          /**
+           * 常见对字符串操作方法中可以使用正则
+           * exec 用于查找字符串匹配正则方法 未匹配返回null, 匹配返回一个数组
+           * text 测试使用用正则匹配成功 成功true 失败false
+           * match 查找字符串匹配String方法 未匹配返回null, 匹配返回一个数组
+           * matchAll 查找字符串所有匹配String方法 返回一个迭代器
+           * search 测试字符串匹配String方法 返回位置索引 失败返回-1
+           * replace 查找执行匹配String方法, 并使用替代字符串替换匹配到的子字符串
+           * split 用正则或者固定字符串分割一个字符串, 并将分割后的字符串存储在一个数组中的String方法
+          */
+
+    </script>
+</body>
+</html>
