@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <button>按钮</button>
+    <script>
+        /**
+         * 在调用setTimeout函数里的回调时
+         * 会将这些回调函数放入一个队列结构里(事件队列)
+         * 队列结构的特点: 
+         * 先进先出(谁先放进来的,谁就先执行)
+         * 就算setTimeout里的回调设置为0秒后执行
+         * 但也还是执行完setTimeout函数但不会立即执行里面的回调
+         * 因为就算设置的0秒后执行
+         * 但它还是要经历创建一个执行上下文
+         * 将执行上下文放入队列里
+        */
+        setTimeout(() => {
+            console.log("异步")
+        }, 3000)
+        setTimeout(() => {
+
+        }, 3000)
+
+        setTimeout(() => {
+
+        }, 6000)
+
+        setTimeout(() => {
+
+        }, 4000)  
+       const btnEl = document.querySelector("button")  
+       btnEl.onclick = function() {
+        console.log("打印")
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 这样写的代码执行流程是
+         * 1 2 3
+         * Promise在没有被回调传入的参数回调时
+         * 默认在Promise里写的代码会在全局执行上下文里执行
+         * setTimeout函数里的回调会放入宏任务队列里
+         * promise里的回调会放入微任务队列里
+        */
+        setTimeout(() => {
+
+        }, 3000)
+         console.log(1)
+        const promise = new Promise((r, j) => {
+            console.log(2)
+            r(4)
+            console.log(5)
+        })
+        promise.then(res => {
+            console.log(res)
+        })
+        console.log(3)
+    </script>
+</body>
+</html>

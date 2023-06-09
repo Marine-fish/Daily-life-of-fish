@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 普通函数的返回值
+         * return 什么值就返回什么值
+        */
+    //    function foo() {
+    //     return 12
+    //    }
+
+        /**
+         * 异步函数的返回值
+         * 默认返回是一个promise
+         * 如果明确返回一个值
+         * 内部是通过resolve(要返回的值)
+         * 如果返回一个promise
+         * 则那到返回值的内容
+         * 是return的promise的 resolve(1214)
+        */
+       async function foo() {
+        
+        // return 1312
+
+        return new Promise((resolve, reject) => {
+            resolve(1214)
+        })
+       }
+       foo()
+    </script>
+</body>
+</html>

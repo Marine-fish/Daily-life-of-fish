@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /***
+         * 在异步函数如果调用then方法
+         * 异步函数内部会回调resolve方法
+         * 如果调用catch方法
+         * 异步函数会回调reject方法
+         * 如果没有明确回调reject方法
+         * 在promise出于padding状态时
+         * 出现了代码错误
+         * 那么会自动回调reject方法
+         * 并将错误的信息抛出
+         * 但还是是能继续执行其他代码+
+        */
+
+        async function foo() {
+            console.log(3)
+            console.log(2)
+            "禁告".map()
+            console.log(1)
+
+            return 1321
+        }
+
+        foo().then(res => {
+            console.log(res)
+        }).catch(err => {
+            console.log(err)
+        })
+    </script>
+</body>
+</html>

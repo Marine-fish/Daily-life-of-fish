@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 一个代码执行
+         * 当遇到非异步代码时
+         * 会执行全局上下文的内容
+         * 当遇到非异步函数时
+         * 会创建一个执行上下文
+         * 并执行这个执行上下文的内容
+         * 执行完弹出栈
+         * 如果全局执行上下文上没有其他的执行上下文时
+         * 就会执行全局上下文里的内容
+         * 全局执行上下文执行完后,会从队列里
+         * 看谁是最先放入队列里的异步代码
+         * 就将异步代码放入全局执行上下文里执行
+         * 直到队列里的代码全部执行完
+        */
+    </script>
+</body>
+</html>
