@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inputEl {
+            position: relative;
+        }
+        .foo {
+            position: absolute;
+            Min-width: 400px;
+            height: 400px;
+            background-color: #ccc;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="inputEl">
+            <input type="text">
+        </div>
+       <div class="foo">
+            <h1></h1>
+       </div>
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-umd-min.js"></script>
+    <script>
+        /***
+         * 防抖是一个函数
+         * 防抖的应用场景
+         * 在每次输入内容都是调用网络请求
+         * 为了不让每次输入都要调一次
+         * 可以让每次输入完等待几秒后如果没有
+         * 再次输入在调用网络请求
+         * 这样可以减少服务器压力
+         * 常用的防抖函数库
+         * underscore
+        */
+       const inputEl = document.querySelector("input")
+       const fooEl = document.querySelector("h1")
+       const fooEls = document.querySelector(".foo")
+    //    inputEl.oninput = function() {
+    //     fooEl.textContent = this.value;
+    //     fooEls.style.display = "block";
+    //     console.log(this.value)
+    //    }
+    
+    /**
+     * 使用underscore库
+     * 用 _.debounce方法
+     * 延迟3秒执行函数
+    */
+    inputEl.oninput = _.debounce(function() {
+        fooEl.textContent = this.value;
+        fooEls.style.display = "block";
+        console.log(this.value)
+       }, 3000)
+    
+    </script>
+</body>
+</html>

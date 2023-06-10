@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const items = 1686381788
+        function setTime(e, l) {
+            console.log(e, l)
+            const date = new Date(e)
+            // const year = date.getFullYear()
+            // const month = date.getMonth() + 1
+            // const day = date.getDay()
+            // const hour = date.getHours()
+            // const minute = date.getMinutes()
+            // const second = date.getSeconds()
+
+            const timeAll = {
+                "y+": date.getFullYear(),
+                "M+": date.getMonth() + 1,
+                "d+": date.getDay(),
+                "h+": date.getHours(),
+                "m+": date.getMinutes(),
+                "s+": date.getSeconds(),
+            }
+
+            for (const key in timeAll) {
+                const itemRz = new RegExp(key)
+                if (itemRz.test(l)) {
+                    const value = (timeAll[key] + "").padStart(2, "0")
+                    l = l.replace(itemRz, value)
+                }
+            }   
+            return l
+        }
+
+       console.log(setTime(items, "yyyy/MM/dd hh:mm:ss")) 
+    </script>
+</body>
+</html>

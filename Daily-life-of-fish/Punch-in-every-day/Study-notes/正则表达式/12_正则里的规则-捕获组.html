@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 可以用()对要截取的内容精准截取
+         * 使用matchAll方法
+         * 
+         * or 表示或的意思
+         * 正则里用 |表示
+        */
+        const info = "关于的童话的书籍: 《一千零一夜》 和 《伊索寓言》"
+        const rez = /《(.+?)》/ig
+        const newInfo = info.matchAll(rez)
+        for (const iterator of newInfo) {
+            console.log(iterator)
+        }
+    </script>
+</body>
+</html>

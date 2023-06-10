@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * ^ 匹配文本开头
+         * $ 匹配文本末尾
+        */
+
+        const message = "What are you Doing"
+
+        //字符串方法(缺点不太好确定大小写)
+        // if (message.startsWith("what")) {
+        //     console.log("以字符串what开头")
+        // }
+
+        // if (message.endsWith("doing")) {
+        //     console.log("以字符串doing结尾")
+        // }
+
+
+         if (/^what/i.test("what")) {
+            console.log("以字符串what开头")
+        }
+
+        if (/doing$/i.test("doing")) {
+            console.log("以字符串doing结尾")
+        }
+    </script>
+</body>
+</html>

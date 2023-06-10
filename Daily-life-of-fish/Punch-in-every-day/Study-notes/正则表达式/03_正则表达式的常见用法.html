@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        /**
+         * 使用正则对象上的实例方法
+         * 常见场景: webpack => loader => text: 匹配文件名
+         * 正则 => 拿到文件 => loader操作
+         * 登录的账号密码验证
+         * test方法: 检测某一个字符串是否符合正则的规则
+        */
+    //    const rez = /love/ig
+    //    const rez3 = /jhh/ig
+    //    const message = "sasaschljhhfghfghdsfdsrdscdsdxc"
+
+    //    if (rez.test(message)) {
+    //     console.log("符合rez规则")
+    //    } else {
+    //     console.log("不符合rez规则")
+    //    }
+
+       /**
+        * exec方法: 使用正则执行一个字符串
+        * 因为用test方法只能判断是否匹配正则
+        * 但是拿不到匹配后的值
+        * 拿到一个数组,对应的匹配的值,
+        * 对应匹配的首位索引
+        * 进行匹配的内容
+       */
+        // const rez1 = rez.exec(message) //null
+        // const rez1 = rez3.exec(message)
+        
+        // console.log(rez1)
+
+        /**
+         * 字符串的方法, 传入一个正则规则表达式
+        */
+       /**
+        * 1.match
+        * 一个数组
+        * 只有匹配到的值
+        * 如果不加g全局匹配
+        * 那么返回结果和exec一样
+       */
+      const re1 = /hkn/ig
+      const message = "nxakhkwahkn xkshkNjha jHknw"
+    //   const rez = message.match(re1)
+    //   console.log(rez)
+
+    /**
+     * 2.matchAll
+     * 加入正则必须加修饰符g
+     * 返回一个迭代器
+    */
+    //  const rez = message.matchAll(re1)
+    //  console.log(rez.next())
+
+    /**
+     * 3.split
+    */
+    </script>
+</body>
+</html>

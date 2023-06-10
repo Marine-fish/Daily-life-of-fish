@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 字符类
+         * 用来匹配特定集中的任何符号
+         * \d 数字 0-9的字符
+         * \s 空格符号, 制表符\t 换行符\n \v \f...
+         * \w 单字字符 拉丁字母或者数字或下划线 _
+         * . 除了换行符之外的任何字符都匹配
+        */
+
+        /**
+         * 匹配所有的数字 \d
+         * +匹配范围(不限)
+         * 一个\d匹配一个数字
+         * \d+匹配一个或者多个
+         * 反向类
+         * \D 除了\d之外的任何字符
+        */
+       const num = "sada2s1 d2a454es12a1c xas45754"
+       const rez = /\d+/ig
+       const newRez = num.match(rez)
+       console.log(newRez)
+    </script>
+</body>
+</html>

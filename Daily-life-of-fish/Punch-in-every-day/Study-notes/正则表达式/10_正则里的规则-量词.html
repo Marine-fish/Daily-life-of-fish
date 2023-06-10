@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * l至少是3个最多是5个
+         * + 一个或者多个 === {1,}
+         * ? 零个或一个 === {0, 1}
+         * *代表着零个或多个 === {0}
+        */
+        const re = /l{3,5}/ig
+        const message = "saaakjskajldjjksaaaklllaklaadilaaallajl"
+        const newMessage = message.match(re)
+        console.log(newMessage)
+    </script>
+</body>
+</html>

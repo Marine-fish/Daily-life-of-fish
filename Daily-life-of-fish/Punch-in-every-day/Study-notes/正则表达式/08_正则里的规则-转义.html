@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /**
+         * 转义一般使用场景
+         * 在需要匹配类似于.这个
+         * 但是规则里有.这个
+         * 导致无法按照自己想定义的规则去定义
+         * 这个时候就可以用转义将属于正则
+         * 转义成自己想要的东西 \
+         * 常见的需要转义的字符
+         * \, [], ^, ., |, ?, *, +, ()
+        */
+
+        const message = "hell."
+        const rez = /\./
+        const newRez = message.match(rez)
+        console.log(newRez)
+    </script>
+</body>
+</html>

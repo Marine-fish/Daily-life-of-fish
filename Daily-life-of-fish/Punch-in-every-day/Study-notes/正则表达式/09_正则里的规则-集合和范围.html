@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /**
+         * 集合
+        */
+    //    const num = ["132", "140", "198", "157", "132a"]
+       /*
+            符合首个字符为1中间以1234
+       */
+    //    const numStart = /^1[1234]\d/
+    //    const newNum = num.filter(item =>  numStart.test(item))
+    //    console.log(newNum)
+
+        /**
+         * 范围
+         * 多个范围
+         * 0-9A-F 表示0到9, A到F
+         * \d === [0-9]
+         * \w === [a-zA-Z0-9]
+        */
+       /**
+        * 首字符为1中间为0到6
+       */
+        // const rez = /^1[0-6]\d/
+        // const newNum = num.filter(item =>  rez.test(item))
+        // console.log(newNum)
+
+        /**
+         * 表示以字符1开头后面数字范围是0-5最多匹配到6位后面不能有其他东西了
+         * 1和[0-5]已经占两位数字了加上限制的6一共是8位
+         * 必须要满足8位数字
+        */
+        const rez = /^1[0-5]\d{6}$/
+        const num = "12342124"
+        const newNum = rez.test(num)
+        console.log(newNum)
+    </script>
+</body>
+</html>
