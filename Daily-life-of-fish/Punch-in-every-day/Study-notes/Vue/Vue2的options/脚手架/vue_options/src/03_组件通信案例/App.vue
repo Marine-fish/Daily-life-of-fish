@@ -1,6 +1,7 @@
 <template>
 <div class="app">
-    <About :info="['鞋子', '衣服', '帽子']"></About>
+    <About :info="['鞋子', '衣服', '帽子']" @activeIndex="activeIndex"></About>
+    <h2>{{ infoContent[index] }}</h2>
 </div>
 </template>
 
@@ -12,7 +13,13 @@ export default {
     },
     data() {
         return {
-            activeIndex: 0
+            infoContent: ["衣服的页面", "裤子的页面", "鞋子的页面"],
+            index: 0
+        }
+    },
+    methods: {
+        activeIndex(index) {
+            this.index = index
         }
     }
 }
