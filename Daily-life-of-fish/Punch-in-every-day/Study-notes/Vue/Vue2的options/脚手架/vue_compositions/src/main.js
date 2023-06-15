@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
-import App from './03_watch监听数据变化/App.vue'
+import router from './05_路由router'
+import App from './/05_路由router/App.vue'
 
-createApp(App).mount('#app')
+createApp(App).use(router).mount('#app')
