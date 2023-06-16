@@ -1,15 +1,19 @@
-import { createRouter, createWebHistory} from "vue-router"
+import { createRouter, createWebHashHistory} from "vue-router"
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: [
         {
             path: "/",
-            redirect: "/login"
+            redirect: "/home"
         },
        {
-            path: "/login",
-            component: () => import("./Home.vue")
+            path: "/home/:id",
+            component: () => import("./路由的切换/Home.vue")
+       },
+       {
+         path: "/about/:id",
+         component: () => import("./路由的切换/About.vue")
        }
     ]
 })
