@@ -4,6 +4,7 @@
 
 interface ArrFace {
     //索引签名 可以通过索引去访问,其返回值是字符串类型
+    // [: number] 的类型要和下面的类型一致
     [xxx: number]: string
     length: number
 }
