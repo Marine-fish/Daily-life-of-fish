@@ -21,6 +21,7 @@
  * this.instance.interceptors.response.use()响应的拦截
  * 第一个参数是响应成功的拦截
  * 第二个参数是响应失败的拦截
+ * 拦截器是可以创建多个的,不会被覆盖掉
  */
 import axios from "axios"
 import type { AxiosInstance, AxiosRequestConfig } from "axios"
