@@ -17,13 +17,16 @@
   // const route = useRoute()
   // console.log(route.params.id)
 
-  watch(route, (newValue, oldVue) => {
-    console.log(newValue, oldVue)
-  })
+  // watch(route, (newValue, oldVue) => {
+  //   console.log(newValue, oldVue)
+  // })
 
-  onBeforeRouteUpdate(() => {
-    const route = useRoute()
-  console.log('路由守卫',route.params.id)
+  onBeforeRouteUpdate((to, from) => {
+    //这样获取,因为无法获取
+  //   const route = useRoute()
+  // console.log('路由守卫',route.params.id)
+    console.log("from", from.params.id)
+    console.log("to", to.params.id)
   })
 </script>
 

@@ -1,11 +1,12 @@
 <template>
-<div class="about">
-  <h2>about-{{ $route.params.id }}</h2>
+<div class="app">
+  <h2>app</h2>
+  <NotFound/>
 </div>
 </template>
 
 <script setup>
-
+    import NotFound from './NotFound.vue';
 </script>
 
 <style lang="less" scoped>

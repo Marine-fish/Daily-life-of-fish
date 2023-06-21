@@ -1,6 +1,6 @@
 <template>
-<div class="about">
-  <h2>about-{{ $route.params.id }}</h2>
+<div class="home">
+  <h2>您当前的路径{{$route.params.id}}不正确</h2>
 </div>
 </template>
 
