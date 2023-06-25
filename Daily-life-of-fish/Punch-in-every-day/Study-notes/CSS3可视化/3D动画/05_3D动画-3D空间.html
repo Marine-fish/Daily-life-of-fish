@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      /* 第一种方式 在父元素定义css透视属性*/
+      .box {
+        position: relative;
+        /* 起始位 */
+        width: 200px;
+        height: 100px;
+        background-color: hotpink;
+        /*transform-style: preserve-3d;开启3D空间*/
+        transform-style: preserve-3d;
+        /* 给父元素定义透视效果 观察者与屏幕的距离*/
+        perspective: 200px;
+      }
+
+      .item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: skyblue;
+        /* 利用z轴对透视效果起到启动条件(三维视角) */
+        transform: rotateX(45deg) translateX(100px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 方式一 -->
+    <div class="box">
+      <div class="item"></div>
+    </div>
+    <script>
+      /**
+       * 3D透视的特点:
+       * 近大远小
+       * z轴就好比人的视角(三维位置)
+       * z轴的初始值为0
+       * perspective的值
+       * 只有一个值 z 和none
+       * 必须是none, length中的一个
+       * none: 没有应用perspective样式的默认值
+       * length: z=0的距离, 观察者与屏幕的距离
+       * 透视两种方式
+       * 在父元素定义css透视属性
+       * 如果它是子元素或者单元素子元素可以使用perspective函数
+       */
+    </script>
+  </body>
+</html>

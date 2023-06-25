@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        padding: 250px;
+        /* 开启3D空间 */
+        transform-style: preserve-3d;
+      }
+
+      .box1 {
+        width: 150px;
+        height: 150px;
+        transform-style: preserve-3d;
+        transform: rotateX(-33.5deg) rotateY(45deg);
+        position: relative;
+        animation: loop 6s linear infinite;
+      }
+
+      .item {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(113, 180, 220, 0.4);
+        border: 1px solid rgb(174, 229, 248);
+      }
+
+      .a {
+        transform: rotateX(90deg) translateZ(75px);
+      }
+
+      .b {
+        transform: rotateX(-90deg) translateZ(75px);
+      }
+
+      .c {
+        transform: rotateX(180deg) translateZ(75px);
+      }
+
+      .d {
+        transform: rotateX(180deg) translateZ(-75px);
+      }
+
+      .e {
+        transform: rotateY(90deg) translateZ(75px);
+      }
+
+      .f {
+        transform: rotateY(-90deg) translateZ(-75px);
+      }
+
+      .box2 {
+        width: 75px;
+        height: 75px;
+        transform-style: preserve-3d;
+        transform: rotateX(-33.5deg) rotateY(45deg);
+        position: relative;
+        animation: loop1 6s linear infinite;
+      }
+
+      .item1 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(105, 189, 240, 0.4);
+        border: 1px solid rgb(174, 229, 248);
+      }
+
+      .g {
+        transform: rotateX(90deg) translateZ(37.5px);
+      }
+
+      .h {
+        transform: rotateX(-90deg) translateZ(37.5px);
+      }
+
+      .i {
+        transform: rotateX(180deg) translateZ(37.5px);
+      }
+
+      .j {
+        transform: rotateX(180deg) translateZ(-37.5px);
+      }
+
+      .k {
+        transform: rotateY(90deg) translateZ(37.5px);
+      }
+
+      .l {
+        transform: rotateY(-90deg) translateZ(-37.5px);
+      }
+
+      @keyframes loop {
+        0% {
+          transform: rotateY(0deg);
+        }
+
+        100% {
+          transform: rotateY(360deg);
+        }
+      }
+
+      @keyframes loop1 {
+        0% {
+          transform: rotateX(0deg);
+        }
+
+        100% {
+          transform: rotateX(-360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box1">
+        <div class="item a"></div>
+        <div class="item b"></div>
+        <div class="item c"></div>
+        <div class="item d"></div>
+        <div class="item e"></div>
+        <div class="item f"></div>
+        <div class="box2">
+          <div class="item1 g"></div>
+          <div class="item1 h"></div>
+          <div class="item1 i"></div>
+          <div class="item1 j"></div>
+          <div class="item1 k"></div>
+          <div class="item1 l"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

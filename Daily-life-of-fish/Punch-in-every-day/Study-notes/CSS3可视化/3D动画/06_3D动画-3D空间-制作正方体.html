@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 1px solid #00000062;
+            margin: 400px auto;
+            /* 开启3D空间 */
+            transform-style: preserve-3d;
+            /* 给父元素一个侧视图 */
+            transform: rotateX(-33.5deg) rotateY(45deg);
+        }
+
+        .item {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+        .top {
+            background-color: rgba(219, 219, 250, .4);
+            transform: rotateX(84deg) translateZ(250px);
+        }
+
+        .left {
+            background-color: rgba(125, 125, 180, .4);
+            transform: rotateX(360deg) translateZ(-250px) translateX(22px);
+        }
+
+        .bottom {
+            background-color: rgba(155, 147, 0, .4);
+            transform: rotateX(84deg) translateZ(-270px) translateY(32px) translateX(17px);
+        }
+
+        .right {
+            background-color: rgba(235, 121, 156, .4);
+            transform: rotateX(360deg) translateZ(280px) translateY(23px);
+        }
+
+        .before {
+            background-color: rgba(21, 214, 201, .4);
+            transform: rotateX(360deg) rotateY(265deg) translateZ(252px) translateY(10px) translateX(56px)
+        }
+
+        .after {
+            background-color: rgba(255, 0, 0, .4);
+            transform:rotateX(358deg) rotateY(-274deg) translateZ(266px) translateY(10px) translateX(-13px)
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="item top">上</div>
+        <div class="item left">左</div>
+        <div class="item bottom">下</div>
+        <div class="item right">右</div>
+        <div class="item before">前</div>
+        <div class="item after">后</div>
+    </div>
+</body>
+</html>

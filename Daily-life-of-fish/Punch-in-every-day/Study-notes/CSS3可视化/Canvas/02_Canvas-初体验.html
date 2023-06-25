@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can" style="width: 200px; height: 200px;"></canvas>
+
+    <script>
+        window.onload = () => {
+            //1.拿到canvas元素
+            let canvasEl = document.getElementById("can")
+
+            if (!canvasEl.getContext) {
+                return
+            }
+
+            //2.拿到canvas渲染上下文
+            let ctx = canvasEl.getContext('2d') //2d | webgl(3d)
+            console.log(ctx)
+        }
+    </script>
+</body>
+</html>

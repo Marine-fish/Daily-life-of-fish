@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      /* 第一种方式 在父元素定义css透视属性*/
+      .box {
+        position: relative;
+        /* 起始位 */
+        width: 200px;
+        height: 100px;
+        background-color: hotpink;
+        /* 给父元素定义透视效果 观察者与屏幕的距离*/
+        perspective: 200px;
+      }
+
+      .item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: skyblue;
+        /* 利用z轴对透视效果起到启动条件(三维视角) */
+        /* transform: rotateY(180deg); */
+
+        backface-visibility: visible;
+
+        animation: loop 6s linear infinite;
+
+      }
+
+      
+      @keyframes loop {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <!-- 方式一 -->
+    <div class="box">
+      <div class="item"></div>
+    </div>
+
+    <script>
+      /**
+       * backface-visibility
+       * 指某个元素当背面朝向观察者时是否可见
+       * visible 背面可见
+       * hidden 背面不可见
+       */
+    </script>
+  </body>
+</html>

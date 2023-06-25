@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        /* 起始位 */
+        width: 200px;
+        height: 100px;
+        background-color: hotpink;
+
+        /* transform: translateX(300px) translateY(150px); */
+        /* 简写 */
+        /* transform: translate3d(300px, 150px, 0); */
+        /* 
+            z轴的平移 z轴数值越大元素就会越近,值越小元素就会越远
+            perspective的值就是人的眼睛,z轴的值越接近perspective设置的值
+            元素就离屏幕越近,如果超出perspective设置的值
+            那么元素就直接跑到perspective眼睛的后面就看不到元素了
+        */
+        transform: perspective(300px) translateZ(50px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
