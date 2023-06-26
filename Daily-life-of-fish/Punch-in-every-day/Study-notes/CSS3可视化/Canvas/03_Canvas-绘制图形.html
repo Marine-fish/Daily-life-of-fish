@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      canvas {
+        /* background-color: hotpink; */
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="can" style="width: 500px; height: 500px">
+      如果显示这句话,说明您的浏览器暂不支持canvas,请更替适配浏览器!
+    </canvas>
+
+    <script>
+      window.onload = () => {
+        //1.拿到canvas元素
+        let canvasEl = document.getElementById("can");
+
+        if (!canvasEl.getContext) {
+          return;
+        }
+
+        let ctx = canvasEl.getContext("2d"); //2d | webgl(3d)
+        //x, y, 宽, 高
+        /**
+         * canvas的坐标轴在canvas元素的左上角
+         * 绘制矩形的方法
+         * fillRect 绘制一个填充矩形的
+         * strokeRect 绘制一个矩形的边框
+         * clearRect 清除指定矩形区域,让清除部分完全透明
+         */
+        // ctx.fillRect(0, 0, 200, 50);
+        // ctx.strokeRect(50, 50, 200, 50)
+        // ctx.clearRect(0, 0, 200, 50)
+        // ctx.clearRect(0, 0, 200, 200)
+        /**
+         * 通过路径进行画画
+         * 有开始路径和结束路径
+         * 中间有多个子路径
+         * beginPath: 创建一个新的开始路径,不会关联到旧的路径
+         * closePath: 闭合路径之后图形绘制命令又重新指向beginPath之前的上下文
+         * stroke: 通过线条绘制图形(针对当前路径图片结束路径)
+         * fill: 填充颜色
+         * moveTo: 移动画笔的方法 x, y把画笔移动到哪个位置
+         * lineTo: 进行画线条,线条只能用stroke方法填充,closePath方法不是必须的
+         */
+        //    ctx.lineWidth = 4 //画笔的大小
+        //     ctx.beginPath()
+        //     ctx.moveTo(20, 30)
+        //     ctx.lineTo(202, 30)
+        //     ctx.moveTo(40, 60)
+        //     ctx.lineTo(202, 30)
+        //     ctx.moveTo(45, 70)
+        //     ctx.lineTo(202, 30)
+        //     ctx.stroke()
+        //绘制三角形
+        // ctx.beginPath()
+        // ctx.moveTo(50, 0)
+        // ctx.lineTo(100, 50)
+        // ctx.lineTo(50, 100)
+        // ctx.closePath()
+        // ctx.stroke()
+
+        // ctx.beginPath()
+        // ctx.moveTo(150, 0)
+        // ctx.lineTo(200, 50)
+        // ctx.lineTo(150, 100)
+        // ctx.fill() //它自动闭合路径closePath()
+
+        /**
+         * 绘制圆弧, 园
+         * arc() x, y, radius, startAngle, endAngle, anticlockwise
+         * radius: 半径
+         * startAngle: 开始角
+         * endAngle: 结束角
+         * anticlockwise: 逆时针方向
+         * 弧度:
+         * 当半径等于弧度就等于一个弧度
+         * arc length = radius
+         * 一整个园就是 1rad = 2 * Math.PI
+         * 半圆弧度就是 Math.PI
+         * 角度和弧度的关系:
+         * 角度与弧度的JS表达式: 弧度 = (Math.PI / 180)*角度即
+         * 1角度 = Math.PI / 180
+        */
+        // ctx.beginPath()
+        // //园
+        // ctx.arc(100, 100, 25, 0, Math.PI * 2);
+        // ctx.stroke()
+        // ctx.beginPath()
+        // //园弧
+        // ctx.arc(50, 50, 25, 0, Math.PI);
+        // ctx.stroke()
+
+        ctx.beginPath()
+        //笑脸
+        ctx.arc(150, 60, 50, 0, Math.PI * 2);
+        ctx.stroke()
+
+        ctx.beginPath()
+        //笑脸
+        ctx.arc(125, 50, 10, 0, Math.PI * 2);
+        ctx.stroke()
+
+        ctx.beginPath()
+        //笑脸
+        ctx.arc(175, 50, 10, 0, Math.PI * 2);
+        ctx.stroke()
+
+        ctx.beginPath()
+        //笑脸
+        ctx.arc(150, 80, 10, 0, Math.PI * 2);
+        ctx.stroke()
+
+        ctx.beginPath()
+        //笑脸
+        ctx.arc(150, 95, 10, 0, Math.PI);
+        ctx.stroke()
+      };
+
+      
+    </script>
+  </body>
+</html>
