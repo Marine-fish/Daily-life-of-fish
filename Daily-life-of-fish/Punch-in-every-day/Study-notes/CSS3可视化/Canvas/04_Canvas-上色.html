@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <canvas id="can" style="width: 500px; height: 500px;"></canvas>
+
+    <script>
+        window.onload = () => {
+            //1.拿到canvas元素
+            let canvasEl = document.getElementById("can")
+
+            if (!canvasEl.getContext) {
+                return
+            }
+
+            //2.拿到canvas渲染上下文
+            // ctx 提供绘图的指令
+            let ctx = canvasEl.getContext('2d') //2d | webgl(3d)
+            /**
+             * fillStyle = 颜色: 给图形填充颜色 需要在fill()函数前调用
+             * strokeStyle = 颜色: 设置图形轮廓的颜色 需要在stroke()函数前调用
+            */
+           //修改画笔的颜色
+           ctx.fillStyle = 'pink'
+           ctx.fillRect(0, 0, 200, 100)
+
+           //可以进行切换覆盖上次的画笔颜色
+           ctx.fillStyle = '#ccc'
+           ctx.fillRect(50, 0, 50, 20)
+
+           //用路径来描写
+           ctx.beginPath()
+           ctx.rect(0, 100, 100, 50)
+           ctx.stroke()
+        }
+    </script>
+</body>
+</html>
